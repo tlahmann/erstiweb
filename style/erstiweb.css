@@ -1,0 +1,38 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: #063971;
+    background-image: repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px,
+            transparent 1mm
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.07) 2px,
+            transparent 1px,
+            transparent 10mm
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px,
+            transparent 1mm
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.07) 2px,
+            transparent 1px,
+            transparent 10mm
+        );
+    background-size: 10mm 10mm;
+}
