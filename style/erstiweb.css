@@ -36,3 +36,9 @@ body {
         );
     background-size: 10mm 10mm;
 }
+
+.card {
+    width: 90vw;
+    height: 90vh;
+    padding: 5vh 5vw;
+}
