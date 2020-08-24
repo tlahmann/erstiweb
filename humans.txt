@@ -1,0 +1,18 @@
+
+/* TEAM */
+Your title: Lahmann, Tobias
+Site: tlahmann.com
+Contact: tobiaslahmann@outlook.com
+Location: Ulm, Germany
+
+/* THANKS */
+Thanks to all who support us and visit our Website.
+Thanks to each of us with constructive criticism brings forward.
+Thanks to those that motivate us again and again.
+
+/* SITE */
+Last update: 2020/08
+Standards: HTML5, CSS3
+
+/*Content*/
+Topics around the first semester at Fachhochschule Dortmund.
