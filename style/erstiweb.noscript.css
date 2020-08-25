@@ -1,0 +1,14 @@
+#js-is-off {
+    color: red;
+}
+
+.card {
+    height: auto;
+}
+
+#calendar,
+#news,
+#team {
+    position: relative;
+    transform: unset;
+}

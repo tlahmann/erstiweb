@@ -37,6 +37,10 @@
     <link rel="stylesheet" href="./style/flexboxgrid.min.css" type="text/css">
     <link rel="stylesheet" href="./style/erstiweb.css" type="text/css">
 
+    <noscript>
+        <link rel="stylesheet" href="./style/erstiweb.noscript.css" type="text/css">
+    </noscript>
+
     <!-- scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -54,6 +58,13 @@
 </head>
 
 <body>
+
+    <noscript>
+        <div class="card" id='js-is-off'>
+            JavaScript ist nicht aktiviert.<br>
+            Diese Seite bietet ein besseres Erlebnis, wenn das nicht so wäre.
+        </div>
+    </noscript>
 
     <div class="card" id="controls">
         <input type="button" value="calendar" onclick="showCard('calendar')" />
