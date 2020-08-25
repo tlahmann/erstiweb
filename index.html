@@ -72,7 +72,9 @@
         <input type="button" value="team" onclick="showCard('team')" />
     </div>
 
-    <div class="card" id="calendar">
+    <!-- TODO: Add more Schema.org references -->
+
+    <div class="card" id="calendar" itemscope itemtype="http://schema.org/Schedule">
         <div class="row">
             <div class="col-xs-12
                         col-sm-8
@@ -98,7 +100,7 @@
         </div>
     </div>
 
-    <div class="card" id="news">
+    <div class="card" id="news" itemscope itemtype="http://schema.org/Schedule">
         <div class="row">
             <div class="col-xs-12
                         col-sm-8
@@ -112,14 +114,16 @@
         </div>
     </div>
 
-    <div class="card" id="team">
-        <div class="row">
-            <div class="col-xs-12
-                        col-sm-8
-                        col-md-6
-                        col-lg-4" style="background-color:blueviolet;">
-                <div class="box">Content</div>
-            </div>
+    <div class="card" id="team" itemscope itemtype="http://schema.org/Organization">
+        <div class="row" itemprop="director" itemscope itemtype="http://schema.org/Person">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="givenName">Max</div>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="familyName">Mustermann</div>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="jobTitle">Vorstand</div>
+        </div>
+        <div class="row" itemprop="founder" itemscope itemtype="http://schema.org/Person">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="givenName">Roger</div>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="familyName">Walk</div>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="jobTitle">Professor</div>
         </div>
         <div class="row">
             <input type="button" value="Reset" onclick="resetAll()" />
