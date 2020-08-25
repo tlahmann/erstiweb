@@ -1,4 +1,5 @@
 const positions = {
+    controls: { left: 0, top: 0 },
     calendar: { left: -100, top: 0 },
     news: { left: 100, top: 0 },
     team: { left: 0, top: 100 },
@@ -14,11 +15,33 @@ $(window).resize(() => {
 
 $(document).keypress((key) => {
     switch (key.keyCode) {
-        case 49: resetAll(); $("#calendar").css('transform', 'translate(0,0)'); break;
-        case 50: resetAll(); $("#news").css('transform', 'translate(0,0)'); break;
-        case 51: resetAll(); $("#team").css('transform', 'translate(0,0)'); break;
+        // press space
+        case 32: resetAll(); break;
+        // press [c] (lower- or upper-case)
+        case 67:
+        case 99:
+            showCard('calendar');
+            break;
+        // press [n] (lower- or upper-case)
+        case 78:
+        case 110:
+            showCard('news');
+            break;
+        // press [t] (lower- or upper-case)
+        case 84:
+        case 116:
+            showCard('team');
+            break;
         default: break;
     }
 });
 
-const resetAll = () => ["calendar", "news", "team"].forEach(name => $(`#${name}`).css('transform', `translate(${positions[name].left}vw,${positions[name].top}vh)`))
+const resetAll = () => ['controls', 'calendar', 'news', 'team']
+    .forEach(name => $(`#${name}`)
+        .css('transform', `translate(${positions[name].left}vw,${positions[name].top}vh)`))
+
+const showCard = (cardName) => {
+    resetAll();
+    $(`#controls`).css('transform', 'translate(0,-100vh)');
+    $(`#${cardName}`).css('transform', 'translate(0,0)');
+}

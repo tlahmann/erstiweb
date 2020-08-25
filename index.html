@@ -55,7 +55,11 @@
 
 <body>
 
-    <div style="position: absolute; top: 300px; left: 300px;color:whitesmoke;">Press [1], [2] or [3] to see changes</div>
+    <div class="card" id="controls">
+        <input type="button" value="calendar" onclick="showCard('calendar')" />
+        <input type="button" value="news" onclick="showCard('news')" />
+        <input type="button" value="team" onclick="showCard('team')" />
+    </div>
 
     <div class="card" id="calendar">
         <div class="row">
@@ -78,6 +82,9 @@
                 <div class="box">Design</div>
             </div>
         </div>
+        <div class="row">
+            <input type="button" value="Reset" onclick="resetAll()" />
+        </div>
     </div>
 
     <div class="card" id="news">
@@ -89,6 +96,9 @@
                 <div class="box">Content</div>
             </div>
         </div>
+        <div class="row">
+            <input type="button" value="Reset" onclick="resetAll()" />
+        </div>
     </div>
 
     <div class="card" id="team">
@@ -99,6 +109,9 @@
                         col-lg-4" style="background-color:blueviolet;">
                 <div class="box">Content</div>
             </div>
+        </div>
+        <div class="row">
+            <input type="button" value="Reset" onclick="resetAll()" />
         </div>
     </div>
 </body>
