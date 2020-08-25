@@ -48,12 +48,15 @@ body {
 
 #calendar {
     position: absolute;
+    transform: translate(-100vw, 0);
 }
 
 #news {
     position: absolute;
+    transform: translate(100vw, 0);
 }
 
 #team {
     position: absolute;
+    transform: translate(0, 100vh);
 }
