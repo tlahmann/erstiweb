@@ -5,6 +5,8 @@ body {
 }
 
 body {
+    position: relative;
+    overflow: hidden;
     background-color: #063971;
     background-image: repeating-linear-gradient(
             90deg,
@@ -41,4 +43,20 @@ body {
     width: 90vw;
     height: 90vh;
     padding: 5vh 5vw;
+    transition: transform 0.35s ease-in-out;
+}
+
+#calendar {
+    position: absolute;
+    transform: translate(-200px, -200px);
+}
+
+#news {
+    position: absolute;
+    transform: translate(600px, 100px);
+}
+
+#team {
+    position: absolute;
+    transform: translate(0px, 200px);
 }
