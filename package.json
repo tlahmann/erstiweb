@@ -22,7 +22,9 @@
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.4",
     "css-loader": "^4.2.2",
+    "file-loader": "^6.1.0",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.1",
     "source-map-loader": "^1.1.0",

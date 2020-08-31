@@ -1,5 +1,3 @@
-import '../style/erstiweb.scss';
-
 const positions: {
     [key: string]: { left: number, top: number },
 } = {

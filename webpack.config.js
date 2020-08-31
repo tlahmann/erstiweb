@@ -1,32 +1,51 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    mode: "development",
+    mode: 'development',
     watch: true,
-    entry: "./src/index.ts",
+    entry: [
+        './src/index.ts',
+        './src/scss/erstiweb.scss',
+        './src/scss/erstiweb.noscript.scss'
+    ],
     output: {
-        filename: "bundle.js",
-        path: __dirname + "/dist"
+        filename: 'bundle.js',
+        path: __dirname + '/dist'
     },
     resolve: {
-        extensions: [".ts", ".js", ".json"]
+        extensions: ['.ts', '.js', '.json', '.css']
     },
     module: {
         rules: [
             {
                 test: /\.s[ac]ss$/i,
+                exclude: /node_modules/,
                 use: [
-                    // Creates `style` nodes from JS strings
-                    'style-loader',
-                    // Translates CSS into CommonJS
-                    'css-loader',
-                    // Compiles Sass to CSS
-                    'sass-loader',
-                ],
+                    {
+                        loader: 'file-loader',
+                        options: { outputPath: 'css/', name: '[name].css' }
+                    },
+                    'sass-loader'
+                ]
             },
-            { test: /\.ts?$/, loader: "babel-loader" },
-            { test: /\.ts?$/, loader: "ts-loader" },
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            { test: /\.ts?$/, loader: 'babel-loader' },
+            { test: /\.ts?$/, loader: 'ts-loader' }
         ]
-    }
+    },
+    plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'src/index.html',
+                },
+                {
+                    //Wildcard is specified hence will copy only css files
+                    from: 'src/style/*.css', //Will resolve to RepoDir/src/css and all *.css files from this directory
+                    to: 'css/', //Copies all matched css files from above dest to dist/css
+                    flatten: true
+                }
+            ]
+        })
+    ]
 };
