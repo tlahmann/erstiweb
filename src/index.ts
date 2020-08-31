@@ -1,4 +1,8 @@
-const positions = {
+import '../style/erstiweb.scss';
+
+const positions: {
+    [key: string]: { left: number, top: number },
+} = {
     controls: { left: 0, top: 0 },
     calendar: { left: -100, top: 0 },
     news: { left: 100, top: 0 },
@@ -37,10 +41,10 @@ $(document).keypress((key) => {
 });
 
 const resetAll = () => ['controls', 'calendar', 'news', 'team']
-    .forEach(name => $(`#${name}`)
+    .forEach((name: string) => $(`#${name}`)
         .css('transform', `translate(${positions[name].left}vw,${positions[name].top}vh)`))
 
-const showCard = (cardName) => {
+const showCard = (cardName: string) => {
     resetAll();
     $(`#controls`).css('transform', 'translate(0,-100vh)');
     $(`#${cardName}`).css('transform', 'translate(0,0)');

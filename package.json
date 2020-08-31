@@ -4,6 +4,8 @@
   "description": "[Website (WIP)](https://tlahmann.github.io/erstiweb/)",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "dev": "npx webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +20,20 @@
   },
   "homepage": "https://github.com/tlahmann/erstiweb#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.1",
+    "source-map-loader": "^1.1.0",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.1",
+    "jquery": "^3.5.1"
   }
 }
