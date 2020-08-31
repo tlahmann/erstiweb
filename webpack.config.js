@@ -40,6 +40,9 @@ module.exports = {
                     from: 'src/index.html',
                 },
                 {
+                    from: 'favicon.ico',
+                },
+                {
                     //Wildcard is specified hence will copy only css files
                     from: 'src/style/*.css', //Will resolve to RepoDir/src/css and all *.css files from this directory
                     to: 'css/', //Copies all matched css files from above dest to dist/css
