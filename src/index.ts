@@ -8,11 +8,11 @@ const positions: {
 };
 
 $(document).ready(() => {
-    resetAll();
+    // resetAll();
 });
 
 $(window).resize(() => {
-    resetAll();
+    // resetAll();
 });
 
 $(document).keypress((key) => {

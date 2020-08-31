@@ -45,7 +45,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script defer src="script/erstiweb.js" type="text/javascript"></script>
+    <script defer src="bundle.js" type="text/javascript"></script>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -59,75 +59,77 @@
 
 <body>
 
-    <noscript>
-        <div class="card" id='js-is-off'>
-            JavaScript ist nicht aktiviert.<br>
-            Diese Seite bietet ein besseres Erlebnis, wenn das nicht so wäre.
+    <div id="root">
+        <noscript>
+            <div class="card" id='js-is-off'>
+                JavaScript ist nicht aktiviert.<br>
+                Diese Seite bietet ein besseres Erlebnis, wenn das nicht so wäre.
+            </div>
+        </noscript>
+
+        <!-- TODO: Add more ARIA landmarks -->
+        <div class="card" id="controls" role="navigation">
+            <input type="button" value="calendar" onclick="showCard('calendar')" />
+            <input type="button" value="news" onclick="showCard('news')" />
+            <input type="button" value="team" onclick="showCard('team')" />
         </div>
-    </noscript>
 
-    <!-- TODO: Add more ARIA landmarks -->
-    <div class="card" id="controls" role="navigation">
-        <input type="button" value="calendar" onclick="showCard('calendar')" />
-        <input type="button" value="news" onclick="showCard('news')" />
-        <input type="button" value="team" onclick="showCard('team')" />
-    </div>
+        <!-- TODO: Add more Schema.org references -->
 
-    <!-- TODO: Add more Schema.org references -->
-
-    <div class="card" id="calendar" itemscope itemtype="http://schema.org/Schedule">
-        <div class="row">
-            <div class="col-xs-12
+        <div class="card" id="calendar" itemscope itemtype="http://schema.org/Schedule">
+            <div class="row">
+                <div class="col-xs-12
                         col-sm-8
                         col-md-6
                         col-lg-4" style="background-color:aqua;">
-                <div class="box">Responsive</div>
-            </div>
-            <div class="col-xs-12
+                    <div class="box">Responsive</div>
+                </div>
+                <div class="col-xs-12
                         col-sm-8
                         col-md-6
                         col-lg-4" style="background-color:red;">
-                <div class="box">Web</div>
-            </div>
-            <div class="col-xs-12
+                    <div class="box">Web</div>
+                </div>
+                <div class="col-xs-12
                         col-sm-8
                         col-md-6
                         col-lg-4" style="background-color:green;">
-                <div class="box">Design</div>
+                    <div class="box">Design</div>
+                </div>
+            </div>
+            <div class="row">
+                <input type="button" value="Reset" onclick="resetAll()" />
             </div>
         </div>
-        <div class="row">
-            <input type="button" value="Reset" onclick="resetAll()" />
-        </div>
-    </div>
 
-    <div class="card" id="news" itemscope itemtype="http://schema.org/Schedule">
-        <div class="row">
-            <div class="col-xs-12
+        <div class="card" id="news" itemscope itemtype="http://schema.org/Schedule">
+            <div class="row">
+                <div class="col-xs-12
                         col-sm-8
                         col-md-6
                         col-lg-4" style="background-color:yellow;">
-                <div class="box">Content</div>
+                    <div class="box">Content</div>
+                </div>
+            </div>
+            <div class="row">
+                <input type="button" value="Reset" onclick="resetAll()" />
             </div>
         </div>
-        <div class="row">
-            <input type="button" value="Reset" onclick="resetAll()" />
-        </div>
-    </div>
 
-    <div class="card" id="team" itemscope itemtype="http://schema.org/Organization">
-        <div class="row" itemprop="director" itemscope itemtype="http://schema.org/Person">
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="givenName">Max</div>
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="familyName">Mustermann</div>
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="jobTitle">Vorstand</div>
-        </div>
-        <div class="row" itemprop="founder" itemscope itemtype="http://schema.org/Person">
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="givenName">Roger</div>
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="familyName">Walk</div>
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="jobTitle">Professor</div>
-        </div>
-        <div class="row">
-            <input type="button" value="Reset" onclick="resetAll()" />
+        <div class="card" id="team" itemscope itemtype="http://schema.org/Organization">
+            <div class="row" itemprop="director" itemscope itemtype="http://schema.org/Person">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="givenName">Max</div>
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="familyName">Mustermann</div>
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="jobTitle">Vorstand</div>
+            </div>
+            <div class="row" itemprop="founder" itemscope itemtype="http://schema.org/Person">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="givenName">Roger</div>
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="familyName">Walk</div>
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2" itemprop="jobTitle">Professor</div>
+            </div>
+            <div class="row">
+                <input type="button" value="Reset" onclick="resetAll()" />
+            </div>
         </div>
     </div>
 </body>

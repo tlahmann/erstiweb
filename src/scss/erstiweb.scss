@@ -1,14 +1,11 @@
-html,
 body {
-    width: 100vw;
+    margin: 0;
     height: 100vh;
-}
-
-body {
-    position: relative;
+    width: 100vw;
     top: 0;
-    left: 0;
+    position: absolute;
     overflow: hidden;
+
     background-color: #063971;
     background-image: repeating-linear-gradient(
             90deg,
@@ -39,28 +36,34 @@ body {
             transparent 10mm
         );
     background-size: 10mm 10mm;
+
+    > #root {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
 }
 
-.card {
-    width: 90vw;
-    height: 90vh;
-    padding: 5vh 5vw;
-    top: 0;
-    left: 0;
-    transition: transform 0.35s ease-in-out;
-}
+// .card {
+//     width: 90vw;
+//     height: 90vh;
+//     padding: 5vh 5vw;
+//     top: 0;
+//     left: 0;
+//     transition: transform 0.35s ease-in-out;
+// }
 
-#calendar {
-    position: absolute;
-    transform: translate(-100vw, 0);
-}
+// #calendar {
+//     position: absolute;
+//     transform: translate(-100vw, 0);
+// }
 
-#news {
-    position: absolute;
-    transform: translate(100vw, 0);
-}
+// #news {
+//     position: absolute;
+//     transform: translate(100vw, 0);
+// }
 
-#team {
-    position: absolute;
-    transform: translate(0, 100vh);
-}
+// #team {
+//     position: absolute;
+//     transform: translate(0, 100vh);
+// }
