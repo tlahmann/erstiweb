@@ -77,6 +77,10 @@ body {
     height: calc(100vh - 8vh - 1px);
     transition: transform 0.35s ease-in-out;
     overflow: hidden;
+
+    > div {
+        transition: transform 0.35s ease-in-out;
+    }
 }
 
 #controls {
@@ -99,15 +103,23 @@ body {
 
 #calendar {
     position: absolute;
-    transform: translate(-100vw, 0);
+    // transform: translate(-100vw, 0);
 }
 
 #news {
     position: absolute;
-    transform: translate(100vw, 0);
+    // transform: translate(100vw, 0);
 }
 
 #team {
     position: absolute;
-    transform: translate(0, 100vh);
+    // transform: translate(0, 100vh);
 }
+
+// #calendar,
+// #news,
+// #team {
+//     div {
+//         transition: transform 0.35s ease-in-out;
+//     }
+// }

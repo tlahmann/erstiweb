@@ -1,9 +1,18 @@
 #js-is-off {
-    color: red;
+    color: rgb(170, 0, 0);
 }
 
 .card {
     height: auto;
+    margin: 0 auto 2rem auto;
+}
+
+body > #root > #switch-container {
+    display: block;
+
+    #controls {
+        display: none;
+    }
 }
 
 #calendar,

@@ -40,12 +40,15 @@ $(document).keypress((key) => {
 const resetAll = () => {
     $(`#controls`).css('transform', 'scale(1)');
     ['calendar', 'news', 'team']
-        .forEach(name => $(`#${name}`)
-            .css('transform', `scale(0)`));
+        .forEach(name => {
+            $(`#${name}`).css('display', 'none')
+            $(`#${name}>div`).css('transform', 'scale(0)');
+        });
 }
 
 const showCard = (cardName) => {
     resetAll();
     $(`#controls`).css('transform', 'scale(0)');
-    $(`#${cardName}`).css('transform', 'scale(1)');
+    $(`#${cardName}`).css('display', 'block');
+    $(`#${cardName}>div`).css('transform', 'scale(1)');
 }
