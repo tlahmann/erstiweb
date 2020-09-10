@@ -5,14 +5,9 @@ module.exports = {
     mode: 'development',
     watch: true,
     entry: [
-        './src/index.ts',
         './src/scss/erstiweb.scss',
         './src/scss/erstiweb.noscript.scss'
     ],
-    output: {
-        filename: 'bundle.js',
-        path: __dirname + '/dist'
-    },
     resolve: {
         extensions: ['.ts', '.js', '.json', '.css']
     },
@@ -28,9 +23,7 @@ module.exports = {
                     },
                     'sass-loader'
                 ]
-            },
-            { test: /\.ts?$/, loader: 'babel-loader' },
-            { test: /\.ts?$/, loader: 'ts-loader' }
+            }
         ]
     },
     plugins: [
@@ -38,6 +31,9 @@ module.exports = {
             patterns: [
                 {
                     from: 'src/index.html',
+                },
+                {
+                    from: 'src/index.js',
                 },
                 {
                     from: 'favicon.ico',

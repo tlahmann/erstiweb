@@ -1,6 +1,4 @@
-const positions: {
-    [key: string]: { left: number, top: number },
-} = {
+const positions = {
     controls: { left: 0, top: 0 },
     calendar: { left: -100, top: 0 },
     news: { left: 100, top: 0 },
@@ -8,11 +6,11 @@ const positions: {
 };
 
 $(document).ready(() => {
-    // resetAll();
+    resetAll();
 });
 
 $(window).resize(() => {
-    // resetAll();
+    resetAll();
 });
 
 $(document).keypress((key) => {
@@ -38,12 +36,16 @@ $(document).keypress((key) => {
     }
 });
 
-const resetAll = () => ['controls', 'calendar', 'news', 'team']
-    .forEach((name: string) => $(`#${name}`)
-        .css('transform', `translate(${positions[name].left}vw,${positions[name].top}vh)`))
 
-const showCard = (cardName: string) => {
+const resetAll = () => {
+    $(`#controls`).css('transform', 'scale(1)');
+    ['calendar', 'news', 'team']
+        .forEach(name => $(`#${name}`)
+            .css('transform', `scale(0)`));
+}
+
+const showCard = (cardName) => {
     resetAll();
-    $(`#controls`).css('transform', 'translate(0,-100vh)');
-    $(`#${cardName}`).css('transform', 'translate(0,0)');
+    $(`#controls`).css('transform', 'scale(0)');
+    $(`#${cardName}`).css('transform', 'scale(1)');
 }

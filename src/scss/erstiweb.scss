@@ -41,29 +41,73 @@ body {
         position: absolute;
         width: 100vw;
         height: 100vh;
+
+        > #switch-container {
+            height: 100%;
+            width: 100%;
+            overflow: visible !important;
+
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            > #controls {
+                box-sizing: border-box;
+                width: calc(100% - 8vw - 1px);
+                height: calc(100% - 8vw - 1px);
+                // overflow: auto;
+                // transition: all 0.4s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 0;
+                &::before {
+                    transition: all 0.4s;
+                    content: "";
+                }
+            }
+        }
     }
 }
 
-// .card {
-//     width: 90vw;
-//     height: 90vh;
-//     padding: 5vh 5vw;
-//     top: 0;
-//     left: 0;
-//     transition: transform 0.35s ease-in-out;
-// }
+.card {
+    width: calc(100vw - 8vw - 1px);
+    height: calc(100vh - 8vh - 1px);
+    transition: transform 0.35s ease-in-out;
+    overflow: hidden;
+}
 
-// #calendar {
-//     position: absolute;
-//     transform: translate(-100vw, 0);
-// }
+#controls {
+    position: relative;
+    transform: translate(-100vw, 0);
 
-// #news {
-//     position: absolute;
-//     transform: translate(100vw, 0);
-// }
+    #calendar-button {
+        position: absolute;
+        transform: translate(-20vw, 0);
+    }
+    #news-button {
+        position: absolute;
+        transform: translate(-10vw, 20vh);
+    }
+    #team-button {
+        position: absolute;
+        transform: translate(10vw, -30vh);
+    }
+}
 
-// #team {
-//     position: absolute;
-//     transform: translate(0, 100vh);
-// }
+#calendar {
+    position: absolute;
+    transform: translate(-100vw, 0);
+}
+
+#news {
+    position: absolute;
+    transform: translate(100vw, 0);
+}
+
+#team {
+    position: absolute;
+    transform: translate(0, 100vh);
+}
