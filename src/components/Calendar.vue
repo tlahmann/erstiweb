@@ -2,8 +2,21 @@
   <div id="calendar" v-bind:class="{ focused: focused }">
     <Titlebar focused="focused" @update-focus="update" />
     <div id="calendar-content" v-on:click="this.focused = true">
-      This is the {{ focused ? "focused" : "unfocused" }} calendar,
-      {{ message }}
+      <div id="side">
+        <input type="checkbox" name="fh-common" value="bla" />
+        <label for="fh-common"> FH Dortmund Allgemein</label><br />
+        <input type="checkbox" name="communicationDesign" value="foo" />
+        <label for="communicationDesign"> Kommunikationsdesign</label><br />
+        <input type="checkbox" name="film-sound" value="bar" />
+        <label for="film-sound"> Film & Sound</label><br />
+        <input type="checkbox" name="object-room" value="this" />
+        <label for="object-room"> Objekt- & Raumdesign</label><br />
+        <input type="checkbox" name="fimography" value="that" />
+        <label for="fimography"> Filmografie</label><br />
+      </div>
+      <div id="weeks">
+        This is the calendar content
+      </div>
     </div>
   </div>
 </template>
@@ -32,7 +45,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #calendar {
-  background-color: #ffffff;
+  background-color: #e8e8e8;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
   width: 1280px;
@@ -42,7 +55,21 @@ export default defineComponent({
   #calendar-content {
     width: 100%;
     height: calc(100% - 25pt);
-    cursor: pointer;
+    display: flex;
+    #side {
+      background-color: #e8e8e8;
+      flex: 1 1 20%;
+      height: calc(100% - 40pt);
+      padding: 20pt 17pt;
+      input[type="checkbox"] {
+        margin: 6.5px 3px;
+      }
+    }
+    #weeks {
+      background-color: #5c6bc0;
+      flex: 1 1 80%;
+      height: 100%;
+    }
   }
 }
 </style>
