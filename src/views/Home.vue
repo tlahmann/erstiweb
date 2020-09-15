@@ -69,14 +69,20 @@ $sizeDuration: 0.95s;
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  z-index: auto;
+
+  -webkit-transition: z-index 3s, transform $sizeDuration, top $positionDuration,
+    left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: z-index 3s, transform $sizeDuration, top $positionDuration,
+    left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition-delay: 0s, 0s, $positionDuration, $positionDuration;
 
   &.focused {
     top: 50vh;
     left: 50vw;
     z-index: 999;
     transform: translate(-50%, -50%) scale(1);
+    cursor: default;
 
     -webkit-transition: top $positionDuration, left $positionDuration,
       transform $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
@@ -109,9 +115,9 @@ $sizeDuration: 0.95s;
   bottom: 0;
   left: 0;
   background-color: #fefefe;
-  -webkit-transition: visibility 0s,
+  -webkit-transition: visibility $positionDuration,
     opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: visibility 0s,
+  transition: visibility $positionDuration,
     opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 #calendar,
@@ -120,10 +126,17 @@ $sizeDuration: 0.95s;
   -webkit-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
+
   transform: translate(-50%, -50%) scale(0.5);
+  overflow: hidden;
+  cursor: pointer;
+}
+#tutors,
+#rooms {
+  text-align: center;
 }
 #calendar {
-  top: 20vh;
+  top: 22vh;
   left: 10vw;
 }
 #contact {
@@ -131,7 +144,7 @@ $sizeDuration: 0.95s;
   left: 95vw;
 }
 #equipment {
-  top: 10vh;
+  top: 13vh;
   left: 50vw;
 }
 #info {
