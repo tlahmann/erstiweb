@@ -37,14 +37,27 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$positionDuration: 0.85s;
+$sizeDuration: 0.95s;
+
 .notepad {
   width: 125pt;
   height: 125pt;
   border-top: 3pt solid;
   position: absolute;
+
+  -webkit-transition: z-index 3s, transform $sizeDuration, top $positionDuration,
+    left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: z-index 3s, transform $sizeDuration, top $positionDuration,
+    left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition-delay: 0s, 0s, $positionDuration, $positionDuration;
 }
 .content {
   width: 125pt;
   height: calc(100% - 3pt);
+
+  -webkit-box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);
 }
 </style>

@@ -67,14 +67,9 @@ img {
   max-width: 20%;
   height: auto;
   position: absolute;
-  // &:nth-of-type(1) {
-  //   transform: translate(20px, -30px);
-  // }
-  // &:nth-of-type(2) {
-  //   transform: translate(20px, -30px);
-  // }
-  // &:nth-of-type(3) {
-  //   transform: translate(20px, -30px);
-  // }
+
+  -webkit-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
 }
 </style>
