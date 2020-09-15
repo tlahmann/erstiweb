@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    
-    <!-- Basic Page Needs
+
+<head>
+
+  <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="UTF-8">
-    <title>Erstiweb - Das digitale Erstibuch der FH Dortmund</title>
-    <meta name="author" content="Fachschaft der FH Dortmund">
-    <meta name="author" content="Tobias Lahmann">
-    <meta name="description" content="Ersiheft der Faschhochschule Dortmund in digitaler Form">
+  <meta charset="UTF-8">
+  <title>Erstiweb - Das digitale Erstibuch der FH Dortmund</title>
+  <meta name="author" content="Fachschaft der FH Dortmund">
+  <meta name="author" content="Tobias Lahmann">
+  <meta name="description" content="Ersiheft der Faschhochschule Dortmund in digitaler Form">
 
-    <!-- Environment Integration
+  <!-- Environment Integration
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="studium,einstieg,anfang,tipps,hilfe,erstsemester">
-    <meta name="msapplication-TileColor" content="#063971" />
-    <meta property="og:title" content="FH Dortmund Erstiweb" />
-    <meta property="og:image" content="<%= BASE_URL %>favicon.png" />
-    <meta property="og:site_name" content="FH Dortmund Erstiweb" />
-    <meta property="og:description" content="Digitales erstsemesterheft der FH Dortmund." />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:locale:alternate" content="en_GB" />
-    <link rel="apple-touch-icon" href="<%= BASE_URL %>favicon.png">
-    <!-- TODO: add different size apple icons -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="keywords" content="studium,einstieg,anfang,tipps,hilfe,erstsemester">
+  <meta name="msapplication-TileColor" content="#063971" />
+  <meta property="og:title" content="FH Dortmund Erstiweb" />
+  <meta property="og:image" content="<%= BASE_URL %>favicon.png" />
+  <meta property="og:site_name" content="FH Dortmund Erstiweb" />
+  <meta property="og:description" content="Digitales erstsemesterheft der FH Dortmund." />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <link rel="apple-touch-icon" href="<%= BASE_URL %>favicon.png">
+  <!-- TODO: add different size apple icons -->
 
-    <link rel="author" href="humans.txt" />
+  <link rel="author" href="humans.txt" />
 
-    <!-- Mobile Specific Metas
+  <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!-- Favicon
+  <!-- Styling
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico" type="image/x-icon">
+  <noscript>
+    <link rel="stylesheet" href="./erstiweb.noscript.css" type="text/css">
+  </noscript>
 
-    <!--
+  <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico" type="image/x-icon">
+
+  <!--
         4d 61 64 65 20 77 69 74 68 20 6c 6f 76 65 20
         61 6e 64 20 63 6f 66 66 65 65 2e
     -->
 
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+</head>
+
+<body>
+  <noscript>
+    <div class="card" id='js-is-off'>
+      <h3>JavaScript ist nicht aktiviert.</h3>
+      <p>Erstiweb - Das digitale Erstibuch der FH Dortmund funktioniert nicht ohne.</p>
+      <img src="robot.png" />
+    </div>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
