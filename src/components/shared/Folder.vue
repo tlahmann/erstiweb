@@ -42,6 +42,7 @@ export default defineComponent({
   height: 62pt;
   position: absolute;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .front {
   position: absolute;
