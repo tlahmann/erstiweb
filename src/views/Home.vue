@@ -8,16 +8,19 @@
   <Rooms />
   <Tutors />
   <div>
-    <Folder title="Ordner" positionX="75" positionY="50" />
+    <Folder title="Ordner" positionX="79" positionY="52" />
     <Folder title="Ordner" positionX="73" positionY="46" />
-    <Folder title="Ordner" positionX="72" positionY="51" />
+    <Folder title="Ordner" positionX="70" positionY="57" />
 
-    <Folder title="Ordner" positionX="65" positionY="28" />
-    <Folder title="Ordner" positionX="63" positionY="29" />
-    <Folder title="Ordner" positionX="64" positionY="31" />
+    <Folder title="tmp" positionX="66" positionY="25" />
+    <Folder title="Final" positionX="60" positionY="28" />
+    <Folder title="Final_new" positionX="64" positionY="31" />
 
-    <Folder title="Ordner" positionX="40" positionY="83" />
-    <Folder title="Ordner" positionX="45" positionY="90" />
+    <Folder title="Downloads" positionX="40" positionY="83" />
+    <Folder title="Ordner" positionX="43" positionY="88" />
+
+    <Folder title="Musik" positionX="20" positionY="68" />
+    <Folder title="Test" positionX="12" positionY="70" />
   </div>
   <div class="overlay"></div>
 </template>
