@@ -7,6 +7,7 @@
       v-bind:key="idx"
       v-bind:style="offset(idx)"
       v-on:click="this.focused = !this.focused"
+      :content="idx"
     />
   </div>
 </template>
@@ -26,8 +27,8 @@ export default defineComponent({
   data: () => ({
     focused: false,
     primeAngle: 137,
-    primeRadiusX: 127,
-    primeRadiusY: 17,
+    primeRadiusX: 67,
+    primeRadiusY: 31,
     notes: [
       { content: "bla", pos: { x: "0px", y: "0px" } },
       { content: "bla", pos: { x: "0px", y: "0px" } },
@@ -38,7 +39,7 @@ export default defineComponent({
     ]
   }),
   created: function() {
-    this.notes = this.notes.map(elem => ({
+    this.notes = this.notes.map((elem) => ({
       ...elem,
       pos: this.generatePosition()
     }));
@@ -54,12 +55,12 @@ export default defineComponent({
       let y = "";
       if (!this.focused) {
         x =
-          Math.cos((this.primeAngle * index) / 180) *
+          Math.cos(this.primeAngle * index * (Math.PI / 180)) *
             this.primeRadiusX *
             (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
           "%";
         y =
-          Math.sin((this.primeAngle * index) / 180) *
+          Math.sin(this.primeAngle * index * (Math.PI / 180)) *
             this.primeRadiusY *
             (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
           "%";
