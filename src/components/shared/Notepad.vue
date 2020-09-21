@@ -8,10 +8,11 @@
     <div
       class="content"
       v-bind:style="{
-        'background-color': color
+        'background-color': color,
+        color: color
       }"
     >
-      {{ title }}
+      {{ content }}
     </div>
   </div>
 </template>
@@ -30,7 +31,7 @@ export default defineComponent({
       type: String,
       required: true
     },
-    title: String
+    content: String
   }
 });
 </script>
@@ -53,8 +54,10 @@ $sizeDuration: 0.95s;
   transition-delay: 0s, 0s, $positionDuration, $positionDuration;
 }
 .content {
-  width: 125pt;
-  height: calc(100% - 3pt);
+  width: calc(125pt - 2em);
+  height: calc(100% - 3pt - 2em);
+  padding: 1em;
+  transition: color 0.95s 0s;
 
   -webkit-box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);

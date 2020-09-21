@@ -134,9 +134,8 @@ $sizeDuration: 0.95s;
 #equipment,
 #exibitions,
 #inspirations {
-  -webkit-transition: top 0.95s, left 0.95s, transform 0.95s;
-  transition: top 0.95s, left 0.95s, transform 0.95s;
-  transition-delay: 0s, 0s, 0s;
+  -webkit-transition: all 0.95s 0s;
+  transition: all 0.95s 0s;
   z-index: initial;
 
   .notepad {
@@ -149,13 +148,18 @@ $sizeDuration: 0.95s;
     transform: translate(0, 0);
     z-index: 999;
 
-    -webkit-transition: top 0.95s, left 0.95s, transform 0.95s;
-    transition: top 0.95s, left 0.95s, transform 0.95s;
-    transition-delay: 0s, 0s, 0s;
+    -webkit-transition: all 0.95s 0s;
+    transition: all 0.95s 0s;
+
+    .notepad > .content {
+      color: initial !important;
+      -webkit-transition: color 0.95s 0s;
+      transition: color 0.95s 0s;
+    }
 
     ~ .overlay {
       visibility: visible;
-      opacity: 0.01;
+      opacity: 0.25;
       position: absolute;
       top: 0;
       right: 0;
@@ -183,7 +187,7 @@ $sizeDuration: 0.95s;
 }
 #equipment {
   top: 13vh;
-  left: 50vw;
+  left: 45vw;
 }
 #info {
   top: 25vh;
