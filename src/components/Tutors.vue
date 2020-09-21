@@ -63,7 +63,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 img {
-  max-width: 10vw;
+  max-width: 8vw;
   height: auto;
   position: absolute;
 
