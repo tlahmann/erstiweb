@@ -4,7 +4,7 @@
       color="#A6FF9A"
       highlightColor="#40D608"
       v-for="(note, idx) in notes"
-      v-bind:key="note"
+      v-bind:key="idx"
       v-bind:style="offset(idx)"
       v-on:click="this.focused = !this.focused"
     />
@@ -28,9 +28,27 @@ export default defineComponent({
     primeAngle: 137,
     primeRadiusX: 127,
     primeRadiusY: 17,
-    notes: ["bla", "bla", "bla", "bla"]
+    notes: [
+      { content: "bla", pos: { x: "0px", y: "0px" } },
+      { content: "bla", pos: { x: "0px", y: "0px" } },
+      { content: "bla", pos: { x: "0px", y: "0px" } },
+      { content: "bla", pos: { x: "0px", y: "0px" } },
+      { content: "bla", pos: { x: "0px", y: "0px" } },
+      { content: "bla", pos: { x: "0px", y: "0px" } }
+    ]
   }),
+  created: function() {
+    this.notes = this.notes.map(elem => ({
+      ...elem,
+      pos: this.generatePosition()
+    }));
+  },
   methods: {
+    generatePosition(): { x: string; y: string } {
+      const x = Math.floor(Math.random() * 80) + "vw"; // (index / this.notes.length) * (100 / 4);
+      const y = Math.floor(Math.random() * 80) + "vh";
+      return { x, y };
+    },
     offset(index: number): { "z-index": number; transform: string } {
       let x = "";
       let y = "";
@@ -46,8 +64,8 @@ export default defineComponent({
             (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
           "%";
       } else {
-        x = Math.floor(Math.random() * 80) + "vw"; // (index / this.notes.length) * (100 / 4);
-        y = Math.floor(Math.random() * 80) + "vh";
+        x = this.notes[index].pos.x;
+        y = this.notes[index].pos.y;
       }
 
       return {
