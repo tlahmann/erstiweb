@@ -62,12 +62,8 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#tutors {
-  min-width: 550pt;
-  min-height: 330pt;
-}
 img {
-  max-width: 17%;
+  max-width: 10vw;
   height: auto;
   position: absolute;
 

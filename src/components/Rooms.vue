@@ -49,12 +49,8 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#rooms {
-  min-width: 550pt;
-  min-height: 330pt;
-}
 img {
-  max-width: 40%;
+  max-width: 17vw;
   height: auto;
   position: absolute;
   // &:nth-of-type(1) {
