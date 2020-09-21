@@ -45,8 +45,8 @@ export default defineComponent({
   },
   methods: {
     generatePosition(): { x: string; y: string } {
-      const x = Math.floor(Math.random() * 80) + "vw"; // (index / this.notes.length) * (100 / 4);
-      const y = Math.floor(Math.random() * 80) + "vh";
+      const x = Math.floor(Math.random() * 60) + 20 + "vw";
+      const y = Math.floor(Math.random() * 60) + 20 + "vh";
       return { x, y };
     },
     offset(index: number): { "z-index": number; transform: string } {
