@@ -1,0 +1,30 @@
+[
+    {
+        "content": "Blumen",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    },
+    {
+        "content": "Berge",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    },
+    {
+        "content": "Tiere",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    },
+    {
+        "content": "Weltraum",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    }
+]

@@ -15,6 +15,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Notepad from "@/components/shared/Notepad.vue"; // @ is an alias to /src
+import axios from "axios";
 
 export default defineComponent({
   name: "Exibitions",
@@ -29,20 +30,18 @@ export default defineComponent({
     primeAngle: 137,
     primeRadiusX: 67,
     primeRadiusY: 31,
-    notes: [
-      { content: "bla", pos: { x: "0px", y: "0px" } },
-      { content: "bla", pos: { x: "0px", y: "0px" } },
-      { content: "bla", pos: { x: "0px", y: "0px" } },
-      { content: "bla", pos: { x: "0px", y: "0px" } },
-      { content: "bla", pos: { x: "0px", y: "0px" } },
-      { content: "bla", pos: { x: "0px", y: "0px" } }
-    ]
+    notes: [{ pos: { x: "", y: "" } }]
   }),
   created: function() {
-    this.notes = this.notes.map(elem => ({
-      ...elem,
-      pos: this.generatePosition()
-    }));
+    axios
+      .get("./_content/exibitions.json")
+      .then((response) => {
+        this.notes = response.data?.notes.map((elem: {}) => ({
+          ...elem,
+          pos: this.generatePosition()
+        }));
+      })
+      .catch((error) => console.error(error));
   },
   methods: {
     generatePosition(): { x: string; y: string } {
