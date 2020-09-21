@@ -19,8 +19,8 @@ export default defineComponent({
   name: "Tutors",
   data: () => ({
     primeAngle: 137,
-    primeRadiusX: 53,
-    primeRadiusY: 43,
+    primeRadiusX: 43,
+    primeRadiusY: 37,
     tutors: [
       require("@/assets/Tutoren/Anna_sw.jpg"),
       require("@/assets/Tutoren/dilara_sw.jpg"),
@@ -38,6 +38,9 @@ export default defineComponent({
       require("@/assets/Tutoren/Tim3_sw.jpg")
     ]
   }),
+  created: function() {
+    this.tutors.sort(() => Math.random() - 0.5);
+  },
   methods: {
     offset(index: number) {
       const x =
@@ -64,7 +67,7 @@ export default defineComponent({
   min-height: 330pt;
 }
 img {
-  max-width: 20%;
+  max-width: 17%;
   height: auto;
   position: absolute;
 

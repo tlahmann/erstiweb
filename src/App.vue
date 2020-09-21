@@ -2,6 +2,7 @@
   <nav>
     Hier steht die aktuelle route
   </nav>
+  <!-- <div id="blue"></div> -->
   <router-view />
 </template>
 
@@ -28,8 +29,9 @@ body,
   // text-align: center;
   color: #2c3e50;
   background-color: #9b9b9b;
-  // filter: sepia(100%) hue-rotate(185deg) brightness(85%) contrast(90%)
-  // saturate(200%);
+  // filter: greyscale(100%) hue-rotate(180deg) brightness(100%) contrast(90%)
+  //   saturate(200%);
+  // filter: sepia(100%) hue-rotate(190deg) brightness(80%) saturate(450%);
 }
 
 nav {
