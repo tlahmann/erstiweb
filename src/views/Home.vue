@@ -79,10 +79,12 @@ $sizeDuration: 0.95s;
     cursor: default;
 
     -webkit-transition: top $positionDuration, left $positionDuration,
-      transform $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+      transform $sizeDuration,
+      z-index $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
     transition: top $positionDuration, left $positionDuration,
-      transform $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-    transition-delay: 0s, 0s, $positionDuration;
+      transform $sizeDuration,
+      z-index $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-delay: 0s, 0s, $positionDuration, $positionDuration;
 
     ~ .overlay {
       visibility: visible;
@@ -92,7 +94,7 @@ $sizeDuration: 0.95s;
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: 99;
+      z-index: 25;
       -webkit-transition: visibility 0s,
         opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
       transition: visibility 0s,
@@ -109,9 +111,10 @@ $sizeDuration: 0.95s;
   bottom: 0;
   left: 0;
   background-color: #fefefe;
-  -webkit-transition: visibility $positionDuration,
+  z-index: initial;
+  -webkit-transition: z-index 0.5s, visibility $positionDuration,
     opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: visibility $positionDuration,
+  transition: z-index 0.5s, visibility $positionDuration,
     opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 #calendar,
