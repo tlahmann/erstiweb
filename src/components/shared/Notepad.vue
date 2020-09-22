@@ -41,9 +41,12 @@ export default defineComponent({
 $positionDuration: 0.85s;
 $sizeDuration: 0.95s;
 
+$width: 109px;
+$height: 111px;
+
 .notepad {
-  width: 125pt;
-  height: 125pt;
+  width: $width;
+  height: $height;
   border-top: 3pt solid;
   position: absolute;
 
@@ -54,7 +57,7 @@ $sizeDuration: 0.95s;
   transition-delay: 0s, 0s, $positionDuration, $positionDuration;
 }
 .content {
-  width: calc(125pt - 2em);
+  width: calc(#{$width} - 2em);
   height: calc(100% - 3pt - 2em);
   padding: 1em;
   transition: color 0.95s 0s;

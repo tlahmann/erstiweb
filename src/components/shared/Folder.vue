@@ -38,20 +38,20 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .folder {
-  width: 80pt;
-  height: 62pt;
+  width: 80px;
+  height: 62px;
   position: absolute;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 .front {
   position: absolute;
-  top: 10pt;
+  top: 10px;
   width: calc(100% - 0pt);
   height: calc(100% - 12pt);
   z-index: 20;
   border-top: 1pt solid #a9e8fc;
-  border-radius: 7pt;
+  border-radius: 7px;
   background-color: #75cdf9;
 }
 .back {
@@ -59,22 +59,22 @@ export default defineComponent({
   width: 100%;
   height: calc(100% - 2pt);
   z-index: 10;
-  border-radius: 7pt;
+  border-radius: 7px;
 
-  -webkit-box-shadow: 0px 7pt 7pt 0px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0px 7pt 7pt 0px rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 7pt 7pt 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
 
   .left,
   .right {
-    // border-radius: 7pt;
+    // border-radius: 5px;
     background-color: #96ddfe;
   }
   .left {
     position: absolute;
     width: 40%;
     height: calc(100% - 2pt);
-    border-radius: 7pt 7pt 0 7pt;
+    border-radius: 5px 5px 0 5px;
     border-top-right-radius: 10pt 15pt;
   }
   .right {
@@ -83,7 +83,7 @@ export default defineComponent({
     height: calc(100% - 8pt);
     left: 20%;
     top: 6pt;
-    border-radius: 0 7pt 7pt 0;
+    border-radius: 0 5px 5px 0;
   }
 }
 .title {

@@ -64,6 +64,7 @@ export default defineComponent({
 <style scoped lang="scss">
 img {
   max-width: 8vw;
+  min-width: 120px;
   height: auto;
   position: absolute;
 
