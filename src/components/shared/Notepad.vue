@@ -12,7 +12,8 @@
         color: color
       }"
     >
-      {{ content }}
+      <h3>{{ content }}</h3>
+      <small>Hier weiterlesen&nbsp;&rarr;</small>
     </div>
   </div>
 </template>
@@ -41,12 +42,12 @@ export default defineComponent({
 $positionDuration: 0.85s;
 $sizeDuration: 0.95s;
 
-$width: 109px;
+$width: 185px;
 $height: 111px;
 
 .notepad {
-  width: $width;
-  height: $height;
+  min-width: $width;
+  min-height: $height;
   border-top: 3pt solid;
   position: absolute;
 
@@ -57,7 +58,7 @@ $height: 111px;
   transition-delay: 0s, 0s, $positionDuration, $positionDuration;
 }
 .content {
-  width: calc(#{$width} - 2em);
+  width: calc(100% - 2em);
   height: calc(100% - 3pt - 2em);
   padding: 1em;
   transition: color 0.95s 0s;

@@ -42,7 +42,7 @@ export default defineComponent({
       this.$options.timer = window.setTimeout(this.updateDateTime, SECOND);
     },
     getZeroPad(n: number): string {
-      return (parseInt(n, 10) >= 10 ? "" : "0") + n;
+      return (parseInt((n as unknown) as string, 10) >= 10 ? "" : "0") + n;
     }
   }
 });
@@ -52,6 +52,10 @@ export default defineComponent({
 @font-face {
   font-family: "muli";
   src: local("muli"), url(./assets/Muli-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "muli-black";
+  src: local("muli-black"), url(./assets/Muli-Black.ttf) format("truetype");
 }
 
 body,
@@ -74,6 +78,12 @@ body,
   // filter: greyscale(100%) hue-rotate(180deg) brightness(100%) contrast(90%)
   //   saturate(200%);
   // filter: sepia(100%) hue-rotate(185deg) brightness(73%) saturate(390%);
+  // filter: grayscale(50%) hue-rotate(185deg) brightness(73%) saturate(390%);
+
+  // mix-blend-mode: screen;
+  // -webkit-filter: grayscale(100%) contrast(200%);
+  // filter: grayscale(100%) contrast(200%);
+  // opacity: 1;
 }
 
 nav {
