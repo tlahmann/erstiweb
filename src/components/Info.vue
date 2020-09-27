@@ -11,11 +11,36 @@
       </div>
       <div id="infos">
         <div id="titles">
-          Bla<br />
-          Bla<br />
-          Bla<br />
-          Bla<br />
-          Bla<br />
+          <ul>
+            <li>
+              <h4>BA Fotografie</h4>
+              <div class="subtitle">
+                <span class="date">Mi., 13.09.2020</span>
+                <span class="teaser">Wenn Du das hier...</span>
+              </div>
+            </li>
+            <li>
+              <h4>BA Kommunikationsdesign</h4>
+              <div class="subtitle">
+                <span class="date">Mo., 11.09.2020</span>
+                <span class="teaser">Das Studium des...</span>
+              </div>
+            </li>
+            <li>
+              <h4>BA Objekt- und Raumdesign</h4>
+              <div class="subtitle">
+                <span class="date">Mi., 13.09.2020</span>
+                <span class="teaser">Holz, Papier, Plexi...</span>
+              </div>
+            </li>
+            <li>
+              <h4>BA Film und Sound</h4>
+              <div class="subtitle">
+                <span class="date">Mi., 13.09.2020</span>
+                <span class="teaser">Im Bachelorstudien...</span>
+              </div>
+            </li>
+          </ul>
         </div>
         <div id="content">
           <h3>BA Fotografie</h3>
@@ -111,11 +136,38 @@ export default defineComponent({
       display: flex;
       flex-direction: row;
       #titles {
-        padding: 1em;
+        // padding: 1em;
         background-color: white;
         flex: 1 1 19.2%;
         height: 100%;
         border-right: 1px solid #c8c7c8;
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            border-bottom: 1px solid #e8e8e8;
+            padding: 14px 18px;
+          }
+          h4 {
+            font-size: 0.875rem;
+            margin: 0;
+          }
+          span {
+            font-size: 0.625rem;
+          }
+          .subtitle {
+            display: flex;
+            flex-direction: row;
+            margin: 12px 0 0 0;
+            .date {
+              flex: 1 1 50%;
+            }
+            .teaser {
+              flex: 1 1 50%;
+            }
+          }
+        }
       }
       #content {
         h3 {
