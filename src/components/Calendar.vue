@@ -21,7 +21,7 @@
         </div>
         <div id="titles">
           <div>Mo</div>
-          <div>DI</div>
+          <div>Di</div>
           <div>Mi</div>
           <div>Do</div>
           <div>Fr</div>
