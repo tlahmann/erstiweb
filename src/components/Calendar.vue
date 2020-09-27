@@ -29,50 +29,17 @@
           <div>So</div>
         </div>
         <div id="days">
-          <div class="row">
-            <div>31</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div class="weekend">5</div>
-            <div class="weekend">6</div>
-          </div>
-          <div class="row">
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-            <div class="weekend">12</div>
-            <div class="weekend">13</div>
-          </div>
-          <div class="row">
-            <div>14</div>
-            <div>15</div>
-            <div>16</div>
-            <div>17</div>
-            <div>18</div>
-            <div class="weekend">19</div>
-            <div class="weekend">20</div>
-          </div>
-          <div class="row">
-            <div>21</div>
-            <div>22</div>
-            <div>23</div>
-            <div>24</div>
-            <div>25</div>
-            <div class="weekend">26</div>
-            <div class="weekend">27</div>
-          </div>
-          <div class="row">
-            <div>28</div>
-            <div>29</div>
-            <div>30</div>
-            <div>1</div>
-            <div>2</div>
-            <div class="weekend">3</div>
-            <div class="weekend">4</div>
+          <div class="row" v-for="(week, weekIndex) in days" :key="weekIndex">
+            <div
+              v-for="(day, dayIndex) in week"
+              :key="dayIndex"
+              :class="{
+                weekend: dayIndex >= 5,
+                'foreign-mongth': !day.isThisMonth
+              }"
+            >
+              {{ day.day }}
+            </div>
           </div>
         </div>
       </div>
@@ -90,7 +57,8 @@ export default defineComponent({
     Titlebar
   },
   data: () => ({
-    month: "jo",
+    days: [0],
+    month: "None",
     year: "2020",
     focused: false
   }),
@@ -110,10 +78,79 @@ export default defineComponent({
       "November",
       "Dezember"
     ][now.getMonth()];
+    this.days = this.constructMonth(now.getMonth(), now.getFullYear()).reduce(
+      (resultArray: any[], item: any, index: number) => {
+        const chunkIndex = Math.floor(index / 7);
+
+        if (!resultArray[chunkIndex]) {
+          resultArray[chunkIndex] = []; // start a new chunk
+        }
+
+        resultArray[chunkIndex].push(item);
+
+        return resultArray;
+      },
+      []
+    );
   },
   methods: {
     update(focused: boolean) {
       this.focused = focused;
+    },
+    getFirstDayOfMonth(zeroBasedMonthNum: number, fullYear: number) {
+      const monthNames = [
+        "January",
+        "Febuary",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ];
+      const dateStr = `${monthNames[zeroBasedMonthNum]} 1, ${fullYear}, 00:00:00`;
+      const monthStart = new Date(dateStr);
+      return monthStart;
+    },
+    daysInMonth(zeroBasedMonthNumber: number) {
+      return [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][
+        zeroBasedMonthNumber
+      ];
+    },
+    constructMonth(monthIndex: number, year: number) {
+      let firstDay = this.getFirstDayOfMonth(monthIndex, year).getDay();
+      if (firstDay == 0) {
+        firstDay = 6;
+      } else {
+        firstDay--;
+      }
+
+      const daysFromLastMonth = firstDay;
+      const result = [];
+
+      const daysInLastMonth = this.daysInMonth(monthIndex - 1);
+      const first = daysInLastMonth - daysFromLastMonth + 1;
+      console.log(first);
+      for (let i = 0; i < daysFromLastMonth; i++) {
+        //result.push(first+i);
+        result.push({ day: first + i, isThisMonth: false });
+      }
+
+      for (let i = 1; i <= this.daysInMonth(monthIndex); i++)
+        //result.push( i );
+        result.push({ day: i, isThisMonth: true });
+
+      const daysDone = result.length;
+      const daysToGo = 6 * 7 - daysDone;
+      for (let i = 1; i <= daysToGo; i++)
+        //result.push( i );
+        result.push({ day: i, isThisMonth: false });
+
+      return result;
     }
   }
 });
@@ -189,9 +226,12 @@ export default defineComponent({
           }
         }
       }
+      .weekend,
+      .foreign-mongth {
+        color: #3d3d3d88;
+      }
       .weekend {
         background-color: #f5f5f5;
-        color: #3d3d3d88;
       }
       // #days div {
       //   border: 1pt solid #e6e5e6;
