@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
-import Tutors from "../components/Tutors.vue";
+import TutorView from "../views/TutorView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,9 +9,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-      path: '/tutors',
-      name: 'Tutors',
-      component: Tutors
+    path: '/tutors',
+    name: 'Tutors',
+    component: TutorView
   }
 ];
 
