@@ -68,6 +68,10 @@ body,
   overflow: hidden;
 }
 
+body {
+  background-color: #0033ff;
+}
+
 #app {
   font-family: muli, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -75,6 +79,8 @@ body,
   // text-align: center;
   color: #2c3e50;
   background-color: #9b9b9b;
+  // mix-blend-mode: screen !important;
+
   // filter: greyscale(100%) hue-rotate(180deg) brightness(100%) contrast(90%)
   //   saturate(200%);
   // filter: sepia(100%) hue-rotate(185deg) brightness(73%) saturate(390%);

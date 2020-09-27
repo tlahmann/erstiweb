@@ -16,6 +16,7 @@
 import { defineComponent } from "vue";
 import Notepad from "@/components/shared/Notepad.vue"; // @ is an alias to /src
 import axios from "axios";
+import { reposition } from "@/utils/reposition.function";
 
 export default defineComponent({
   name: "Equipment",
@@ -40,6 +41,7 @@ export default defineComponent({
           ...elem,
           pos: this.generatePosition()
         }));
+        // reposition(this.notes, 20, 10);
       })
       .catch((error) => console.error(error));
   },

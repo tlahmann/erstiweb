@@ -35,13 +35,13 @@ export default defineComponent({
   created: function() {
     axios
       .get("./_content/inspirations.json")
-      .then((response) => {
+      .then(response => {
         this.notes = response.data?.map((elem: {}) => ({
           ...elem,
           pos: this.generatePosition()
         }));
       })
-      .catch((error) => console.error(error));
+      .catch(error => console.error(error));
   },
   methods: {
     generatePosition(): { x: string; y: string } {
