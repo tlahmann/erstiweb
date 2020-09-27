@@ -134,7 +134,6 @@ export default defineComponent({
 
       const daysInLastMonth = this.daysInMonth(monthIndex - 1);
       const first = daysInLastMonth - daysFromLastMonth + 1;
-      console.log(first);
       for (let i = 0; i < daysFromLastMonth; i++) {
         //result.push(first+i);
         result.push({ day: first + i, isThisMonth: false });

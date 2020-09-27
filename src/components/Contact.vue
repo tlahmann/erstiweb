@@ -1,22 +1,60 @@
 <template>
   <div id="contact" v-bind:class="{ focused: focused }">
-    <!-- <Titlebar focused="focused" @update-focus="update" /> -->
-    <div id="contact-content" v-on:click="this.focused = true">
+    <div id="contact-content">
       <div id="side">
-        <input type="checkbox" name="fh-common" value="bla" />
-        <label for="fh-common"> FH Dortmund Allgemein</label><br />
-        <input type="checkbox" name="communicationDesign" value="foo" />
-        <label for="communicationDesign"> Kommunikationsdesign</label><br />
-        <input type="checkbox" name="film-sound" value="bar" />
-        <label for="film-sound"> Film & Sound</label><br />
-        <input type="checkbox" name="object-room" value="this" />
-        <label for="object-room"> Objekt- & Raumdesign</label><br />
-        <input type="checkbox" name="fimography" value="that" />
-        <label for="fimography"> Filmografie</label><br />
+        <div>
+          <TitlebarButtons @update-focus="updateFocus" />
+        </div>
+        <div class="list" v-on:click="this.focused = true">
+          <ul>
+            <li>Alle Kontakte</li>
+          </ul>
+          <span>FH Dortmund</span>
+          <ul>
+            <li>Alle FH Dortmund Kontakte</li>
+          </ul>
+          <span>FH Dortmund</span>
+          <ul>
+            <li>Alle Fachbereich-Kontakte</li>
+            <li>Kommunikationsdesign</li>
+            <li>Fotografie</li>
+            <li>Objekt- und Raumdesign</li>
+            <li>Film & Sound</li>
+          </ul>
+        </div>
       </div>
-      <div id="contacts">
+      <div id="contacts" v-on:click="this.focused = true">
         <div id="contact-list">
-          This is the {{ focused ? "focused" : "unfocused" }} contact
+          <ul>
+            <li>
+              <h4>BA Fotografie</h4>
+              <div class="subtitle">
+                <span class="date">Mi., 13.09.2020</span>
+                <span class="teaser">Wenn Du das hier...</span>
+              </div>
+            </li>
+            <li>
+              <h4>BA Kommunikationsdesign</h4>
+              <div class="subtitle">
+                <span class="date">Mo., 11.09.2020</span>
+                <span class="teaser">Das Studium des...</span>
+              </div>
+            </li>
+            <li>
+              <h4>BA Objekt- und Raumdesign</h4>
+              <div class="subtitle">
+                <span class="date">Mi., 13.09.2020</span>
+                <span class="teaser">Holz, Papier, Plexi...</span>
+              </div>
+            </li>
+            <li>
+              <h4>BA Film und Sound</h4>
+              <div class="subtitle">
+                <span class="date">Mi., 13.09.2020</span>
+                <span class="teaser">Im Bachelorstudien...</span>
+              </div>
+            </li>
+          </ul>
         </div>
         <div id="contact-info">
           This is the {{ focused ? "focused" : "unfocused" }} contact
@@ -28,18 +66,18 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-// import Titlebar from "@/components/shared/Titlebar.vue"; // @ is an alias to /src
+import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
 
 export default defineComponent({
   name: "Contact",
   components: {
-    // Titlebar
+    TitlebarButtons
   },
   data: () => ({
     focused: false
   }),
   methods: {
-    update(focused: boolean) {
+    updateFocus(focused: boolean) {
       this.focused = focused;
     }
   }
@@ -68,6 +106,20 @@ export default defineComponent({
       input[type="checkbox"] {
         margin: 6.5px 3px;
       }
+      .list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            border-bottom: 1px solid #e8e8e8;
+            padding: 14px 18px;
+          }
+        }
+      }
     }
     #contacts {
       background-color: #ffffff;
@@ -80,8 +132,37 @@ export default defineComponent({
         padding: 1rem;
       }
       #contact-list {
-        flex: 1 1 30.1%;
+        flex: 1 1 40.1%;
         border-right: 1px solid #e8e8e8;
+        background-color: white;
+        height: 100%;
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            border-bottom: 1px solid #e8e8e8;
+            padding: 14px 18px;
+          }
+          h4 {
+            font-size: 0.875rem;
+            margin: 0;
+          }
+          span {
+            font-size: 0.625rem;
+          }
+          .subtitle {
+            display: flex;
+            flex-direction: row;
+            margin: 12px 0 0 0;
+            .date {
+              flex: 1 1 50%;
+            }
+            .teaser {
+              flex: 1 1 50%;
+            }
+          }
+        }
       }
       #contact-info {
         flex: 1 1 69.9%;
