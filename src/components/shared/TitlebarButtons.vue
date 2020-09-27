@@ -1,0 +1,43 @@
+<template>
+  <input type="button" value="" v-on:click="unfocus" />
+  <input type="button" value="" v-on:click="unfocus" />
+  <input type="button" value="" v-on:click="unfocus" />
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "TitlebarButtons",
+  props: {
+    focused: Boolean
+  },
+  methods: {
+    unfocus: function() {
+      this.$emit("update-focus", false);
+    }
+  }
+});
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+input[type="button"] {
+  align-self: flex-start;
+  margin: 2.4pt;
+  padding: 0;
+  width: 10pt;
+  height: 10pt;
+  border: solid 1pt rgba(0, 0, 0, 15%);
+  border-radius: 5pt;
+  &:nth-of-type(1) {
+    background-color: #ff6157;
+  }
+  &:nth-of-type(2) {
+    background-color: #ffc12f;
+  }
+  &:nth-of-type(3) {
+    background-color: #2acb42;
+  }
+}
+</style>

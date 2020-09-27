@@ -1,17 +1,19 @@
 <template>
   <div class="titlebar">
-    <input type="button" value="" v-on:click="unfocus" />
-    <input type="button" value="" v-on:click="unfocus" />
-    <input type="button" value="" v-on:click="unfocus" />
+    <TitlebarButtons @update-focus="unfocus" />
     <p>{{ title }}</p>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
 
 export default defineComponent({
   name: "Titlebar",
+  components: {
+    TitlebarButtons
+  },
   props: {
     title: String,
     focused: Boolean
