@@ -5,7 +5,9 @@
   <Exibitions />
   <Info />
   <Inspirations />
+  <Notes />
   <Rooms />
+  <Search />
   <Tutors />
   <div>
     <Folder title="Ordner" positionX="79" positionY="52" />
@@ -33,7 +35,9 @@ import Equipment from "@/components/Equipment.vue"; // @ is an alias to /src
 import Exibitions from "@/components/Exibitions.vue"; // @ is an alias to /src
 import Info from "@/components/Info.vue"; // @ is an alias to /src
 import Inspirations from "@/components/Inspirations.vue"; // @ is an alias to /src
+import Notes from "@/components/Notes.vue"; // @ is an alias to /src
 import Rooms from "@/components/Rooms.vue"; // @ is an alias to /src
+import Search from "@/components/Search.vue"; // @ is an alias to /src
 import Tutors from "@/components/Tutors.vue"; // @ is an alias to /src
 import Folder from "@/components/shared/Folder.vue"; // @ is an alias to /src
 
@@ -46,7 +50,9 @@ export default defineComponent({
     Exibitions,
     Info,
     Inspirations,
+    Notes,
     Rooms,
+    Search,
     Tutors,
     Folder
   }
@@ -63,7 +69,9 @@ $sizeDuration: 0.95s;
 #exibitions,
 #info,
 #inspirations,
+#notes,
 #rooms,
+#search,
 #tutors {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -116,7 +124,9 @@ $sizeDuration: 0.95s;
 }
 #calendar,
 #contact,
-#info {
+#info,
+#notes,
+#search {
   z-index: 5;
   -webkit-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
@@ -182,7 +192,7 @@ $sizeDuration: 0.95s;
 }
 #calendar {
   top: 12vh;
-  left: 10vw;
+  left: 11vw;
 }
 #contact {
   top: 86vh;
@@ -197,19 +207,27 @@ $sizeDuration: 0.95s;
   left: 90vw;
 }
 #exibitions {
-  top: 85vh;
-  left: 20vw;
+  top: 89vh;
+  left: 17vw;
 }
 #inspirations {
-  top: 50vh;
-  left: 10vw;
+  top: 38vh;
+  left: 8vw;
+}
+#notes {
+  top: 64vh;
+  left: 32vw;
 }
 #rooms {
   top: 77vh;
   left: 55vw;
 }
+#search {
+  top: 71vh;
+  left: 5vw;
+}
 #tutors {
-  top: 42vh;
-  left: 43vw;
+  top: 32vh;
+  left: 47vw;
 }
 </style>
