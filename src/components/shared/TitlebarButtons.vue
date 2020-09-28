@@ -12,6 +12,7 @@ export default defineComponent({
   props: {
     focused: Boolean
   },
+  emits: ["update-focus"],
   methods: {
     unfocus: function() {
       this.$emit("update-focus", false);
