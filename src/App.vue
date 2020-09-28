@@ -8,7 +8,11 @@
     <div id="time">{{ day }}, {{ hours }}:{{ minutes }}</div>
   </nav>
   <!-- <div id="blue"></div> -->
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component"
+    /></transition>
+  </router-view>
 </template>
 
 <script lang="ts">
@@ -20,6 +24,7 @@ export default defineComponent({
   name: "App",
   data() {
     return {
+      transitionName: "slide-left",
       day: "",
       hours: "",
       minutes: ""
@@ -30,6 +35,13 @@ export default defineComponent({
   },
   beforeUnmount() {
     window.clearTimeout(this.$options.timer);
+  },
+  beforeRouteUpdate(to, from, next) {
+    console.log("bla");
+    const toDepth = to.path.split("/").length;
+    const fromDepth = from.path.split("/").length;
+    this.transitionName = toDepth < fromDepth ? "slide-right" : "slide-left";
+    next();
   },
   methods: {
     updateDateTime() {
@@ -110,5 +122,17 @@ nav {
     margin: 0 45pt 0 0;
     cursor: pointer;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
 }
 </style>

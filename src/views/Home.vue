@@ -1,30 +1,32 @@
 <template>
-  <Calendar />
-  <Contact />
-  <Equipment />
-  <Exibitions />
-  <Info />
-  <Inspirations />
-  <Notes />
-  <Rooms />
-  <Search />
-  <Tutors />
   <div>
-    <Folder title="Ordner" positionX="79" positionY="52" />
-    <Folder title="Ordner" positionX="73" positionY="46" />
-    <Folder title="Ordner" positionX="70" positionY="57" />
+    <Calendar />
+    <Contact />
+    <Equipment />
+    <Exibitions />
+    <Info />
+    <Inspirations />
+    <Notes />
+    <Rooms />
+    <Search />
+    <Tutors />
+    <div>
+      <Folder title="Ordner" positionX="79" positionY="52" />
+      <Folder title="Ordner" positionX="73" positionY="46" />
+      <Folder title="Ordner" positionX="70" positionY="57" />
 
-    <Folder title="tmp" positionX="66" positionY="25" />
-    <Folder title="Final" positionX="60" positionY="28" />
-    <Folder title="Final_new" positionX="64" positionY="31" />
+      <Folder title="tmp" positionX="66" positionY="25" />
+      <Folder title="Final" positionX="60" positionY="28" />
+      <Folder title="Final_new" positionX="64" positionY="31" />
 
-    <Folder title="Downloads" positionX="40" positionY="83" />
-    <Folder title="Ordner" positionX="43" positionY="88" />
+      <Folder title="Downloads" positionX="40" positionY="83" />
+      <Folder title="Ordner" positionX="43" positionY="88" />
 
-    <Folder title="Musik" positionX="20" positionY="68" />
-    <Folder title="Test" positionX="12" positionY="70" />
+      <Folder title="Musik" positionX="20" positionY="68" />
+      <Folder title="Test" positionX="12" positionY="70" />
+    </div>
+    <div class="overlay"></div>
   </div>
-  <div class="overlay"></div>
 </template>
 
 <script lang="ts">
