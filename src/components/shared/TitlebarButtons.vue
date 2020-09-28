@@ -24,7 +24,6 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 input[type="button"] {
-  align-self: flex-start;
   margin: 2.4pt;
   padding: 0;
   width: 10pt;
