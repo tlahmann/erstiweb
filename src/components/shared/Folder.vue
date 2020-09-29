@@ -41,7 +41,6 @@ export default defineComponent({
         ...(this.top && { top: `${this.top}%` }),
         ...(this.left && { left: `${this.left}%` })
       };
-      console.log(style);
       return style;
     }
   }

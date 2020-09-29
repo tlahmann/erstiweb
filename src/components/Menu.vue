@@ -8,7 +8,7 @@
         left="17"
         textColor="black"
         fontWeight="400"
-        v-on:click="updateFocus('menu', true)"
+        v-on:click="updateFocus('', true)"
       />
       <Folder
         title="Kalender"
@@ -70,7 +70,7 @@ export default defineComponent({
     updateFocus(focusValue: string, exitMenu?: boolean) {
       if (exitMenu) {
         this.$emit("update-focus", focusValue);
-      } else {
+      } else if (focusValue === "") {
         this.$emit("update-focus", "");
       }
     }
