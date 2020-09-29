@@ -1,46 +1,44 @@
-{
-    "notes": [
-        {
-            "content": "Eine Kamera",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
-        },
-        {
-            "content": "Ein Stativ",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
-        },
-        {
-            "content": "Eine GoPro",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
-        },
-        {
-            "content": "Ein Objektiv",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
-        },
-        {
-            "content": "Ein MacBook Pro",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
-        },
-        {
-            "content": "Ein Photoshop",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
+[
+    {
+        "content": "Eine Kamera",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
         }
-    ]
-}
+    },
+    {
+        "content": "Ein Stativ",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    },
+    {
+        "content": "Eine GoPro",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    },
+    {
+        "content": "Ein Objektiv",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    },
+    {
+        "content": "Ein MacBook Pro",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    },
+    {
+        "content": "Ein Photoshop",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    }
+]

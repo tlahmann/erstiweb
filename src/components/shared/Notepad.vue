@@ -2,7 +2,9 @@
   <div
     class="notepad"
     v-bind:style="{
-      'border-color': highlightColor
+      'border-color': highlightColor,
+      width: width + 'px',
+      height: height + 'px'
     }"
   >
     <div
@@ -32,6 +34,8 @@ export default defineComponent({
       type: String,
       required: true
     },
+    width: [Number, String],
+    height: [Number, String],
     content: String
   }
 });
@@ -42,20 +46,18 @@ export default defineComponent({
 $positionDuration: 0.85s;
 $sizeDuration: 0.95s;
 
-$width: 185px;
-$height: 111px;
-
 .notepad {
-  min-width: $width;
-  min-height: $height;
   border-top: 3pt solid;
   position: absolute;
+  overflow: hidden;
 
-  -webkit-transition: z-index 3s, transform $sizeDuration, top $positionDuration,
+  -webkit-transition: z-index 3s, transform $sizeDuration, width $sizeDuration,
+    height $sizeDuration, top $positionDuration,
     left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: z-index 3s, transform $sizeDuration, top $positionDuration,
+  transition: z-index 3s, transform $sizeDuration, width $sizeDuration,
+    height $sizeDuration, top $positionDuration,
     left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition-delay: 0s, 0s, $positionDuration, $positionDuration;
+  transition-delay: 0s, 0s, 0s, 0s, $positionDuration, $positionDuration;
 }
 .content {
   width: calc(100% - 2em);

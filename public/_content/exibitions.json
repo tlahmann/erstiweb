@@ -1,25 +1,23 @@
-{
-    "notes": [
-        {
-            "content": "Oben",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
-        },
-        {
-            "content": "Unten",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
-        },
-        {
-            "content": "Rechts",
-            "pos": {
-                "x": "0px",
-                "y": "0px"
-            }
+[
+    {
+        "content": "Oben",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
         }
-    ]
-}
+    },
+    {
+        "content": "Unten",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    },
+    {
+        "content": "Rechts",
+        "pos": {
+            "x": "0px",
+            "y": "0px"
+        }
+    }
+]

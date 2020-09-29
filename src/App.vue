@@ -13,7 +13,6 @@
     <div id="imprint">Impressum</div>
     <div id="time">{{ day }}, {{ hours }}:{{ minutes }}</div>
   </nav>
-  <!-- <div id="blue"></div> -->
   <div>
     <!-- window-style components -->
     <Calendar
@@ -332,8 +331,8 @@ $sizeDuration: 0.95s;
 #equipment,
 #exibitions,
 #inspirations {
-  // -webkit-transition: all 0.95s 0s;
-  // transition: all 0.95s 0s;
+  -webkit-transition: all 0.95s 0s;
+  transition: all 0.95s 0s;
   z-index: initial;
 
   .notepad {
@@ -341,13 +340,13 @@ $sizeDuration: 0.95s;
   }
 
   &.expanded {
-    top: 0;
-    left: 0;
+    top: 30vh;
+    left: 30vw;
     transform: translate(0, 0);
     z-index: 999;
 
-    // -webkit-transition: all 0.95s 0s;
-    // transition: all 0.95s 0s;
+    -webkit-transition: all 0.95s 0s;
+    transition: all 0.95s 0s;
 
     .notepad > .content {
       color: initial !important;

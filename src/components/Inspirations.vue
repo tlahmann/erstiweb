@@ -5,8 +5,10 @@
       highlightColor="#FDEA3C"
       v-for="(note, idx) in notes"
       v-bind:key="idx"
-      v-bind:style="offset(idx)"
       v-on:click="updateFocus('inspirations')"
+      v-bind:style="offset(idx)"
+      :width="note.bounds.width"
+      :height="note.bounds.height"
       :content="note.content"
     />
   </div>
@@ -16,6 +18,7 @@
 import { defineComponent } from "vue";
 import Notepad from "@/components/shared/Notepad.vue"; // @ is an alias to /src
 import axios from "axios";
+import { reposition } from "@/utils/reposition.function";
 
 export default defineComponent({
   name: "Inspirations",
@@ -26,19 +29,48 @@ export default defineComponent({
     msg: String
   },
   data: () => ({
+    init: true,
     primeAngle: 137,
     primeRadiusX: 31,
     primeRadiusY: 31,
-    notes: [{ pos: { x: "", y: "" } }]
+    notes: [] as {
+      bounds: { x: string; y: string; left: string; top: string };
+    }[]
   }),
   created: function() {
     axios
       .get("./_content/inspirations.json")
       .then((response) => {
-        this.notes = response.data?.map((elem: {}) => ({
-          ...elem,
-          pos: this.generatePosition()
-        }));
+        return response.data?.map((elem: {}) => {
+          const w = Math.floor(Math.random() * 150) + 150;
+          const h = Math.floor(Math.random() * 150) + 150;
+          return {
+            ...elem,
+            // pos: this.generatePosition(),
+            bounds: {
+              ...this.generatePosition(),
+              width: w,
+              height: h,
+              hw: w >> 1, // half-width
+              hh: h >> 1 // half-height
+            }
+          };
+        });
+      })
+      .then((notes) => {
+        this.notes = reposition(
+          {
+            x: 100,
+            y: 100,
+            w: window.innerWidth - 200,
+            h: window.innerHeight - 200,
+            hw: (window.innerWidth - 200) >> 1,
+            hh: (window.innerHeight - 200) >> 1
+          },
+          notes,
+          50,
+          100
+        );
       })
       .catch((error) => console.error(error));
   },
@@ -51,29 +83,42 @@ export default defineComponent({
       const y = Math.floor(Math.random() * 60) + 20 + "vh";
       return { x, y };
     },
-    offset(index: number): { "z-index": number; transform: string } {
+    offset(
+      index: number
+    ): {
+      "z-index": number;
+      transform: string;
+      width?: string;
+      height?: string;
+    } {
       let x = "";
       let y = "";
-      // if (!this.focused) {
-      x =
-        Math.cos(this.primeAngle * index * (Math.PI / 180)) *
-          this.primeRadiusX *
-          (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
-        "%";
-      y =
-        Math.sin(this.primeAngle * index * (Math.PI / 180)) *
-          this.primeRadiusY *
-          (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
-        "%";
-      // } else {
-      //   x = this.notes[index].pos.x;
-      //   y = this.notes[index].pos.y;
-      // }
-
-      return {
-        "z-index": Math.floor(Math.random() * this.notes.length),
-        transform: `translate(${x}, ${y})`
-      };
+      if (this.$el.classList.contains("expanded") || this.init) {
+        x =
+          Math.cos(this.primeAngle * index * (Math.PI / 180)) *
+            this.primeRadiusX *
+            (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
+          "%";
+        y =
+          Math.sin(this.primeAngle * index * (Math.PI / 180)) *
+            this.primeRadiusY *
+            (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
+          "%";
+        this.init = !(this.init && index + 1 === this.notes.length);
+        return {
+          "z-index": Math.floor(Math.random() * this.notes.length),
+          transform: `translate(${x}, ${y})`,
+          width: "100px",
+          height: "100px"
+        };
+      } else {
+        x = this.notes[index].bounds.x + "px";
+        y = this.notes[index].bounds.y + "px";
+        return {
+          "z-index": Math.floor(Math.random() * this.notes.length),
+          transform: `translate(${x}, ${y})`
+        };
+      }
     }
   }
 });
