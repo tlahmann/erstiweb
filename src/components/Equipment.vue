@@ -1,12 +1,12 @@
 <template>
-  <div id="equipment" v-bind:class="{ expanded: focused }">
+  <div id="equipment">
     <Notepad
       color="#D6809A"
       highlightColor="#ED1A5B"
       v-for="(note, idx) in notes"
       v-bind:key="idx"
       v-bind:style="offset(idx)"
-      v-on:click="this.focused = !this.focused"
+      v-on:click="updateFocus('equipment')"
       :content="note.content"
     />
   </div>
@@ -23,11 +23,11 @@ export default defineComponent({
   components: {
     Notepad
   },
+  emits: ["update-focus"],
   props: {
     msg: String
   },
   data: () => ({
-    focused: false,
     primeAngle: 137,
     primeRadiusX: 67,
     primeRadiusY: 31,
@@ -46,6 +46,9 @@ export default defineComponent({
       .catch((error) => console.error(error));
   },
   methods: {
+    updateFocus(focusValue: string) {
+      this.$emit("update-focus", focusValue);
+    },
     generatePosition(): { x: string; y: string } {
       const x = Math.floor(Math.random() * 60) + 20 + "vw";
       const y = Math.floor(Math.random() * 60) + 20 + "vh";
@@ -54,21 +57,21 @@ export default defineComponent({
     offset(index: number): { "z-index": number; transform: string } {
       let x = "";
       let y = "";
-      if (!this.focused) {
-        x =
-          Math.cos(this.primeAngle * index * (Math.PI / 180)) *
-            this.primeRadiusX *
-            (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
-          "%";
-        y =
-          Math.sin(this.primeAngle * index * (Math.PI / 180)) *
-            this.primeRadiusY *
-            (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
-          "%";
-      } else {
-        x = this.notes[index].pos.x;
-        y = this.notes[index].pos.y;
-      }
+      // if (!this.focused) {
+      x =
+        Math.cos(this.primeAngle * index * (Math.PI / 180)) *
+          this.primeRadiusX *
+          (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
+        "%";
+      y =
+        Math.sin(this.primeAngle * index * (Math.PI / 180)) *
+          this.primeRadiusY *
+          (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
+        "%";
+      // } else {
+      //   x = this.notes[index].pos.x;
+      //   y = this.notes[index].pos.y;
+      // }
 
       return {
         "z-index": Math.floor(Math.random() * this.notes.length),

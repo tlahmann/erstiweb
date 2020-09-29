@@ -1,7 +1,7 @@
 <template>
-  <input type="button" value="" v-on:click="unfocus" />
-  <input type="button" value="" v-on:click="unfocus" />
-  <input type="button" value="" v-on:click="unfocus" />
+  <input type="button" value="" v-on:click="updateFocus" />
+  <input type="button" value="" v-on:click="updateFocus" />
+  <input type="button" value="" v-on:click="updateFocus" />
 </template>
 
 <script lang="ts">
@@ -14,8 +14,8 @@ export default defineComponent({
   },
   emits: ["update-focus"],
   methods: {
-    unfocus: function() {
-      this.$emit("update-focus", false);
+    updateFocus: function() {
+      this.$emit("update-focus", "");
     }
   }
 });

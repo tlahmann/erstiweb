@@ -4,6 +4,7 @@
       v-for="(tutor, idx) in rooms"
       v-bind:key="tutor"
       v-bind:src="tutor"
+      v-on:click="updateFocus('rooms')"
       width="780"
       height="521"
       alt="Bilder je nach Breite des Viewports"
@@ -17,6 +18,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Rooms",
+  emits: ["update-focus"],
   data: () => ({
     primeAngle: -137,
     primeRadiusX: 127,
@@ -29,6 +31,9 @@ export default defineComponent({
     ]
   }),
   methods: {
+    updateFocus(focusValue: string) {
+      this.$emit("update-focus", focusValue);
+    },
     offset(index: number) {
       const x =
         Math.cos((this.primeAngle * index) / 180) *

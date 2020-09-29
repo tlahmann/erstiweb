@@ -1,7 +1,7 @@
 <template>
-  <div id="calendar" v-bind:class="{ focused: focused }">
-    <Titlebar focused="focused" @update-focus="update" />
-    <div id="calendar-content" v-on:click="this.focused = true">
+  <div id="calendar">
+    <Titlebar focused="focused" @update-focus="updateFocus" />
+    <div id="calendar-content" v-on:click="updateFocus('calendar')">
       <div id="side">
         <input type="checkbox" name="fh-common" value="bla" />
         <label for="fh-common"> FH Dortmund Allgemein</label><br />
@@ -56,11 +56,11 @@ export default defineComponent({
   components: {
     Titlebar
   },
+  emits: ["update-focus"],
   data: () => ({
     days: [0],
     month: "None",
-    year: "2020",
-    focused: false
+    year: "2020"
   }),
   mounted() {
     const now = new Date();
@@ -94,8 +94,8 @@ export default defineComponent({
     );
   },
   methods: {
-    update(focused: boolean) {
-      this.focused = focused;
+    updateFocus(focusValue: string) {
+      this.$emit("update-focus", focusValue);
     },
     getFirstDayOfMonth(zeroBasedMonthNum: number, fullYear: number) {
       const monthNames = [

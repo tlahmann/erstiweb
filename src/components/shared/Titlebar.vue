@@ -1,6 +1,6 @@
 <template>
   <div class="titlebar">
-    <TitlebarButtons @update-focus="unfocus" />
+    <TitlebarButtons @update-focus="updateFocus" />
     <p>{{ title }}</p>
   </div>
 </template>
@@ -18,12 +18,10 @@ export default defineComponent({
     title: String,
     focused: Boolean
   },
-  // data: () => ({
-  //   focused: false
-  // }),
+  emits: ["update-focus"],
   methods: {
-    unfocus: function() {
-      this.$emit("update-focus", false);
+    updateFocus: function() {
+      this.$emit("update-focus", "");
     }
   }
 });

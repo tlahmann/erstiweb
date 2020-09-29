@@ -1,7 +1,7 @@
 <template>
-  <div id="search" v-bind:class="{ focused: focused }">
-    <Titlebar focused="focused" @update-focus="update" />
-    <div id="search-content" v-on:click="this.focused = true">
+  <div id="search">
+    <Titlebar focused="focused" @update-focus="updateFocus" />
+    <div id="search-content" v-on:click="updateFocus('search')">
       <div id="side">
         <p>FH Dortmund</p>
         <ul>
@@ -23,12 +23,10 @@ export default defineComponent({
   components: {
     Titlebar
   },
-  data: () => ({
-    focused: false
-  }),
+  emits: ["update-focus"],
   methods: {
-    update(focused: boolean) {
-      this.focused = focused;
+    updateFocus(focusValue: string) {
+      this.$emit("update-focus", focusValue);
     }
   }
 });

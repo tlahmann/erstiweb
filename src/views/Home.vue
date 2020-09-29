@@ -1,15 +1,50 @@
 <template>
   <div>
-    <Calendar />
-    <Contact />
-    <Equipment />
-    <Exibitions />
-    <Info />
-    <Inspirations />
-    <Notes />
-    <Rooms />
-    <Search />
-    <Tutors />
+    <!-- window-style components -->
+    <Calendar
+      v-bind:class="{ focused: focused === 'calendar' }"
+      @update-focus="updateFocus"
+    />
+    <Contact
+      v-bind:class="{ focused: focused === 'contact' }"
+      @update-focus="updateFocus"
+    />
+    <Info
+      v-bind:class="{ focused: focused === 'info' }"
+      @update-focus="updateFocus"
+    />
+    <Notes
+      v-bind:class="{ focused: focused === 'notes' }"
+      @update-focus="updateFocus"
+    />
+    <Search
+      v-bind:class="{ focused: focused === 'search' }"
+      @update-focus="updateFocus"
+    />
+
+    <!-- Post-It style components -->
+    <Equipment
+      v-bind:class="{ expanded: focused === 'equipment' }"
+      @update-focus="updateFocus"
+    />
+    <Exibitions
+      v-bind:class="{ expanded: focused === 'exibitions' }"
+      @update-focus="updateFocus"
+    />
+    <Inspirations
+      v-bind:class="{ expanded: focused === 'inspirations' }"
+      @update-focus="updateFocus"
+    />
+
+    <!-- image-style components -->
+    <Rooms
+      v-bind:class="{ focused: focused === 'rooms' }"
+      @update-focus="updateFocus"
+    />
+    <Tutors
+      v-bind:class="{ focused: focused === 'tutors' }"
+      @update-focus="updateFocus"
+    />
     <div>
       <Folder title="Ordner" positionX="79" positionY="52" />
       <Folder title="Ordner" positionX="73" positionY="46" />
@@ -25,7 +60,7 @@
       <Folder title="Musik" positionX="20" positionY="68" />
       <Folder title="Test" positionX="12" positionY="70" />
     </div>
-    <div class="overlay"></div>
+    <div class="overlay" v-on:click="updateFocus('')"></div>
   </div>
 </template>
 
@@ -42,6 +77,7 @@ import Rooms from "@/components/Rooms.vue"; // @ is an alias to /src
 import Search from "@/components/Search.vue"; // @ is an alias to /src
 import Tutors from "@/components/Tutors.vue"; // @ is an alias to /src
 import Folder from "@/components/shared/Folder.vue"; // @ is an alias to /src
+import router from "@/router";
 
 export default defineComponent({
   name: "Home",
@@ -57,6 +93,24 @@ export default defineComponent({
     Search,
     Tutors,
     Folder
+  },
+  data: () => ({
+    focused: ""
+  }),
+  mounted() {
+    setTimeout(() => (this.focused = this.$route.query["c"] as string), 1);
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.focused = to.query["c"] as string;
+    next();
+  },
+  methods: {
+    updateFocus(componentName: string): void {
+      if (this.focused !== componentName) {
+        router.push({ path: "", query: { c: componentName } });
+      }
+      this.focused = componentName;
+    }
   }
 });
 </script>

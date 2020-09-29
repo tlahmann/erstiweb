@@ -1,11 +1,11 @@
 <template>
-  <div id="contact" v-bind:class="{ focused: focused }">
+  <div id="contact">
     <div id="contact-content">
       <div id="side">
         <div>
           <TitlebarButtons @update-focus="updateFocus" />
         </div>
-        <div class="list" v-on:click="this.focused = true">
+        <div class="list" v-on:click="updateFocus('contact')">
           <ul>
             <li>Alle Kontakte</li>
           </ul>
@@ -23,7 +23,7 @@
           </ul>
         </div>
       </div>
-      <div id="contacts" v-on:click="this.focused = true">
+      <div id="contacts" v-on:click="updateFocus('contact')">
         <div id="contact-list">
           <ul>
             <li>
@@ -57,7 +57,7 @@
           </ul>
         </div>
         <div id="contact-info">
-          This is the {{ focused ? "focused" : "unfocused" }} contact
+          This is the {{ false ? "focused" : "unfocused" }} contact
         </div>
       </div>
     </div>
@@ -73,12 +73,10 @@ export default defineComponent({
   components: {
     TitlebarButtons
   },
-  data: () => ({
-    focused: false
-  }),
+  emits: ["update-focus"],
   methods: {
-    updateFocus(focused: boolean) {
-      this.focused = focused;
+    updateFocus(focusValue: string) {
+      this.$emit("update-focus", focusValue);
     }
   }
 });

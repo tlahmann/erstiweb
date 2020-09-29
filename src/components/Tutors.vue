@@ -1,11 +1,11 @@
 <template>
-  <div id="tutors" v-bind:class="{ focused: focused }">
+  <div id="tutors">
     <div id="tutor-images">
       <img
         v-for="(tutor, idx) in tutors"
         v-bind:key="tutor"
         v-bind:src="tutor"
-        v-on:click="this.focused = true"
+        v-on:click="updateFocus('tutors')"
         width="780"
         height="521"
         alt="Bilder je nach Breite des Viewports"
@@ -13,7 +13,7 @@
         class="tutor-image"
       />
     </div>
-    <div id="content">
+    <div id="content" v-on:click="updateFocus('')">
       <img :src="tutorBanner" class="tutor-banner" />
       <strong>
         Die Tutor*innen sind Studierende, die euch beim Einstieg ins Studium
@@ -50,7 +50,6 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "Tutors",
   data: () => ({
-    focused: false,
     primeAngle: 137,
     primeRadiusX: 43,
     primeRadiusY: 37,
@@ -76,6 +75,9 @@ export default defineComponent({
     this.tutors.sort(() => Math.random() - 0.5);
   },
   methods: {
+    updateFocus(focusValue: string) {
+      this.$emit("update-focus", focusValue);
+    },
     offset(index: number) {
       const x =
         Math.cos((this.primeAngle * index) / 180) *
