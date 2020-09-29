@@ -109,6 +109,13 @@ $sizeDuration: 0.95s;
     }
   }
 }
+#tutors.focused {
+  top: 40px;
+  left: 0;
+  transform: translate(0, 0) scale(1);
+  width: 100vw;
+  height: 100vh;
+}
 .overlay {
   visibility: hidden;
   opacity: 0;
