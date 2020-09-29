@@ -5,7 +5,15 @@
       <div class="left"></div>
       <div class="right"></div>
     </div>
-    <p class="title">{{ title }}</p>
+    <p
+      class="title"
+      v-bind:style="{
+        color: textColor,
+        'font-weight': fontWeight
+      }"
+    >
+      {{ title }}
+    </p>
   </div>
 </template>
 
@@ -16,20 +24,25 @@ export default defineComponent({
   name: "Folder",
   props: {
     title: String,
-    positionX: {
-      type: [Number, String], // { x: Number, y: Number },
-      required: true
-    },
-    positionY: {
-      type: [Number, String], // { x: Number, y: Number },
-      required: true
-    }
+    positionX: [Number, String],
+    positionY: [Number, String],
+    top: Number,
+    left: Number,
+    textColor: String,
+    fontWeight: String
   },
   methods: {
     positionString() {
-      return {
-        transform: `translate(${+this.positionX}vw, ${+this.positionY}vh)`
+      const style = {
+        ...(this.positionX &&
+          this.positionY && {
+            transform: `translate(${+this.positionX}%, ${+this.positionY}%)`
+          }),
+        ...(this.top && { top: `${this.top}%` }),
+        ...(this.left && { left: `${this.left}%` })
       };
+      console.log(style);
+      return style;
     }
   }
 });
@@ -46,9 +59,9 @@ export default defineComponent({
 }
 .front {
   position: absolute;
-  top: 10px;
+  top: 12px;
   width: calc(100% - 0pt);
-  height: calc(100% - 12pt);
+  height: calc(100% - 16px);
   z-index: 20;
   border-top: 1pt solid #a9e8fc;
   border-radius: 7px;
