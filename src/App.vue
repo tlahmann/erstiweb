@@ -233,6 +233,10 @@ nav {
     margin: 0 45pt 0 0;
     cursor: pointer;
   }
+
+  #route {
+    cursor: pointer;
+  }
 }
 
 $positionDuration: 0.85s;
@@ -282,6 +286,14 @@ $sizeDuration: 0.95s;
         opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
     }
   }
+}
+#calendar,
+#contact,
+#menu,
+#info,
+#notes {
+  max-width: 90vw;
+  max-height: 83vh;
 }
 #tutors.focused {
   top: 40px;

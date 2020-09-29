@@ -96,8 +96,6 @@ export default defineComponent({
   border-radius: 7pt;
   width: 1280px;
   height: 815px;
-  min-width: 1280px;
-  min-height: 815px;
   #info-content {
     width: 100%;
     height: calc(100% - 25pt);

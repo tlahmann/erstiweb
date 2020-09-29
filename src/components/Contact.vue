@@ -97,8 +97,6 @@ export default defineComponent({
   border-radius: 7pt;
   width: 1079px;
   height: 827px;
-  min-width: 1079px;
-  min-height: 827px;
   #contact-content {
     width: 100%;
     height: 100%;

@@ -148,8 +148,6 @@ export default defineComponent({
   border-radius: 7pt;
   width: 614px;
   height: 750px;
-  min-width: 614px;
-  min-height: 750px;
   #notes-content {
     width: 100%;
     height: calc(100% - 25pt);
