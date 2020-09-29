@@ -27,37 +27,44 @@
         <div id="contact-list">
           <ul>
             <li>
-              <h4>BA Fotografie</h4>
-              <div class="subtitle">
-                <span class="date">Mi., 13.09.2020</span>
-                <span class="teaser">Wenn Du das hier...</span>
-              </div>
+              <h4>Marita Altermann-Köster</h4>
+            </li>
+            <li class="active">
+              <h4>Ulrike Brückner</h4>
             </li>
             <li>
-              <h4>BA Kommunikationsdesign</h4>
-              <div class="subtitle">
-                <span class="date">Mo., 11.09.2020</span>
-                <span class="teaser">Das Studium des...</span>
-              </div>
+              <h4>Lars Harmsen</h4>
             </li>
             <li>
-              <h4>BA Objekt- und Raumdesign</h4>
-              <div class="subtitle">
-                <span class="date">Mi., 13.09.2020</span>
-                <span class="teaser">Holz, Papier, Plexi...</span>
-              </div>
-            </li>
-            <li>
-              <h4>BA Film und Sound</h4>
-              <div class="subtitle">
-                <span class="date">Mi., 13.09.2020</span>
-                <span class="teaser">Im Bachelorstudien...</span>
-              </div>
+              <h4>Roger Walk</h4>
             </li>
           </ul>
         </div>
         <div id="contact-info">
-          This is the {{ false ? "focused" : "unfocused" }} contact
+          <span id="first-name">Prof. Ulrike</span>&nbsp;
+          <span id="last-name">Brückner</span>
+          <ul>
+            <li>
+              <span class="title">Arbeitsgebiet</span>
+              <span class="value">K + E Grundlagen</span>
+            </li>
+            <li>
+              <span class="title">Org.-Einheit</span>
+              <span class="value">Fachbereich Design</span>
+            </li>
+            <li>
+              <span class="title">Raum</span>
+              <span class="value">MOP 2 131</span>
+            </li>
+            <li>
+              <span class="title">Telefon</span>
+              <span class="value">+49 (0231) 9112 - 9439 </span>
+            </li>
+            <li>
+              <span class="title">Mail</span>
+              <span class="value">ulrike.brueckner@fh-dortmund.de</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -129,11 +136,13 @@ export default defineComponent({
       #contact-info {
         padding: 1rem;
       }
-      #contact-list {
+      #contact-list,
+      #contact-info {
         flex: 1 1 40.1%;
         border-right: 1px solid #e8e8e8;
         background-color: white;
         height: 100%;
+        padding: 1rem 0;
         ul {
           margin: 0;
           padding: 0;
@@ -141,6 +150,10 @@ export default defineComponent({
           li {
             border-bottom: 1px solid #e8e8e8;
             padding: 14px 18px;
+            &.active {
+              background-color: #707070;
+              color: white;
+            }
           }
           h4 {
             font-size: 0.875rem;
@@ -149,21 +162,41 @@ export default defineComponent({
           span {
             font-size: 0.625rem;
           }
-          .subtitle {
-            display: flex;
-            flex-direction: row;
-            margin: 12px 0 0 0;
-            .date {
-              flex: 1 1 50%;
-            }
-            .teaser {
-              flex: 1 1 50%;
-            }
-          }
         }
       }
       #contact-info {
         flex: 1 1 69.9%;
+        padding: 3rem 1.375em;
+        height: calc(100% - 6rem);
+        #first-name,
+        #last-name {
+          color: #7c7c7c;
+          font-size: 2.125rem;
+          margin-bottom: 1rem;
+          display: inline-block;
+        }
+        #first-name {
+          font-weight: 400;
+        }
+        #last-name {
+          font-weight: 600;
+        }
+        ul li {
+          display: flex;
+          flex-direction: row;
+          padding: 20px 5px;
+          border-top: 1px solid #e8e8e8;
+          border-bottom: none;
+          .value {
+            flex: 1 1 78%;
+            font-size: 0.875rem;
+          }
+          .title {
+            flex: 1 1 22%;
+            font-weight: 600;
+            font-size: 0.785rem;
+          }
+        }
       }
     }
   }

@@ -61,19 +61,18 @@
       @update-focus="updateFocus"
     />
     <div>
-      <Folder title="Ordner" positionX="79" positionY="52" />
-      <Folder title="Ordner" positionX="73" positionY="46" />
-      <Folder title="Ordner" positionX="70" positionY="57" />
+      <Folder title="Ordner" top="89" left="35" />
+      <Folder title="Ordner" top="86" left="31" />
 
-      <Folder title="tmp" positionX="66" positionY="25" />
-      <Folder title="Final" positionX="60" positionY="28" />
-      <Folder title="Final_new" positionX="64" positionY="31" />
+      <Folder title="Ordner" top="18" left="38" />
+      <Folder title="tmp" top="27" left="34" />
+      <Folder title="Final" top="30" left="28" />
+      <Folder title="Final_new" top="34" left="31" />
 
-      <Folder title="Downloads" positionX="40" positionY="83" />
-      <Folder title="Ordner" positionX="43" positionY="88" />
-
-      <Folder title="Musik" positionX="20" positionY="68" />
-      <Folder title="Test" positionX="12" positionY="70" />
+      <Folder title="Downloads" top="50" left="81" />
+      <Folder title="Ordner" top="53" left="86" />
+      <Folder title="Musik" top="58" left="72" />
+      <Folder title="Test" top="60" left="74" />
     </div>
 
     <Menu
@@ -135,9 +134,15 @@ export default defineComponent({
   }),
   mounted() {
     this.$options.timer = window.setTimeout(this.updateDateTime, SECOND);
+    setTimeout(() => (this.focused = this.$route.query["c"] as string), 1);
   },
   beforeUnmount() {
     window.clearTimeout(this.$options.timer);
+  },
+  // FIXME: the routing is not called in app.vue, only in (routed) components
+  beforeRouteUpdate(to, from, next) {
+    this.focused = to.query["c"] as string;
+    next();
   },
   methods: {
     updateFocus(componentName: string): void {
@@ -197,7 +202,8 @@ body {
   // text-align: center;
   color: #2c3e50;
   background-color: #9b9b9b;
-  // mix-blend-mode: screen !important;
+  // mix-blend-mode: screen;
+  // filter: sepia(1) hue-rotate(180deg);
 
   // filter: greyscale(100%) hue-rotate(180deg) brightness(100%) contrast(90%)
   //   saturate(200%);
@@ -326,8 +332,8 @@ $sizeDuration: 0.95s;
 #equipment,
 #exibitions,
 #inspirations {
-  -webkit-transition: all 0.95s 0s;
-  transition: all 0.95s 0s;
+  // -webkit-transition: all 0.95s 0s;
+  // transition: all 0.95s 0s;
   z-index: initial;
 
   .notepad {
@@ -340,8 +346,8 @@ $sizeDuration: 0.95s;
     transform: translate(0, 0);
     z-index: 999;
 
-    -webkit-transition: all 0.95s 0s;
-    transition: all 0.95s 0s;
+    // -webkit-transition: all 0.95s 0s;
+    // transition: all 0.95s 0s;
 
     .notepad > .content {
       color: initial !important;
@@ -370,7 +376,7 @@ $sizeDuration: 0.95s;
   text-align: center;
 }
 #calendar {
-  top: 12vh;
+  top: 8vh;
   left: 11vw;
 }
 #contact {
@@ -378,39 +384,39 @@ $sizeDuration: 0.95s;
   left: 100vw;
 }
 #equipment {
-  top: 13vh;
-  left: 45vw;
+  top: 11vh;
+  left: 58vw;
 }
 #info {
   top: 25vh;
-  left: 90vw;
+  left: 93vw;
 }
 #exibitions {
-  top: 89vh;
-  left: 17vw;
+  top: 95vh;
+  left: 7vw;
 }
 #inspirations {
-  top: 38vh;
-  left: 8vw;
+  top: 33vh;
+  left: 6vw;
 }
 #menu {
   top: 50vh;
   left: 120vw;
 }
 #notes {
-  top: 64vh;
-  left: 32vw;
+  top: 58vh;
+  left: 31vw;
 }
 #rooms {
   top: 77vh;
   left: 55vw;
 }
 #search {
-  top: 71vh;
+  top: 69vh;
   left: 5vw;
 }
 #tutors {
-  top: 32vh;
-  left: 47vw;
+  top: 31vh;
+  left: 52vw;
 }
 </style>

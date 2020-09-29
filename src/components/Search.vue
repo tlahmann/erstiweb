@@ -9,7 +9,10 @@
           <li>Master</li>
         </ul>
       </div>
-      <div id="searches"></div>
+      <div id="searches">
+        <input id="search-text" type="text" />
+        <input id="search-button" type="button" value="Suchen" />
+      </div>
     </div>
   </div>
 </template>
@@ -76,8 +79,26 @@ export default defineComponent({
       flex: 1 1 80.6%;
       height: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       background-color: white;
+      align-items: center;
+      justify-content: center;
+
+      #search-text {
+        width: 740px;
+        height: 56px;
+        border: 1px solid #e5e5e5;
+        border-radius: 28px;
+        margin-bottom: 28px;
+      }
+      #search-button {
+        width: 130px;
+        height: 35px;
+        background-color: #f5f5f5;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.125rem;
+      }
     }
   }
 }

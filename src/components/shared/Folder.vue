@@ -26,8 +26,8 @@ export default defineComponent({
     title: String,
     positionX: [Number, String],
     positionY: [Number, String],
-    top: Number,
-    left: Number,
+    top: [Number, String],
+    left: [Number, String],
     textColor: String,
     fontWeight: String
   },

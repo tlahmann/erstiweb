@@ -29,7 +29,7 @@ export default defineComponent({
   },
   data: () => ({
     primeAngle: 137,
-    primeRadiusX: 67,
+    primeRadiusX: 57,
     primeRadiusY: 31,
     notes: [{ pos: { x: "", y: "" } }]
   }),

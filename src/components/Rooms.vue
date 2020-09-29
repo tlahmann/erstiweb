@@ -27,7 +27,11 @@ export default defineComponent({
       require("@/assets/Räume/Aula/nikonf65tmax20032_bearbeitet.jpg"),
       require("@/assets/Räume/Bibliothek/nikonf65tmax20067_bearbeitet.jpg"),
       require("@/assets/Räume/Computerpools/nikonf65tmax20052.jpg"),
-      require("@/assets/Räume/Computerpools/nikonf65tmax20053.jpg")
+      require("@/assets/Räume/Druckwerkstatt/img0025_bearbeitet.jpg"),
+      require("@/assets/Räume/FH Dortmund/img0076_bearbeitet.jpg"),
+      require("@/assets/Räume/Filmstudio/nikonf65tmax20022.jpg"),
+      require("@/assets/Räume/Fotostudio/nikonf65tmax20087_bearbeitet.jpg"),
+      require("@/assets/Räume/Mensa/DSC_0311-positive.jpg")
     ]
   }),
   methods: {
