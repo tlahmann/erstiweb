@@ -3,8 +3,8 @@
     <div id="tutor-images">
       <img
         v-for="(tutor, idx) in tutors"
-        v-bind:key="tutor"
-        v-bind:src="tutor"
+        v-bind:key="idx"
+        v-bind:src="tutor.image"
         v-on:click="updateFocus('tutors')"
         width="780"
         height="521"
@@ -46,51 +46,104 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import axios from "axios";
+import { reposition } from "@/utils/reposition.function";
 
 export default defineComponent({
   name: "Tutors",
   data: () => ({
+    init: true,
     primeAngle: 137,
-    primeRadiusX: 43,
-    primeRadiusY: 37,
+    primeRadiusX: 37,
+    primeRadiusY: 23,
     tutorBanner: require("@/assets/tutors.svg"),
-    tutors: [
-      require("@/assets/Tutoren/Anna_sw.jpg"),
-      require("@/assets/Tutoren/dilara_sw.jpg"),
-      require("@/assets/Tutoren/Emma_sw.jpg"),
-      require("@/assets/Tutoren/Fabian_sw.jpg"),
-      require("@/assets/Tutoren/greta_sw.jpg"),
-      require("@/assets/Tutoren/Isabell_sw.jpg"),
-      require("@/assets/Tutoren/janika_sw.jpg"),
-      require("@/assets/Tutoren/lorenz_sw.jpg"),
-      require("@/assets/Tutoren/Luisa.jpg"),
-      require("@/assets/Tutoren/Marie_sw.jpg"),
-      require("@/assets/Tutoren/Olga_sw.jpg"),
-      require("@/assets/Tutoren/Tim1_sw.jpg"),
-      require("@/assets/Tutoren/tim2_sw.jpg"),
-      require("@/assets/Tutoren/Tim3_sw.jpg")
-    ]
+    tutors: [] as {
+      image: string;
+      bounds: { x: string; y: string; left: string; top: string };
+    }[]
   }),
   created: function() {
-    this.tutors.sort(() => Math.random() - 0.5);
+    axios
+      .get("./_content/tutors.json")
+      .then((response) => {
+        return response.data?.tutors.map((elem: {}) => {
+          const w = Math.floor(Math.random() * 100) + 230;
+          const h = Math.floor(Math.random() * 100) + 120;
+          return {
+            ...elem,
+            // pos: this.generatePosition(),
+            bounds: {
+              ...this.generatePosition(),
+              width: w,
+              height: h,
+              hw: w >> 1, // half-width
+              hh: h >> 1 // half-height
+            }
+          };
+        });
+      })
+      .then((tutors) => {
+        this.tutors = reposition(
+          {
+            x: 100,
+            y: 100,
+            w: window.innerWidth - 200,
+            h: 820 - 50,
+            hw: (window.innerWidth - 200) >> 1,
+            hh: (820 - 50) >> 1
+          },
+          tutors,
+          20,
+          30
+        );
+      })
+      .catch((error) => console.error(error));
   },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
     },
-    offset(index: number) {
-      const x =
-        Math.cos((this.primeAngle * index) / 180) *
-        this.primeRadiusX *
-        (Math.floor((this.primeAngle * (index + 1)) / 360) + 1);
-      const y =
-        Math.sin((this.primeAngle * index) / 180) *
-        this.primeRadiusY *
-        (Math.floor((this.primeAngle * (index + 1)) / 360) + 1);
-      return {
-        "z-index": Math.floor(Math.random() * this.tutors.length),
-        transform: `translate(${x}px, ${y}px)`
-      };
+    generatePosition(): { x: number; y: number } {
+      const x = Math.floor(Math.random() * 30) + 20;
+      const y = Math.floor(Math.random() * 30) + 20;
+      return { x, y };
+    },
+    offset(
+      index: number
+    ): {
+      "z-index": number;
+      transform: string;
+      width?: string;
+      height?: string;
+    } {
+      let x = "";
+      let y = "";
+      if (this.$el.classList.contains("focused") || this.init) {
+        x =
+          Math.cos(this.primeAngle * index * (Math.PI / 180)) *
+            this.primeRadiusX *
+            (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
+          "%";
+        y =
+          Math.sin(this.primeAngle * index * (Math.PI / 180)) *
+            this.primeRadiusY *
+            (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
+          "%";
+        this.init = !(this.init && index + 1 === this.tutors.length);
+        return {
+          "z-index": Math.floor(Math.random() * this.tutors.length),
+          transform: `translate(${x}, ${y})`
+          // width: "100px",
+          // height: "100px"
+        };
+      } else {
+        x = this.tutors[index].bounds.x + "px";
+        y = this.tutors[index].bounds.y + "px";
+        return {
+          "z-index": Math.floor(Math.random() * this.tutors.length),
+          transform: `translate(${x}, ${y})`
+        };
+      }
     }
   }
 });
@@ -98,6 +151,9 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$positionDuration: 0.85s;
+$sizeDuration: 0.95s;
+
 img.tutor-image {
   max-width: 6vw;
   min-width: 110px;
@@ -107,6 +163,11 @@ img.tutor-image {
   -webkit-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
+
+  -webkit-transition: transform $positionDuration
+    cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: transform $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition-delay: 0s;
 }
 .tutor-banner {
   display: block;
@@ -117,11 +178,19 @@ img.tutor-image {
 #content {
   display: none;
 }
+#tutor.focused {
+  transition: top 0.85s, left 0.85s,
+    transform 0.95s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition-delay: 0s, 0s, 0s;
+}
 .focused {
+  overflow-x: hidden;
   overflow-y: scroll;
   #tutor-images {
     width: 100%;
-    height: 820px;
+    height: 400px;
+    transform: translateY(40%);
+    margin-bottom: 420px;
   }
   #content {
     max-width: 1088px;
