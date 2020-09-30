@@ -1,0 +1,96 @@
+[
+    {
+        "title": "Prof.",
+        "firstname": "Roger",
+        "lastname": "Walk",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "????"
+            },
+            {
+                "key": "Org.-Einheit",
+                "value": "Fachbereich Design"
+            },
+            {
+                "key": "Raum",
+                "value": "Mal hier mal Dort"
+            },
+            {
+                "key": "Telefon",
+                "value": "EasterEgg, huhu"
+            },
+            {
+                "key": "Mail",
+                "value": "roger.walk@fh-dortmund.de"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Ulrike",
+        "lastname": "Brückner",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "K + E Grundlagen"
+            },
+            {
+                "key": "Org.-Einheit",
+                "value": "Fachbereich Design"
+            },
+            {
+                "key": "Raum",
+                "value": "MOP 2 131"
+            },
+            {
+                "key": "Telefon",
+                "value": "+49 (0231) 9112 - 9439"
+            },
+            {
+                "key": "Mail",
+                "value": "ulrike.brueckner@fh-dortmund.de"
+            }
+        ]
+    },
+    {
+        "firstname": "Marita",
+        "lastname": "Altermann-Köster",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "k.A."
+            },
+            {
+                "key": "Org.-Einheit",
+                "value": "Fachbereich Design"
+            },
+            {
+                "key": "Raum",
+                "value": "Irgendwo FH Dortmund"
+            },
+            {
+                "key": "Telefon",
+                "value": "+49 (0231) 0000 - 0000"
+            },
+            {
+                "key": "Mail",
+                "value": "marita.altermann-koester@fh-dortmund.de"
+            }
+        ]
+    },
+    {
+        "firstname": "Lars",
+        "lastname": "Harmsen",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "k.A."
+            },
+            {
+                "key": "Mail",
+                "value": "lars.harmsen@fh-dortmund.de"
+            }
+        ]
+    }
+]

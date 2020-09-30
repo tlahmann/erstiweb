@@ -159,10 +159,6 @@ export default defineComponent({
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
     },
-    selectNote(idx: number) {
-      console.log(idx);
-      this.current = idx;
-    }
   }
 });
 </script>

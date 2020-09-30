@@ -26,43 +26,33 @@
       <div id="contacts" v-on:click="updateFocus('contact')">
         <div id="contact-list">
           <ul>
-            <li>
-              <h4>Marita Altermann-Köster</h4>
-            </li>
-            <li class="active">
-              <h4>Ulrike Brückner</h4>
-            </li>
-            <li>
-              <h4>Lars Harmsen</h4>
-            </li>
-            <li>
-              <h4>Roger Walk</h4>
+            <li
+              v-for="(contact, contactIndex) in contacts"
+              :key="contactIndex"
+              :class="{ active: contactIndex === current }"
+              v-on:click="current = contactIndex"
+            >
+              <span class="first-name"> {{ contact.firstname }}&nbsp; </span>
+              <span class="last-name">{{ contact.lastname }}</span>
+              <!-- <h4>{{ contact.firstname }} {{ contact.lastname }}</h4> -->
             </li>
           </ul>
         </div>
         <div id="contact-info">
-          <span id="first-name">Prof. Ulrike</span>&nbsp;
-          <span id="last-name">Brückner</span>
+          <span id="first-name" v-if="contacts[current]?.title">
+            {{ contacts[current]?.title }}&nbsp;
+          </span>
+          <span id="first-name">
+            {{ contacts[current]?.firstname }}&nbsp;
+          </span>
+          <span id="last-name">{{ contacts[current]?.lastname }}</span>
           <ul>
-            <li>
-              <span class="title">Arbeitsgebiet</span>
-              <span class="value">K + E Grundlagen</span>
-            </li>
-            <li>
-              <span class="title">Org.-Einheit</span>
-              <span class="value">Fachbereich Design</span>
-            </li>
-            <li>
-              <span class="title">Raum</span>
-              <span class="value">MOP 2 131</span>
-            </li>
-            <li>
-              <span class="title">Telefon</span>
-              <span class="value">+49 (0231) 9112 - 9439 </span>
-            </li>
-            <li>
-              <span class="title">Mail</span>
-              <span class="value">ulrike.brueckner@fh-dortmund.de</span>
+            <li
+              v-for="(info, contactIndex) in contacts[current]?.contactInfos"
+              :key="contactIndex"
+            >
+              <span class="title">{{ info.key }}</span>
+              <span class="value">{{ info.value }}</span>
             </li>
           </ul>
         </div>
@@ -74,13 +64,28 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
+import axios from "axios";
 
 export default defineComponent({
   name: "Contact",
   components: {
     TitlebarButtons
   },
+  data: () => ({
+    current: 0,
+    contacts: [] as { text: string }[]
+  }),
   emits: ["update-focus"],
+  created: function() {
+    axios
+      .get("./_content/contacts.json")
+      .then((response) => {
+        this.contacts = response.data?.sort((c1: any, c2: any) =>
+          c2.lastname > c1.lastname ? -1 : 1
+        );
+      })
+      .catch((error) => console.error(error));
+  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
@@ -147,18 +152,22 @@ export default defineComponent({
           list-style: none;
           li {
             border-bottom: 1px solid #e8e8e8;
-            padding: 14px 18px;
+            padding: 14px 18px 14px 22px;
+            color: #7c7c7c;
             &.active {
               background-color: #707070;
               color: white;
             }
-          }
-          h4 {
-            font-size: 0.875rem;
-            margin: 0;
-          }
-          span {
-            font-size: 0.625rem;
+            .first-name,
+            .last-name {
+              font-size: 0.875rem;
+            }
+            .first-name {
+              font-weight: 400;
+            }
+            .last-name {
+              font-weight: 600;
+            }
           }
         }
       }
