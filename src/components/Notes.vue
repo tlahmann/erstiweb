@@ -2,6 +2,16 @@
   <div id="notes">
     <Titlebar focused="focused" @update-focus="updateFocus" />
     <div id="notes-content" v-on:click="updateFocus('notes')">
+      <nav>
+        <span
+          v-for="(note, noteIndex) in notes"
+          :key="noteIndex"
+          :class="{ active: noteIndex === current }"
+          v-on:click="current = noteIndex"
+        >
+          Notiz {{ noteIndex + 1 }}
+        </span>
+      </nav>
       <div id="ruler">
         <div class="horizontal"></div>
         <div class="vertical" style="left: 8px">
@@ -117,7 +127,7 @@
           <div class="number">24</div>
         </div>
       </div>
-      <div id="content"></div>
+      <div id="content" v-html="notes[current]?.text"></div>
     </div>
   </div>
 </template>
@@ -125,16 +135,33 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Titlebar from "@/components/shared/Titlebar.vue"; // @ is an alias to /src
+import axios from "axios";
 
 export default defineComponent({
   name: "Notes",
   components: {
     Titlebar
   },
+  data: () => ({
+    current: 0,
+    notes: [] as { text: string }[]
+  }),
   emits: ["update-focus"],
+  created: function() {
+    axios
+      .get("./_content/notes.json")
+      .then((response) => {
+        this.notes = response.data;
+      })
+      .catch((error) => console.error(error));
+  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
+    },
+    selectNote(idx: number) {
+      console.log(idx);
+      this.current = idx;
     }
   }
 });
@@ -199,6 +226,22 @@ export default defineComponent({
       background-color: white;
       height: calc(100% - 54px);
       padding: 8px;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  }
+}
+
+nav {
+  padding: 6px 0;
+  span {
+    padding: 5px;
+    border-right: 1px solid #787878;
+    border-radius: 0 0 6px 6px;
+    &.active {
+      background-color: white;
     }
   }
 }
