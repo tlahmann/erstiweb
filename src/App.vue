@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav id="main-nav">
     <div id="route" v-on:click="updateFocus('')">
       {{ $route.name }} {{ getRoute() }}
     </div>
@@ -16,23 +16,38 @@
   <div>
     <!-- window-style components -->
     <Calendar
-      v-bind:class="{ focused: focused === 'calendar' }"
+      v-bind:class="{
+        focused: focused === 'calendar',
+        unfocused: !!focused && focused !== 'calendar'
+      }"
       @update-focus="updateFocus"
     />
     <Contact
-      v-bind:class="{ focused: focused === 'contact' }"
+      v-bind:class="{
+        focused: focused === 'contact',
+        unfocused: !!focused && focused !== 'contact'
+      }"
       @update-focus="updateFocus"
     />
     <Info
-      v-bind:class="{ focused: focused === 'info' }"
+      v-bind:class="{
+        focused: focused === 'info',
+        unfocused: !!focused && focused !== 'info'
+      }"
       @update-focus="updateFocus"
     />
     <Notes
-      v-bind:class="{ focused: focused === 'notes' }"
+      v-bind:class="{
+        focused: focused === 'notes',
+        unfocused: !!focused && focused !== 'notes'
+      }"
       @update-focus="updateFocus"
     />
     <Search
-      v-bind:class="{ focused: focused === 'search' }"
+      v-bind:class="{
+        focused: focused === 'search',
+        unfocused: !!focused && focused !== 'search'
+      }"
       @update-focus="updateFocus"
     />
 
@@ -215,7 +230,7 @@ body {
   // opacity: 1;
 }
 
-nav {
+#main-nav {
   background-color: #f2f2f2;
   z-index: 1200;
   position: relative;
@@ -286,6 +301,11 @@ $sizeDuration: 0.95s;
         opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
     }
   }
+
+  &.unfocused {
+    transform: translate(-50%, -50%) scale(0.25);
+    opacity: 0;
+  }
 }
 #calendar,
 #contact,
@@ -334,12 +354,12 @@ $sizeDuration: 0.95s;
   box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
 
   -webkit-transition: z-index $positionDuration, transform $sizeDuration,
-    top $positionDuration,
+    opacity $positionDuration, top $positionDuration,
     left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
   transition: z-index $positionDuration, transform $sizeDuration,
-    top $positionDuration,
+    opacity $positionDuration, top $positionDuration,
     left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition-delay: 0s, 0s, $positionDuration, $positionDuration;
+  transition-delay: 0s, 0s, 0s, $positionDuration, $positionDuration;
 
   transform: translate(-50%, -50%) scale(0.5);
   overflow: hidden;
