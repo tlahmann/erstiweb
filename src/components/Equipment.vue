@@ -10,6 +10,7 @@
       :width="note.bounds.width"
       :height="note.bounds.height"
       :content="note.content"
+      :link="note.link"
     />
   </div>
 </template>
@@ -43,8 +44,8 @@ export default defineComponent({
       .get("./_content/equipment.json")
       .then((response) => {
         return response.data?.map((elem: {}) => {
-          const w = Math.floor(Math.random() * 150) + 150;
-          const h = Math.floor(Math.random() * 150) + 150;
+          const w = Math.floor(Math.random() * 150) + 220;
+          const h = Math.floor(Math.random() * 150) + 170;
           return {
             ...elem,
             // pos: this.generatePosition(),

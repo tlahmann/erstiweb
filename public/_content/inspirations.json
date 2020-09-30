@@ -1,30 +1,34 @@
 [
     {
-        "content": "Blumen",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Studienbüro & Prüfungsangelegenheiten",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Berge",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Mentoring",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Tiere",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Allgemeine Studienberatung",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Weltraum",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Barrierefreies Studieren & Inklusion",
+        "link": "https://www.google.com"
+    },
+    {
+        "content": "Psychologische Studienberatung",
+        "link": "https://www.google.com"
+    },
+    {
+        "content": "Studentische Studienberatung",
+        "link": "https://www.google.com"
+    },
+    {
+        "content": "Stipendien & Finanzierung",
+        "link": "https://www.google.com"
+    },
+    {
+        "content": "BAföG",
+        "link": "https://www.google.com"
     }
 ]

@@ -14,8 +14,8 @@
         color: color
       }"
     >
-      <h3>{{ content }}</h3>
-      <small>Hier weiterlesen&nbsp;&rarr;</small>
+      <h4>{{ content }}</h4>
+      <a :href="link">Hier weiterlesen&nbsp;&rarr;</a>
     </div>
   </div>
 </template>
@@ -36,7 +36,8 @@ export default defineComponent({
     },
     width: [Number, String],
     height: [Number, String],
-    content: String
+    content: String,
+    link: String
   }
 });
 </script>
@@ -46,8 +47,11 @@ export default defineComponent({
 $positionDuration: 0.85s;
 $sizeDuration: 0.95s;
 
+.expanded .notepad {
+  border-width: 7px;
+}
 .notepad {
-  border-top: 3pt solid;
+  border-top: 3px solid;
   position: absolute;
   overflow: hidden;
 
@@ -64,6 +68,23 @@ $sizeDuration: 0.95s;
   height: calc(100% - 3pt - 2em);
   padding: 1em;
   transition: color 0.95s 0s;
+  display: flex;
+  flex-direction: column;
+  h4 {
+    // display: flex;
+    font-size: 2.2rem;
+    margin: 0;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  a {
+    // display: flex;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: #242424;
+    // align-self: flex-end;
+    margin-top: auto;
+  }
 
   -webkit-box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);

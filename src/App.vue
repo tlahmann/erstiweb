@@ -349,6 +349,12 @@ $sizeDuration: 0.95s;
 
   .notepad {
     cursor: pointer;
+    > .content {
+      h4,
+      a {
+        display: none;
+      }
+    }
   }
 
   &.expanded {
@@ -364,6 +370,10 @@ $sizeDuration: 0.95s;
       color: initial !important;
       -webkit-transition: color 0.95s 0s;
       transition: color 0.95s 0s;
+      h4,
+      a {
+        display: flex;
+      }
     }
 
     ~ .overlay {

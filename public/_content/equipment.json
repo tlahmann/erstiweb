@@ -1,44 +1,26 @@
 [
     {
-        "content": "Eine Kamera",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "FASTA",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Ein Stativ",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "ASTA",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Eine GoPro",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Prüfungsausschuss",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Ein Objektiv",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Senat",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Ein MacBook Pro",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "StuPA",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Ein Photoshop",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Fachbereichsrat",
+        "link": "https://www.google.com"
     }
 ]

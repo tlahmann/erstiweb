@@ -1,23 +1,26 @@
 [
     {
-        "content": "Oben",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Internationale Woche",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Unten",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "International Office",
+        "link": "https://www.google.com"
     },
     {
-        "content": "Rechts",
-        "pos": {
-            "x": "0px",
-            "y": "0px"
-        }
+        "content": "Auslandssemester",
+        "link": "https://www.google.com"
+    },
+    {
+        "content": "Internationale Studierende",
+        "link": "https://www.google.com"
+    },
+    {
+        "content": "Designwandern",
+        "link": "https://www.google.com"
+    },
+    {
+        "content": "Selbstmodule zum wiss. schreiben",
+        "link": "https://www.google.com"
     }
 ]
