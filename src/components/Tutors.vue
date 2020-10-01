@@ -168,8 +168,8 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-$positionDuration: 0.85s;
-$sizeDuration: 0.95s;
+$positionDuration: 0.55s;
+$sizeDuration: 0.65s;
 
 img.tutor-image {
   max-width: 6vw;
@@ -196,8 +196,8 @@ img.tutor-image {
   display: none;
 }
 #tutor.focused {
-  transition: top 0.85s, left 0.85s,
-    transform 0.95s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: top $positionDuration, left $positionDuration,
+    transform $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
   transition-delay: 0s, 0s, 0s;
 }
 .focused {

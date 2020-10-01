@@ -44,8 +44,8 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-$positionDuration: 0.85s;
-$sizeDuration: 0.95s;
+$positionDuration: 0.55s;
+$sizeDuration: 0.65s;
 
 .expanded .notepad {
   border-width: 7px;
@@ -67,7 +67,7 @@ $sizeDuration: 0.95s;
   width: calc(100% - 2em);
   height: calc(100% - 3pt - 2em);
   padding: 1em;
-  transition: color 0.95s 0s;
+  transition: color $sizeDuration 0s;
   display: flex;
   flex-direction: column;
   h4 {

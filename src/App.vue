@@ -269,8 +269,8 @@ body {
   }
 }
 
-$positionDuration: 0.85s;
-$sizeDuration: 0.95s;
+$positionDuration: 0.55s;
+$sizeDuration: 0.65s;
 
 #calendar,
 #contact,
@@ -368,12 +368,11 @@ $sizeDuration: 0.95s;
   -moz-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
 
-  -webkit-transition: z-index $positionDuration, transform $sizeDuration,
-    opacity $positionDuration, top $positionDuration,
-    left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: z-index $positionDuration, transform $sizeDuration,
-    opacity $positionDuration, top $positionDuration,
-    left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition-property: z-index, transform, opacity, top, left;
+  transition-duration: $positionDuration, $sizeDuration, $positionDuration,
+    $positionDuration, $positionDuration;
+  transition-timing-function: ease, ease, ease,
+    cubic-bezier(0.65, 0.05, 0.36, 1), cubic-bezier(0.65, 0.05, 0.36, 1);
   transition-delay: 0s, 0s, 0s, $positionDuration, $positionDuration;
 
   transform: translate(-50%, -50%) scale(0.5);
@@ -383,8 +382,8 @@ $sizeDuration: 0.95s;
 #equipment,
 #exibitions,
 #inspirations {
-  -webkit-transition: all 0.95s 0s;
-  transition: all 0.95s 0s;
+  -webkit-transition: all $sizeDuration 0s;
+  transition: all $sizeDuration 0s;
   z-index: initial;
 
   .notepad {
@@ -403,13 +402,13 @@ $sizeDuration: 0.95s;
     transform: translate(0, 0);
     z-index: 555;
 
-    -webkit-transition: all 0.95s 0s;
-    transition: all 0.95s 0s;
+    -webkit-transition: all $sizeDuration 0s;
+    transition: all $sizeDuration 0s;
 
     .notepad > .content {
       color: initial !important;
-      -webkit-transition: color 0.95s 0s;
-      transition: color 0.95s 0s;
+      -webkit-transition: color $sizeDuration 0s;
+      transition: color $sizeDuration 0s;
       h4,
       a {
         display: flex;
@@ -435,12 +434,12 @@ $sizeDuration: 0.95s;
 #tutors,
 #rooms {
   text-align: center;
-  -webkit-transition: all 0.95s 0s;
-  transition: all 0.95s 0s;
+  -webkit-transition: all $sizeDuration 0s;
+  transition: all $sizeDuration 0s;
   z-index: initial;
   &.expanded {
-    -webkit-transition: all 0.95s 0s;
-    transition: all 0.95s 0s;
+    -webkit-transition: all $sizeDuration 0s;
+    transition: all $sizeDuration 0s;
   }
 }
 #calendar {
