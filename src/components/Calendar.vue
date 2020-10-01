@@ -3,16 +3,19 @@
     <Titlebar focused="focused" @update-focus="updateFocus" />
     <div id="calendar-content" v-on:click="updateFocus('calendar')">
       <div id="side">
-        <input type="checkbox" name="fh-common" value="bla" />
-        <label for="fh-common"> FH Dortmund Allgemein</label><br />
-        <input type="checkbox" name="communicationDesign" value="foo" />
-        <label for="communicationDesign"> Kommunikationsdesign</label><br />
-        <input type="checkbox" name="film-sound" value="bar" />
-        <label for="film-sound"> Film & Sound</label><br />
-        <input type="checkbox" name="object-room" value="this" />
-        <label for="object-room"> Objekt- & Raumdesign</label><br />
-        <input type="checkbox" name="fimography" value="that" />
-        <label for="fimography"> Filmografie</label><br />
+        <div
+          v-for="(category, categoryIndex) in getCategories()"
+          :key="categoryIndex"
+        >
+          <input
+            type="checkbox"
+            :id="'fhdo-' + category"
+            :name="'fhdo-' + category"
+            :value="category"
+            v-model="checkedCategories"
+          />
+          <label :for="'fhdo-' + category"> {{ category }}</label>
+        </div>
       </div>
       <div id="weeks">
         <div id="title">
@@ -36,7 +39,7 @@
               :key="dayIndex"
               :class="{
                 weekend: dayIndex >= 5,
-                'foreign-month': !day.isThisMonth
+                'foreign-month': day.monthOffset !== 0
               }"
             >
               <div
@@ -48,8 +51,13 @@
                 <span>{{ day.day }}</span>
               </div>
               <div class="events">
-                <div class="event">bla</div>
-                <div class="event">bla</div>
+                <div
+                  class="event"
+                  v-for="(event, eventIndex) in getEventsOfDay(day)"
+                  :key="eventIndex"
+                >
+                  {{ event.title }}
+                </div>
               </div>
             </div>
           </div>
@@ -62,6 +70,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Titlebar from "@/components/shared/Titlebar.vue"; // @ is an alias to /src
+import axios from "axios";
+
+type Event = { title: string; category: string; date: string };
 
 export default defineComponent({
   name: "Calendar",
@@ -72,8 +83,19 @@ export default defineComponent({
   data: () => ({
     days: [0],
     month: "None",
-    year: "2020"
+    year: "2020",
+    checkedCategories: [] as string[],
+    events: [] as Event[]
   }),
+  created: function() {
+    axios
+      .get("./_content/calendar.json")
+      .then((response) => {
+        this.events = response.data;
+        this.checkedCategories = this.getCategories();
+      })
+      .catch((error) => console.error(error));
+  },
   mounted() {
     const now = new Date();
     this.month = [
@@ -108,6 +130,30 @@ export default defineComponent({
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
+    },
+    getCategories(): string[] {
+      return this.events
+        ?.map((e) => e.category)
+        ?.filter((value, index, self) => self.indexOf(value) === index);
+    },
+    setSelectedEvents(): Event[] {
+      return this.events.filter((e) =>
+        this.checkedCategories.includes(e.category)
+      );
+    },
+    getEventsOfMonth(month?: number): Event[] {
+      return this.setSelectedEvents().filter(
+        (e) => new Date(e.date).getMonth() === (month || new Date().getMonth())
+      );
+    },
+    getEventsOfDay(day: {
+      day: number;
+      monthOffset: number;
+      isCurrent: boolean;
+    }): Event[] {
+      return this.getEventsOfMonth(
+        new Date().getMonth() + day.monthOffset
+      ).filter((e) => new Date(e.date).getDate() === day.day);
     },
     getFirstDayOfMonth(zeroBasedMonthNum: number, fullYear: number) {
       const monthNames = [
@@ -148,14 +194,14 @@ export default defineComponent({
       const first = daysInLastMonth - daysFromLastMonth + 1;
       for (let i = 0; i < daysFromLastMonth; i++) {
         //result.push(first+i);
-        result.push({ day: first + i, isThisMonth: false, isCurrent: false });
+        result.push({ day: first + i, monthOffset: -1, isCurrent: false });
       }
 
       for (let i = 1; i <= this.daysInMonth(monthIndex); i++) {
         //result.push( i );
         result.push({
           day: i,
-          isThisMonth: true,
+          monthOffset: 0,
           isCurrent: i === new Date().getDate()
         });
       }
@@ -164,7 +210,7 @@ export default defineComponent({
       const daysToGo = 6 * 7 - daysDone;
       for (let i = 1; i <= daysToGo; i++)
         //result.push( i );
-        result.push({ day: i, isThisMonth: false, isCurrent: false });
+        result.push({ day: i, monthOffset: +1, isCurrent: false });
 
       return result;
     }
