@@ -43,8 +43,6 @@ export default defineComponent({
   border-radius: 7pt;
   width: 1374px;
   height: 869px;
-  // min-width: 1374px;
-  // min-height: 869px;
   #search-content {
     width: 100%;
     height: calc(100% - 25pt);

@@ -329,7 +329,8 @@ $sizeDuration: 0.65s;
 #contact,
 #menu,
 #info,
-#notes {
+#notes,
+#search {
   max-width: 90vw;
   max-height: 83vh;
 }
