@@ -34,7 +34,6 @@
             >
               <span class="first-name"> {{ contact.firstname }}&nbsp; </span>
               <span class="last-name">{{ contact.lastname }}</span>
-              <!-- <h4>{{ contact.firstname }} {{ contact.lastname }}</h4> -->
             </li>
           </ul>
         </div>

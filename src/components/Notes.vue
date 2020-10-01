@@ -158,7 +158,7 @@ export default defineComponent({
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
-    },
+    }
   }
 });
 </script>
@@ -222,8 +222,8 @@ export default defineComponent({
       background-color: white;
       height: calc(100% - 54px);
       padding: 8px;
-      font-size: 1rem;
-      line-height: 1.25rem;
+      font-size: 1.125rem;
+      line-height: 2.125rem;
       overflow-x: hidden;
       overflow-y: scroll;
     }

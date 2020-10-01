@@ -5,65 +5,40 @@
       <div id="side">
         <p>FH Dortmund</p>
         <ul>
-          <li>Bachelor</li>
-          <li>Master</li>
+          <li
+            v-for="(category, categoryIndex) in getCategories()"
+            :key="categoryIndex"
+            v-on:click="
+              () => {
+                current = filter !== category ? 0 : current;
+                filter = category;
+              }
+            "
+          >
+            {{ category }}
+          </li>
         </ul>
       </div>
       <div id="infos">
         <div id="titles">
           <ul>
-            <li>
-              <h4>BA Fotografie</h4>
+            <li
+              v-for="(info, infoIndex) in getInfos()"
+              :key="infoIndex"
+              :class="{ active: infoIndex === current }"
+              v-on:click="current = infoIndex"
+            >
+              <h4>{{ info.title }}</h4>
               <div class="subtitle">
-                <span class="date">Mi., 13.09.2020</span>
-                <span class="teaser">Wenn Du das hier...</span>
-              </div>
-            </li>
-            <li>
-              <h4>BA Kommunikationsdesign</h4>
-              <div class="subtitle">
-                <span class="date">Mo., 11.09.2020</span>
-                <span class="teaser">Das Studium des...</span>
-              </div>
-            </li>
-            <li>
-              <h4>BA Objekt- und Raumdesign</h4>
-              <div class="subtitle">
-                <span class="date">Mi., 13.09.2020</span>
-                <span class="teaser">Holz, Papier, Plexi...</span>
-              </div>
-            </li>
-            <li>
-              <h4>BA Film und Sound</h4>
-              <div class="subtitle">
-                <span class="date">Mi., 13.09.2020</span>
-                <span class="teaser">Im Bachelorstudien...</span>
+                <span class="date">{{ info.date }}</span>
+                <span class="teaser">{{ info.content }}</span>
               </div>
             </li>
           </ul>
         </div>
         <div id="content">
-          <h3>BA Fotografie</h3>
-          <br />
-          Wenn Du das hier liest, hast Du Dich erfolgreich für den Studiengang
-          Fotografie eingeschrieben. Dazu erst einmal herzlichen Glück-wunsch!
-          Aber was erwartet Dich nun? Das Studium bereitet Dich in erster Linie
-          auf den professionellen Umgang mit einer Fotokamera vor, um
-          individuell gewünschte Projekte und Konzepte umzusetzen. Diese in Form
-          von Ausstellungen, Installationen oder in Buch- und Magazinformen zu
-          sehen, wird Dich unfassbar stolz machen. Nichts steht Dir und Deiner
-          Kamera im Wege, abgesehen vielleicht von der deutschen Bürokratie,
-          aber selbst wenn diese Dich in bestimmten Bereichen einschränkt, wird
-          sie Dir auch in puncto Selbstständigkeit und Datenschutz sehr helfen.
-          Vieles wird Dir dazu während Deines Studiums erklärt, aber auch die
-          Förderung und Forderung Deiner Kreativität wird nicht zu kurz kommen!
-          Denn natürlich ist das Stu-dium, neben den theoretischen und
-          technischen Lehrveranstaltun-gen, darauf ausgelegt, dass Du ganz viel
-          praktisch arbeitest, um aus Dir eine*n professionelle*n Fotograf*in zu
-          machen und Deinen ganz persönlichen Stil zu entwickeln. Damit Dir das
-          gelingt, bietet Dir die FH die Möglichkeit, mit entsprechendem
-          Equipment zu arbeiten, wie zum Beispiel das hauseigene Studio
-          mitzubenutzen oder professionelle Kameras auszuleihen. scrollen ...
+          <h3>{{ getInfos()[current]?.title }}</h3>
+          <div v-html="getInfos()[current]?.content"></div>
         </div>
       </div>
     </div>
@@ -73,16 +48,44 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Titlebar from "@/components/shared/Titlebar.vue"; // @ is an alias to /src
+import axios from "axios";
 
 export default defineComponent({
   name: "Info",
   components: {
     Titlebar
   },
+  data: () => ({
+    current: 0,
+    filter: "",
+    infos: [] as {
+      category: string;
+      title: string;
+      date: string;
+      content: string;
+    }[]
+  }),
   emits: ["update-focus"],
+  created: function() {
+    axios
+      .get("./_content/infos.json")
+      .then((response) => {
+        this.infos = response.data;
+        this.filter = this.infos[0]?.category;
+      })
+      .catch((error) => console.error(error));
+  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
+    },
+    getCategories() {
+      return this.infos
+        ?.map((i) => i.category)
+        ?.filter((value, index, self) => self.indexOf(value) === index);
+    },
+    getInfos() {
+      return this.infos?.filter((i) => i.category === this.filter);
     }
   }
 });
@@ -156,11 +159,18 @@ export default defineComponent({
             display: flex;
             flex-direction: row;
             margin: 12px 0 0 0;
-            .date {
-              flex: 1 1 50%;
+            .date,
+            .teaser {
+              flex: 0 1 45%;
+              max-width: 110px;
+              text-overflow: ellipsis;
+
+              /* Required for text-overflow to do anything */
+              white-space: nowrap;
+              overflow: hidden;
             }
             .teaser {
-              flex: 1 1 50%;
+              margin-left: auto;
             }
           }
         }
@@ -169,7 +179,7 @@ export default defineComponent({
         h3 {
           font-size: 1.75rem;
           line-height: 2.125rem;
-          margin: 0;
+          margin: 0 0 1.375rem 0;
         }
         padding: 2em;
         background-color: white;
@@ -177,6 +187,9 @@ export default defineComponent({
         height: calc(100% - 5rem);
         font-size: 1.125rem;
         line-height: 2.125rem;
+
+        overflow-x: hidden;
+        overflow-y: scroll;
       }
     }
   }

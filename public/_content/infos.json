@@ -1,0 +1,74 @@
+[
+    {
+        "category": "Bachelor",
+        "title": "BA Fotografie",
+        "date": "Mo., 11.09.2020",
+        "content": "Wenn Du das hier liest, hast Du Dich erfolgreich für den Studiengang Fotografie eingeschrieben. Dazu erst einmal herzlichen Glückwunsch! Aber was erwartet Dich nun? Das Studium bereitet Dich in erster Linie auf den professionellen Umgang mit einer Fotokamera vor, um individuell gewünschte Projekte und Konzepte umzusetzen. Diese in Form von Ausstellungen, Installationen oder in Buch- und Magazinformen zu sehen, wird Dich unfassbar stolz machen. Nichts steht Dir und Deiner Kamera im Wege, abgesehen vielleicht von der deutschen Bürokratie, aber selbst wenn diese Dich in bestimmten Bereichen einschränkt, wird sie Dir auch in puncto Selbstständigkeit und Datenschutz sehr helfen. Vieles wird Dir dazu während Deines Studiums erklärt, aber auch die Förderung und Forderung Deiner Kreativität wird nicht zu kurz kommen! Denn natürlich ist das Studium, neben den theoretischen und technischen Lehrveranstaltungen, darauf ausgelegt, dass Du ganz viel praktisch arbeitest, um aus Dir eine*n professionelle*n Fotograf*in zu machen und Deinen ganz persönlichen Stil zu entwickeln. Damit Dir das gelingt, bietet Dir die FH die Möglichkeit, mit entsprechendem Equipment zu arbeiten, wie zum Beispiel das hauseigene Studio mitzubenutzen oder professionelle Kameras auszuleihen."
+    },
+    {
+        "category": "Bachelor",
+        "title": "TEST",
+        "date": "hier kann eigentlich stehen was will",
+        "content": "Hier auch"
+    },
+    {
+        "category": "Bachelor",
+        "title": "BA Kommunikationsdesign",
+        "date": "Mo., 11.09.2020",
+        "content": "Das Studium des Kommunikationsdesigns is sehr spannend..."
+    },
+    {
+        "category": "Bachelor",
+        "title": "BA Objekt- und Raumdesign",
+        "date": "Mo., 11.09.2020",
+        "content": "Holz, Papier, Plexiglas... <p>Testen wir mal Paragraphen</p><p>zweiter Paragraph</p>Der Titel wird automatisch an den anfang der Inhalte gesetzt"
+    },
+    {
+        "category": "Bachelor",
+        "title": "BA Film und Sound",
+        "date": "Mo., 11.09.2020",
+        "content": "Im Bachelorstudiengang..."
+    },
+    {
+        "category": "Master",
+        "title": "MA Kommunikationsdesign",
+        "date": "Di., 12.09.2020",
+        "content": "Vielleicht stehen hier auch Inhalte"
+    },
+    {
+        "category": "Master",
+        "title": "MA Objekt- und Raumdesign",
+        "date": "Mo., 11.09.2020",
+        "content": " Die Infos für den Masterstudiengang Objekt und Raumdesign werden Nachgereicht"
+    },
+    {
+        "category": "Master",
+        "title": "MA Film und Sound",
+        "date": "Mo., 11.09.2020",
+        "content": "Im Masterstudiengang Film und Sound passiert auch etwas"
+    },
+    {
+        "category": "Allgemeines",
+        "title": "Wichtige Information",
+        "date": "Sa., 03.10.2020",
+        "content": "Kneipentour! Alle mitkommen!"
+    },
+    {
+        "category": "Wichtiges",
+        "title": "Wohnen",
+        "date": "Mo., 12.10.2020",
+        "content": "Besser in Wohnungen als unter Brücken"
+    },
+    {
+        "category": "Wichtiges",
+        "title": "Einkaufen",
+        "date": "Mo., 12.10.2020",
+        "content": "Mit Geld bezahlen und Maske mitnehmen"
+    },
+    {
+        "category": "Kategorien können beliebig sein",
+        "title": "Blabla",
+        "date": "So., 04.10.2020",
+        "content": "Noch mehr wichtiges"
+    }
+]
