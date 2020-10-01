@@ -82,7 +82,8 @@ export default defineComponent({
       for (const m of mutations) {
         const newValue = (m.target as HTMLElement).classList;
         this.$nextTick(() => {
-          this.expanded = newValue.contains("expanded");
+          this.expanded =
+            newValue.contains("expanded") || newValue.contains("focused");
         });
       }
     });

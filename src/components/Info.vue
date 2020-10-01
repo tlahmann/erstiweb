@@ -126,6 +126,7 @@ export default defineComponent({
         padding-left: 1.5rem;
         li {
           margin-bottom: 6px;
+          cursor: pointer;
         }
       }
     }
@@ -147,6 +148,7 @@ export default defineComponent({
           li {
             border-bottom: 1px solid #e8e8e8;
             padding: 14px 18px;
+            cursor: pointer;
           }
           h4 {
             font-size: 0.875rem;

@@ -54,22 +54,25 @@
     <!-- Post-It style components -->
     <Equipment
       v-bind:class="{
-        expanded: focused === 'equipment',
-        unfocused: !!focused && focused !== 'equipment'
+        focused: focused === 'equipment',
+        unfocused: !!focused && focused !== 'equipment',
+        expanded: !!focused && focused !== 'equipment'
       }"
       @update-focus="updateFocus"
     />
     <Exibitions
       v-bind:class="{
-        expanded: focused === 'exibitions',
-        unfocused: !!focused && focused !== 'exibitions'
+        focused: focused === 'exibitions',
+        unfocused: !!focused && focused !== 'exibitions',
+        expanded: !!focused && focused !== 'exibitions'
       }"
       @update-focus="updateFocus"
     />
     <Inspirations
       v-bind:class="{
-        expanded: focused === 'inspirations',
-        unfocused: !!focused && focused !== 'inspirations'
+        focused: focused === 'inspirations',
+        unfocused: !!focused && focused !== 'inspirations',
+        expanded: !!focused && focused !== 'inspirations'
       }"
       @update-focus="updateFocus"
     />
@@ -77,14 +80,14 @@
     <!-- image-style components -->
     <Rooms
       v-bind:class="{
-        expanded: focused === 'rooms',
+        focused: focused === 'rooms',
         unfocused: !!focused && focused !== 'rooms'
       }"
       @update-focus="updateFocus"
     />
     <Tutors
       v-bind:class="{
-        expanded: focused === 'tutors',
+        focused: focused === 'tutors',
         unfocused: !!focused && focused !== 'tutors'
       }"
       @update-focus="updateFocus"
@@ -396,7 +399,7 @@ $sizeDuration: 0.65s;
     }
   }
 
-  &.expanded {
+  &.focused {
     top: 30vh;
     left: 30vw;
     transform: translate(0, 0);
@@ -437,7 +440,7 @@ $sizeDuration: 0.65s;
   -webkit-transition: all $sizeDuration 0s;
   transition: all $sizeDuration 0s;
   z-index: initial;
-  &.expanded {
+  &.focused {
     -webkit-transition: all $sizeDuration 0s;
     transition: all $sizeDuration 0s;
   }
