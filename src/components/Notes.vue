@@ -173,7 +173,7 @@ export default defineComponent({
   height: 750px;
   #notes-content {
     width: 100%;
-    height: calc(100% - 25pt);
+    height: calc(100% - 30pt);
     display: flex;
     flex-direction: column;
     #ruler {

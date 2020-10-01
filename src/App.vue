@@ -166,7 +166,7 @@ export default defineComponent({
       this.focused = componentName;
     },
     getRoute(): string {
-      const idx = this.focused.toString();
+      const idx = this.focused?.toString();
       return this.routeNames[idx];
     },
     updateDateTime() {
