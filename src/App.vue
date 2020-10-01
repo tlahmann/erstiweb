@@ -53,25 +53,40 @@
 
     <!-- Post-It style components -->
     <Equipment
-      v-bind:class="{ expanded: focused === 'equipment' }"
+      v-bind:class="{
+        expanded: focused === 'equipment',
+        unfocused: !!focused && focused !== 'equipment'
+      }"
       @update-focus="updateFocus"
     />
     <Exibitions
-      v-bind:class="{ expanded: focused === 'exibitions' }"
+      v-bind:class="{
+        expanded: focused === 'exibitions',
+        unfocused: !!focused && focused !== 'exibitions'
+      }"
       @update-focus="updateFocus"
     />
     <Inspirations
-      v-bind:class="{ expanded: focused === 'inspirations' }"
+      v-bind:class="{
+        expanded: focused === 'inspirations',
+        unfocused: !!focused && focused !== 'inspirations'
+      }"
       @update-focus="updateFocus"
     />
 
     <!-- image-style components -->
     <Rooms
-      v-bind:class="{ focused: focused === 'rooms' }"
+      v-bind:class="{
+        expanded: focused === 'rooms',
+        unfocused: !!focused && focused !== 'rooms'
+      }"
       @update-focus="updateFocus"
     />
     <Tutors
-      v-bind:class="{ focused: focused === 'tutors' }"
+      v-bind:class="{
+        expanded: focused === 'tutors',
+        unfocused: !!focused && focused !== 'tutors'
+      }"
       @update-focus="updateFocus"
     />
     <div>
@@ -303,8 +318,8 @@ $sizeDuration: 0.95s;
   }
 
   &.unfocused {
-    transform: translate(-50%, -50%) scale(0.25);
-    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.35);
+    opacity: 0.35;
   }
 }
 #calendar,
@@ -386,7 +401,7 @@ $sizeDuration: 0.95s;
     top: 30vh;
     left: 30vw;
     transform: translate(0, 0);
-    z-index: 999;
+    z-index: 555;
 
     -webkit-transition: all 0.95s 0s;
     transition: all 0.95s 0s;
@@ -420,6 +435,13 @@ $sizeDuration: 0.95s;
 #tutors,
 #rooms {
   text-align: center;
+  -webkit-transition: all 0.95s 0s;
+  transition: all 0.95s 0s;
+  z-index: initial;
+  &.expanded {
+    -webkit-transition: all 0.95s 0s;
+    transition: all 0.95s 0s;
+  }
 }
 #calendar {
   top: 8vh;

@@ -30,7 +30,8 @@ export default defineComponent({
     msg: String
   },
   data: () => ({
-    init: true,
+    observer: {} as MutationObserver,
+    expanded: false,
     primeAngle: 137,
     primeRadiusX: 31,
     primeRadiusY: 31,
@@ -75,6 +76,25 @@ export default defineComponent({
       })
       .catch((error) => console.error(error));
   },
+  mounted() {
+    this.observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        const newValue = (m.target as HTMLElement).classList;
+        this.$nextTick(() => {
+          this.expanded = newValue.contains("expanded");
+        });
+      }
+    });
+
+    this.observer.observe(this.$el, {
+      attributes: true,
+      attributeOldValue: true,
+      attributeFilter: ["class"]
+    });
+  },
+  beforeUnmount() {
+    this.observer.disconnect();
+  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
@@ -94,7 +114,7 @@ export default defineComponent({
     } {
       let x = "";
       let y = "";
-      if (this.$el.classList.contains("expanded") || this.init) {
+      if (!this.expanded) {
         x =
           Math.cos(this.primeAngle * index * (Math.PI / 180)) *
             this.primeRadiusX *
@@ -105,7 +125,6 @@ export default defineComponent({
             this.primeRadiusY *
             (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
           "%";
-        this.init = !(this.init && index + 1 === this.notes.length);
         return {
           "z-index": Math.floor(Math.random() * this.notes.length),
           transform: `translate(${x}, ${y})`,

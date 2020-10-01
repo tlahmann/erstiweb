@@ -31,14 +31,26 @@
         <div id="days">
           <div class="row" v-for="(week, weekIndex) in days" :key="weekIndex">
             <div
+              class="day"
               v-for="(day, dayIndex) in week"
               :key="dayIndex"
               :class="{
                 weekend: dayIndex >= 5,
-                'foreign-mongth': !day.isThisMonth
+                'foreign-month': !day.isThisMonth
               }"
             >
-              {{ day.day }}
+              <div
+                class="day-number"
+                :class="{
+                  'current-day': day.isCurrent
+                }"
+              >
+                <span>{{ day.day }}</span>
+              </div>
+              <div class="events">
+                <div class="event">bla</div>
+                <div class="event">bla</div>
+              </div>
             </div>
           </div>
         </div>
@@ -136,18 +148,23 @@ export default defineComponent({
       const first = daysInLastMonth - daysFromLastMonth + 1;
       for (let i = 0; i < daysFromLastMonth; i++) {
         //result.push(first+i);
-        result.push({ day: first + i, isThisMonth: false });
+        result.push({ day: first + i, isThisMonth: false, isCurrent: false });
       }
 
-      for (let i = 1; i <= this.daysInMonth(monthIndex); i++)
+      for (let i = 1; i <= this.daysInMonth(monthIndex); i++) {
         //result.push( i );
-        result.push({ day: i, isThisMonth: true });
+        result.push({
+          day: i,
+          isThisMonth: true,
+          isCurrent: i === new Date().getDate()
+        });
+      }
 
       const daysDone = result.length;
       const daysToGo = 6 * 7 - daysDone;
       for (let i = 1; i <= daysToGo; i++)
         //result.push( i );
-        result.push({ day: i, isThisMonth: false });
+        result.push({ day: i, isThisMonth: false, isCurrent: false });
 
       return result;
     }
@@ -214,17 +231,53 @@ export default defineComponent({
           display: flex;
           flex-direction: row;
           flex: 1 1 calc(100% / 4);
-          div {
+          .day {
             flex: 1 1 calc(100% / 7);
             padding: 0.4em 0.9em;
-            text-align: end;
+            display: flex;
+            flex-direction: column;
             border-top: 1pt solid #e6e5e6;
             border-left: 1pt solid #e6e5e6;
+            .day-number {
+              // width: 20px;
+              // height: 20px;
+              align-self: flex-end;
+              text-align: end;
+              position: relative;
+              font-size: 0.8125rem;
+              // color: #3d3d3d;
+              &.current-day {
+                color: white;
+                display: inline-block;
+                line-height: 0px;
+                border-radius: 50%;
+                background-color: #fe453a;
+                transform: translateX(6px);
+                span {
+                  display: inline-block;
+                  padding-top: 50%;
+                  padding-bottom: 50%;
+                  margin-left: 6px;
+                  margin-right: 6px;
+                }
+              }
+            }
+            .events {
+              display: flex;
+              flex-direction: column;
+              .event {
+                border: 1px solid #e6e5e6;
+                border-radius: 4px;
+                padding: 2px;
+                margin-bottom: 2px;
+                font-size: 0.75rem;
+              }
+            }
           }
         }
       }
       .weekend,
-      .foreign-mongth {
+      .foreign-month {
         color: #3d3d3d88;
       }
       .weekend {
