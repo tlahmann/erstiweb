@@ -93,18 +93,88 @@
       @update-focus="updateFocus"
     />
     <div>
-      <Folder title="Ordner" top="89" left="35" />
-      <Folder title="Ordner" top="86" left="31" />
+      <Folder
+        title="Ordner"
+        top="89"
+        left="35"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
+      <Folder
+        title="Ordner"
+        top="86"
+        left="31"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
 
-      <Folder title="Ordner" top="18" left="38" />
-      <Folder title="tmp" top="27" left="34" />
-      <Folder title="Final" top="30" left="28" />
-      <Folder title="Final_new" top="34" left="31" />
+      <Folder
+        title="Ordner"
+        top="18"
+        left="38"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
+      <Folder
+        title="tmp"
+        top="27"
+        left="34"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
+      <Folder
+        title="Final"
+        top="30"
+        left="28"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
+      <Folder
+        title="Final_new"
+        top="34"
+        left="31"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
 
-      <Folder title="Downloads" top="50" left="81" />
-      <Folder title="Ordner" top="53" left="86" />
-      <Folder title="Musik" top="58" left="72" />
-      <Folder title="Test" top="60" left="74" />
+      <Folder
+        title="Downloads"
+        top="50"
+        left="81"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
+      <Folder
+        title="Ordner"
+        top="53"
+        left="86"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
+      <Folder
+        title="Musik"
+        top="58"
+        left="72"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
+      <Folder
+        title="Test"
+        top="60"
+        left="74"
+        v-bind:class="{
+          unfocused: !!focused
+        }"
+      />
     </div>
 
     <Menu
@@ -323,6 +393,20 @@ $sizeDuration: 0.65s;
   &.unfocused {
     transform: translate(-50%, -50%) scale(0.35);
     opacity: 0.35;
+  }
+}
+.folder {
+  transition-property: z-index, transform, opacity;
+  transition-duration: $positionDuration, $sizeDuration, $positionDuration;
+  transition-timing-function: ease, ease, ease;
+  transition-delay: 0s, 0s, 0s;
+  &.unfocused {
+    transform: translate(-50%, -50%) scale(0.35);
+    opacity: 0.35;
+    transition-property: z-index, transform, opacity;
+    transition-duration: $positionDuration, $sizeDuration, $positionDuration;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s;
   }
 }
 #calendar,
