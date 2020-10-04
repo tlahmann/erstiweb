@@ -40,17 +40,32 @@
         uns die Zeit vertreiben: mit Podcasts rund ums Studium, Onlinespielen
         und Livestreams von euren Future Tuts.
       </p>
+      <Calendar />
+      <p>
+        Die Zukunft. Hier feiern die fetzigsten Dinge der Vergangenheit ihr
+        Comeback: Neonlicht, Aluhüte und LED-Heelys dürfen auf keiner Future
+        Party fehlen. Sounds like fun? Dann sucht euch ein grooviges Partyoutfit
+        aus der Zukunft zusammen, schwingt euch aufs Hoverboard und lasst uns
+        mit den Leuchtstoffröhren um die Wette strahlen!
+        <br /><br />
+        01010100011101010111010001101111011100100110010101101110
+      </p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Calendar from "@/components/Calendar.vue"; // @ is an alias to /src
 import axios from "axios";
 import { reposition } from "@/utils/reposition.function";
+import randInt from "@/utils/randInt.function";
 
 export default defineComponent({
   name: "Tutors",
+  components: {
+    Calendar
+  },
   data: () => ({
     observer: {} as MutationObserver,
     expanded: false,
@@ -67,7 +82,8 @@ export default defineComponent({
     axios
       .get("./_content/tutors.json")
       .then((response) => {
-        return response.data?.tutors.map((elem: {}) => {
+        // return response.data?.tutors.map((elem: {}) => {
+        this.tutors = response.data?.tutors.map((elem: {}) => {
           const w = Math.floor(Math.random() * 100) + 230;
           const h = Math.floor(Math.random() * 100) + 120;
           return {
@@ -83,21 +99,21 @@ export default defineComponent({
           };
         });
       })
-      .then((tutors) => {
-        this.tutors = reposition(
-          {
-            x: 100,
-            y: 100,
-            w: window.innerWidth - 200,
-            h: 820 - 50,
-            hw: (window.innerWidth - 200) >> 1,
-            hh: (820 - 50) >> 1
-          },
-          tutors,
-          20,
-          30
-        );
-      })
+      // .then((tutors) => {
+      //   this.tutors = reposition(
+      //     {
+      //       x: 100,
+      //       y: 100,
+      //       w: window.innerWidth - 200,
+      //       h: 820 - 50,
+      //       hw: (window.innerWidth - 200) >> 1,
+      //       hh: (820 - 50) >> 1
+      //     },
+      //     tutors,
+      //     20,
+      //     30
+      //   );
+      // })
       .catch((error) => console.error(error));
   },
   mounted() {
@@ -155,11 +171,13 @@ export default defineComponent({
           transform: `translate(${x}, ${y})`
         };
       } else {
-        x = this.tutors[index].bounds.x + "px";
-        y = this.tutors[index].bounds.y + "px";
+        // x = this.tutors[index].bounds.x + "px";
+        // y = this.tutors[index].bounds.y + "px";
+        const x = randInt(-30, 30) + "px";
+        const y = randInt(-30, 30) + "px";
         return {
-          "z-index": Math.floor(Math.random() * this.tutors.length)
-          // transform: `translate(${x}, ${y})`
+          "z-index": Math.floor(Math.random() * this.tutors.length),
+          transform: `translate(${x}, ${y})`
         };
       }
     }
@@ -179,7 +197,7 @@ img.tutor-image {
   position: absolute;
   .focused & {
     position: relative;
-    margin: 2.5rem;
+    margin: 2rem;
   }
 
   -webkit-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
@@ -230,7 +248,18 @@ img.tutor-image {
     p {
       line-height: 48px;
       font-size: 32px;
+      margin-bottom: 10rem;
     }
   }
+}
+
+#calendar {
+  position: relative;
+  display: block;
+  transform: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-bottom: 10rem;
 }
 </style>
