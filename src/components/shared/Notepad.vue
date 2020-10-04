@@ -14,7 +14,7 @@
         color: color
       }"
     >
-      <h4>{{ content }}</h4>
+      <h4 lang="de">{{ content }}</h4>
       <a :href="link">Hier weiterlesen&nbsp;&rarr;</a>
     </div>
   </div>
@@ -72,9 +72,9 @@ $sizeDuration: 0.65s;
   flex-direction: column;
   h4 {
     // display: flex;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin: 0;
-    word-wrap: break-word;
+    // word-wrap: break-word;
     hyphens: auto;
   }
   a {
