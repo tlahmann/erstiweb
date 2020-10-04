@@ -418,7 +418,8 @@ $sizeDuration: 0.65s;
   max-width: 90vw;
   max-height: 83vh;
 }
-#tutors.focused {
+#tutors.focused,
+#rooms.focused {
   // top: 40px;
   // left: 0;
   // transform: translate(0, 0) scale(1);

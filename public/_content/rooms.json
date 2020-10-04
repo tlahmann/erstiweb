@@ -1,0 +1,12 @@
+{
+    "rooms": [
+        {"image": "./assets/Räume/Aula/nikonf65tmax20032_bearbeitet.jpg"},
+        {"image": "./assets/Räume/Bibliothek/nikonf65tmax20067_bearbeitet.jpg"},
+        {"image": "./assets/Räume/Computerpools/nikonf65tmax20052.jpg"},
+        {"image": "./assets/Räume/Druckwerkstatt/img0025_bearbeitet.jpg"},
+        {"image": "./assets/Räume/FH Dortmund/img0076_bearbeitet.jpg"},
+        {"image": "./assets/Räume/Filmstudio/nikonf65tmax20022.jpg"},
+        {"image": "./assets/Räume/Fotostudio/nikonf65tmax20087_bearbeitet.jpg"},
+        {"image": "./assets/Räume/Mensa/DSC_0311-positive.jpg"}
+    ]
+}
