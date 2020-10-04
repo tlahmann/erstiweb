@@ -60,7 +60,7 @@ export function reposition(
       box.bounds.x = x;
       box.bounds.y = y;
     } while (
-      attempts++ < 100 &&
+      attempts++ < 500 &&
       boxCollides(box, collisionBoxes, parBound, sep)
     );
 

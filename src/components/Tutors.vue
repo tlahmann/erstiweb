@@ -133,7 +133,7 @@ export default defineComponent({
       index: number
     ): {
       "z-index": number;
-      transform: string;
+      transform?: string;
       width?: string;
       height?: string;
     } {
@@ -158,8 +158,8 @@ export default defineComponent({
         x = this.tutors[index].bounds.x + "px";
         y = this.tutors[index].bounds.y + "px";
         return {
-          "z-index": Math.floor(Math.random() * this.tutors.length),
-          transform: `translate(${x}, ${y})`
+          "z-index": Math.floor(Math.random() * this.tutors.length)
+          // transform: `translate(${x}, ${y})`
         };
       }
     }
@@ -170,13 +170,17 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 $positionDuration: 0.55s;
-$sizeDuration: 0.65s;
+$sizeDuration: 0.25s;
 
 img.tutor-image {
   max-width: 6vw;
   min-width: 110px;
   height: auto;
   position: absolute;
+  .focused & {
+    position: relative;
+    margin: 2.5rem;
+  }
 
   -webkit-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
@@ -205,10 +209,10 @@ img.tutor-image {
   overflow-x: hidden;
   overflow-y: scroll;
   #tutor-images {
-    width: 100%;
-    height: 400px;
-    transform: translateY(40%);
-    margin-bottom: 420px;
+    width: 80%;
+    height: 600px;
+    transform: translateY(10%);
+    margin: 0 auto 220px auto;
   }
   #content {
     max-width: 1088px;
