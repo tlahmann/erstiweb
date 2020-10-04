@@ -2,35 +2,45 @@
   <div id="contact">
     <div id="contact-content">
       <div id="side">
-        <div>
+        <div id="buttons">
           <TitlebarButtons @update-focus="updateFocus" />
         </div>
-        <div class="list" v-on:click="updateFocus('contact')">
+        <div id="side-content" v-on:click="updateFocus('contact')">
+          <p>FH Dortmund</p>
           <ul>
-            <li>Alle Kontakte</li>
-          </ul>
-          <span>FH Dortmund</span>
-          <ul>
-            <li>Alle FH Dortmund Kontakte</li>
-          </ul>
-          <span>FH Dortmund</span>
-          <ul>
-            <li>Alle Fachbereich-Kontakte</li>
-            <li>Kommunikationsdesign</li>
-            <li>Fotografie</li>
-            <li>Objekt- und Raumdesign</li>
-            <li>Film & Sound</li>
+            <li
+              v-for="(category, categoryIndex) in getCategories()"
+              :key="categoryIndex"
+              v-on:click="
+                () => {
+                  current = filter !== category ? 0 : current;
+                  filter = category;
+                }
+              "
+            >
+              {{ category }}
+            </li>
           </ul>
         </div>
       </div>
       <div id="contacts" v-on:click="updateFocus('contact')">
         <div id="contact-list">
-          <ul>
+          <input
+            id="contact-search"
+            v-model="filter"
+            type="text"
+            placeholder="Suche"
+          />
+          <ul
+            v-for="(letter, letterIndex) in getContactLetter()"
+            :key="letterIndex"
+          >
+            <li>{{ letter }}</li>
             <li
-              v-for="(contact, contactIndex) in contacts"
+              v-for="(contact, contactIndex) in getContactsByLetter(letter)"
               :key="contactIndex"
-              :class="{ active: contactIndex === current }"
-              v-on:click="current = contactIndex"
+              :class="{ active: contact === current }"
+              v-on:click="current = contact"
             >
               <span class="first-name"> {{ contact.firstname }}&nbsp; </span>
               <span class="last-name">{{ contact.lastname }}</span>
@@ -38,16 +48,14 @@
           </ul>
         </div>
         <div id="contact-info">
-          <span id="first-name" v-if="contacts[current]?.title">
-            {{ contacts[current]?.title }}&nbsp;
+          <span id="first-name" v-if="current?.title">
+            {{ current?.title }}&nbsp;
           </span>
-          <span id="first-name">
-            {{ contacts[current]?.firstname }}&nbsp;
-          </span>
-          <span id="last-name">{{ contacts[current]?.lastname }}</span>
+          <span id="first-name"> {{ current?.firstname }}&nbsp; </span>
+          <span id="last-name">{{ current?.lastname }}</span>
           <ul>
             <li
-              v-for="(info, contactIndex) in contacts[current]?.contactInfos"
+              v-for="(info, contactIndex) in current?.contactInfos"
               :key="contactIndex"
             >
               <span class="title">{{ info.key }}</span>
@@ -71,8 +79,15 @@ export default defineComponent({
     TitlebarButtons
   },
   data: () => ({
-    current: 0,
-    contacts: [] as { text: string }[]
+    current: {},
+    filter: "",
+    contacts: [] as {
+      firstname: string;
+      lastname: string;
+      category: string;
+      title: string;
+      contactInfos: { key: string; value: string }[];
+    }[]
   }),
   emits: ["update-focus"],
   created: function() {
@@ -82,12 +97,41 @@ export default defineComponent({
         this.contacts = response.data?.sort((c1: any, c2: any) =>
           c2.lastname > c1.lastname ? -1 : 1
         );
+        this.current = this.contacts?.[0];
       })
       .catch((error) => console.error(error));
   },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
+    },
+    filteredContacts() {
+      return this.contacts.filter((c) => {
+        return (
+          !this.filter ||
+          c.firstname?.toLowerCase().match(this.filter.toLowerCase()) ||
+          c.lastname?.toLowerCase().match(this.filter.toLowerCase()) ||
+          c.title?.toLowerCase().match(this.filter.toLowerCase()) ||
+          c.category?.toLowerCase().match(this.filter.toLowerCase()) ||
+          c.contactInfos?.some((ci) => ci.value === this.filter)
+        );
+      });
+    },
+    getCategories() {
+      return this.contacts
+        ?.map((i) => i.category)
+        ?.filter((value, index, self) => self.indexOf(value) === index);
+    },
+    getContactLetter() {
+      return this.filteredContacts()
+        ?.map((c) => c.lastname.charAt(0).toUpperCase())
+        ?.filter((value, index, self) => self.indexOf(value) === index)
+        ?.sort();
+    },
+    getContactsByLetter(letter: string) {
+      return this.filteredContacts()?.filter(
+        (value) => value.lastname.charAt(0).toUpperCase() === letter
+      );
     }
   }
 });
@@ -107,24 +151,36 @@ export default defineComponent({
     display: flex;
     #side {
       background-color: #e8e8e8;
-      flex: 1 1 22.7%;
-      height: calc(100% - 40pt);
-      padding: 20pt 17pt;
+      flex: 1 1 18.9%;
+      height: calc(100% - 30pt);
+      padding: 10pt 8pt;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+
+      #buttons {
+        margin-bottom: 1rem;
+      }
+
+      #side-content {
+        height: 100%;
+      }
       input[type="checkbox"] {
         margin: 6.5px 3px;
       }
-      .list {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          li {
-            border-bottom: 1px solid #e8e8e8;
-            padding: 14px 18px;
-          }
+      p {
+        margin: 0;
+        color: rgba(36, 36, 36, 0.6);
+        margin-bottom: 6px;
+      }
+      ul {
+        margin: 0;
+        list-style-type: none;
+        padding-left: 1.5rem;
+        li {
+          margin-bottom: 6px;
+          cursor: pointer;
         }
       }
     }
@@ -202,6 +258,31 @@ export default defineComponent({
             font-weight: 600;
             font-size: 0.785rem;
           }
+        }
+      }
+      #contact-search {
+        font-size: 0.875rem;
+        width: 82%;
+        padding: 3px;
+        margin: 10px auto;
+        display: block;
+        border-radius: 2px;
+        border: 1px solid rgb(0 0 0 / 0.1);
+        box-shadow: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.28);
+        &::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: #e8e8e8;
+          opacity: 1; /* Firefox */
+        }
+
+        &:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: #e8e8e8;
+        }
+
+        &::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: #e8e8e8;
         }
       }
     }
