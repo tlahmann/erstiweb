@@ -1,8 +1,8 @@
 <template>
   <div id="exibitions">
     <Notepad
-      color="#A6FF9A"
-      highlightColor="#40D608"
+      color="#198C19"
+      highlightColor="#116211"
       v-for="(note, idx) in notes"
       v-bind:key="idx"
       v-on:click="updateFocus('exibitions')"

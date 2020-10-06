@@ -264,7 +264,7 @@ export default defineComponent({
           flex: 1 1 calc(100% / 7);
           padding: 0.4em 0.9em;
           text-align: end;
-          font-size: 12px;
+          font-size: 0.75rem;
         }
       }
       #days {
@@ -272,7 +272,7 @@ export default defineComponent({
         flex-direction: column;
         display: flex;
         color: #3d3d3d;
-        font-size: 14px;
+        font-size: 0.875rem;
         .row {
           display: flex;
           flex-direction: row;
@@ -316,7 +316,7 @@ export default defineComponent({
                 border-radius: 4px;
                 padding: 2px;
                 margin-bottom: 2px;
-                font-size: 0.75rem;
+                font-size: 0.75em;
               }
             }
           }
