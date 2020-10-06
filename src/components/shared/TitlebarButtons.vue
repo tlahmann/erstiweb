@@ -1,7 +1,22 @@
 <template>
-  <input type="button" class="titlebar-button" value="" v-on:click="updateFocus" />
-  <input type="button" class="titlebar-button" value="" v-on:click="updateFocus" />
-  <input type="button" class="titlebar-button" value="" v-on:click="updateFocus" />
+  <input
+    type="button"
+    class="titlebar-button"
+    value=""
+    v-on:click="updateFocus"
+  />
+  <input
+    type="button"
+    class="titlebar-button"
+    value=""
+    v-on:click="updateMaximization"
+  />
+  <input
+    type="button"
+    class="titlebar-button"
+    value=""
+    v-on:click="updateFocus"
+  />
 </template>
 
 <script lang="ts">
@@ -12,10 +27,13 @@ export default defineComponent({
   props: {
     focused: Boolean
   },
-  emits: ["update-focus"],
+  emits: ["update-focus", "update-maximization"],
   methods: {
     updateFocus: function() {
       this.$emit("update-focus", "");
+    },
+    updateMaximization: function() {
+      this.$emit("update-maximization", "");
     }
   }
 });

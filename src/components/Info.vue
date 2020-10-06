@@ -1,7 +1,10 @@
 <template>
   <div id="info">
     <div class="titlebar">
-      <TitlebarButtons @update-focus="updateFocus" />
+      <TitlebarButtons
+        @update-focus="updateFocus"
+        @update-maximization="updateMaximization"
+      />
       <input
         type="button"
         class="dead-button"
@@ -81,7 +84,7 @@ export default defineComponent({
       content: string;
     }[]
   }),
-  emits: ["update-focus"],
+  emits: ["update-focus", "update-maximization"],
   created: function() {
     axios
       .get("./_content/infos.json")
@@ -94,6 +97,9 @@ export default defineComponent({
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
+    },
+    updateMaximization() {
+      this.$emit("update-maximization", "info");
     },
     getCategories() {
       return this.infos

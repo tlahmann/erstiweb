@@ -1,7 +1,10 @@
 <template>
   <div id="search">
     <div class="titlebar">
-      <TitlebarButtons @update-focus="updateFocus" />
+      <TitlebarButtons
+        @update-focus="updateFocus"
+        @update-maximization="updateMaximization"
+      />
       <input
         type="button"
         class="dead-button"
@@ -41,10 +44,13 @@ export default defineComponent({
   data: () => ({
     title: "Suche"
   }),
-  emits: ["update-focus"],
+  emits: ["update-focus", "update-maximization"],
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
+    },
+    updateMaximization() {
+      this.$emit("update-maximization", "search");
     }
   }
 });

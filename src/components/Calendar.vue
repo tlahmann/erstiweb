@@ -1,7 +1,10 @@
 <template>
   <div id="calendar">
     <div class="titlebar">
-      <TitlebarButtons @update-focus="updateFocus" />
+      <TitlebarButtons
+        @update-focus="updateFocus"
+        @update-maximization="updateMaximization"
+      />
       <input
         type="button"
         class="dead-button"
@@ -95,7 +98,7 @@ export default defineComponent({
   components: {
     TitlebarButtons
   },
-  emits: ["update-focus"],
+  emits: ["update-focus", "update-maximization"],
   data: () => ({
     title: "Kalender",
     days: [0],
@@ -147,6 +150,9 @@ export default defineComponent({
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
+    },
+    updateMaximization() {
+      this.$emit("update-maximization", "calendar");
     },
     getCategories(): string[] {
       return this.events

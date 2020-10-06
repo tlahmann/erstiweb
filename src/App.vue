@@ -18,37 +18,47 @@
     <Calendar
       v-bind:class="{
         focused: focused === 'calendar',
+        maximized: maximized === 'calendar',
         unfocused: !!focused && focused !== 'calendar'
       }"
       @update-focus="updateFocus"
+      @update-maximization="updateMaximization"
     />
     <Contact
       v-bind:class="{
         focused: focused === 'contact',
+        maximized: maximized === 'contact',
         unfocused: !!focused && focused !== 'contact'
       }"
       @update-focus="updateFocus"
+      @update-maximization="updateMaximization"
     />
     <Info
       v-bind:class="{
         focused: focused === 'info',
+        maximized: maximized === 'info',
         unfocused: !!focused && focused !== 'info'
       }"
       @update-focus="updateFocus"
+      @update-maximization="updateMaximization"
     />
     <Notes
       v-bind:class="{
         focused: focused === 'notes',
+        maximized: maximized === 'notes',
         unfocused: !!focused && focused !== 'notes'
       }"
       @update-focus="updateFocus"
+      @update-maximization="updateMaximization"
     />
     <Search
       v-bind:class="{
         focused: focused === 'search',
+        maximized: maximized === 'search',
         unfocused: !!focused && focused !== 'search'
       }"
       @update-focus="updateFocus"
+      @update-maximization="updateMaximization"
     />
 
     <!-- Post-It style components -->
@@ -225,6 +235,7 @@ export default defineComponent({
     hours: "",
     minutes: "",
     focused: "",
+    maximized: "",
     routeNames: {
       calendar: " / Kalender",
       contact: " / Kontakte",
@@ -250,8 +261,12 @@ export default defineComponent({
     updateFocus(componentName: string): void {
       if (this.focused !== componentName) {
         router.push({ path: "", query: { c: componentName } });
+        this.maximized = "";
       }
       this.focused = componentName;
+    },
+    updateMaximization(componentName: string): void {
+      this.maximized = this.maximized ? "" : componentName;
     },
     getRoute(): string {
       const idx = this.focused?.toString();
@@ -417,6 +432,22 @@ $sizeDuration: 0.65s;
 #search {
   max-width: 90vw;
   max-height: 83vh;
+
+  &.maximized {
+    width: 100vw;
+    height: calc(100vh - 45px);
+    max-width: 100vw;
+    max-height: calc(100vh - 45px);
+    top: calc(50vh + 20px);
+    z-index: 1300;
+
+    transition-property: width, height, top, left;
+    transition-duration: $sizeDuration/2, $sizeDuration/2, $positionDuration,
+      $positionDuration;
+    transition-timing-function: ease, ease, cubic-bezier(0.65, 0.05, 0.36, 1),
+      cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-delay: 0s, 0s, 0s, 0s;
+  }
 }
 #tutors.focused,
 #rooms.focused {
@@ -466,12 +497,12 @@ $sizeDuration: 0.65s;
   -moz-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.3);
 
-  transition-property: z-index, transform, opacity, top, left;
+  transition-property: z-index, transform, opacity, width, height, top, left;
   transition-duration: $positionDuration, $sizeDuration, $positionDuration,
-    $positionDuration, $positionDuration;
-  transition-timing-function: ease, ease, ease,
+    $sizeDuration, $sizeDuration, $positionDuration, $positionDuration;
+  transition-timing-function: ease, ease, ease, ease, ease,
     cubic-bezier(0.65, 0.05, 0.36, 1), cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition-delay: 0s, 0s, 0s, $positionDuration, $positionDuration;
+  transition-delay: 0s, 0s, 0s, 0s, 0s, $positionDuration, $positionDuration;
 
   transform: translate(-50%, -50%) scale(0.5);
   overflow: hidden;

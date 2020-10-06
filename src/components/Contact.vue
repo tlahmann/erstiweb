@@ -3,7 +3,10 @@
     <div id="contact-content">
       <div id="side">
         <div id="buttons">
-          <TitlebarButtons @update-focus="updateFocus" />
+          <TitlebarButtons
+            @update-focus="updateFocus"
+            @update-maximization="updateMaximization"
+          />
         </div>
         <div id="side-content" v-on:click="updateFocus('contact')">
           <p>FH Dortmund</p>
@@ -99,7 +102,7 @@ export default defineComponent({
       contactInfos: { key: string; value: string }[];
     }[]
   }),
-  emits: ["update-focus"],
+  emits: ["update-focus", "update-maximization"],
   created: function() {
     axios
       .get("./_content/contacts.json")
@@ -114,6 +117,9 @@ export default defineComponent({
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
+    },
+    updateMaximization() {
+      this.$emit("update-maximization", "contact");
     },
     filteredContacts() {
       return this.contacts.filter((c) => {
