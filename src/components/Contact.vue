@@ -9,12 +9,22 @@
           <p>FH Dortmund</p>
           <ul>
             <li
+              v-on:click="
+                () => {
+                  filter = '';
+                  current = filteredContacts()?.[0];
+                }
+              "
+            >
+              Alle Kontakte
+            </li>
+            <li
               v-for="(category, categoryIndex) in getCategories()"
               :key="categoryIndex"
               v-on:click="
                 () => {
-                  current = filter !== category ? 0 : current;
                   filter = category;
+                  current = filteredContacts()?.[0];
                 }
               "
             >
@@ -113,7 +123,9 @@ export default defineComponent({
           c.lastname?.toLowerCase().match(this.filter.toLowerCase()) ||
           c.title?.toLowerCase().match(this.filter.toLowerCase()) ||
           c.category?.toLowerCase().match(this.filter.toLowerCase()) ||
-          c.contactInfos?.some((ci) => ci.value === this.filter)
+          c.contactInfos?.some((ci) =>
+            ci.value.toLowerCase().match(this.filter.toLowerCase())
+          )
         );
       });
     },

@@ -112,19 +112,39 @@ export default defineComponent({
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
     },
-    offset(index: number) {
-      const x =
-        Math.cos((this.primeAngle * index) / 180) *
-        this.primeRadiusX *
-        (Math.floor((this.primeAngle * (index + 1)) / 360) + 1);
-      const y =
-        Math.sin((this.primeAngle * index) / 180) *
-        this.primeRadiusY *
-        (Math.floor((this.primeAngle * (index + 1)) / 360) + 1);
-      return {
-        "z-index": Math.floor(Math.random() * this.rooms.length),
-        transform: `translate(${x}px, ${y}px)`
-      };
+    offset(
+      index: number
+    ): {
+      "z-index": number;
+      transform?: string;
+      width?: string;
+      height?: string;
+    } {
+      let x = "";
+      let y = "";
+      if (!this.expanded) {
+        x =
+          Math.cos(this.primeAngle * index * (Math.PI / 180)) *
+            this.primeRadiusX *
+            (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
+          "px";
+        y =
+          Math.sin(this.primeAngle * index * (Math.PI / 180)) *
+            this.primeRadiusY *
+            (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
+          "px";
+        return {
+          "z-index": Math.floor(Math.random() * this.rooms.length),
+          transform: `translate(${x}, ${y})`
+        };
+      } else {
+        const x = "0px";
+        const y = "0px";
+        return {
+          "z-index": Math.floor(Math.random() * this.rooms.length),
+          transform: `translate(${x}, ${y})`
+        };
+      }
     }
   }
 });
