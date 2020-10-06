@@ -463,8 +463,6 @@ $sizeDuration: 0.65s;
     height: 1px;
     overflow: visible;
   }
-  //   25%  {background-color: yellow;}
-  //   50%  {background-color: blue;}
   100% {
     width: 100vw;
     height: calc(100vh - 40px);
