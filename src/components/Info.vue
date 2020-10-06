@@ -2,6 +2,19 @@
   <div id="info">
     <div class="titlebar">
       <TitlebarButtons @update-focus="updateFocus" />
+      <input
+        type="button"
+        class="dead-button"
+        :value="title"
+        style="margin: 0 20px;padding: 3px 28px;"
+      />
+      <input type="button" class="dead-button" value="+" />
+      <input
+        type="text"
+        class="dead-button"
+        placeholder="Suche"
+        style="margin: 0 0 0 auto;"
+      />
     </div>
     <div id="info-content" v-on:click="updateFocus('info')">
       <div id="side">
@@ -58,6 +71,7 @@ export default defineComponent({
     TitlebarButtons
   },
   data: () => ({
+    title: "Informationen",
     current: 0,
     filter: "",
     infos: [] as {

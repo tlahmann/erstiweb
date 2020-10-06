@@ -586,7 +586,7 @@ $sizeDuration: 0.65s;
 }
 
 // Titlebar
-$titlebarHeight: 28px;
+$titlebarHeight: 40px;
 .titlebar {
   height: $titlebarHeight;
   width: calc(100% - 8pt);
@@ -598,7 +598,14 @@ $titlebarHeight: 28px;
   border-top-left-radius: 7pt;
   border-top-right-radius: 7pt;
   align-items: center;
-  input[type="button"] {
+  font-size: 13px;
+  .dead-button {
+    padding: 3px 8px;
+    margin: 0 0px;
+    border-radius: 3px;
+    border: 1px solid #0000001a;
+  }
+  .titlebar-button {
     margin: 2.4pt;
     padding: 0;
     width: 10pt;

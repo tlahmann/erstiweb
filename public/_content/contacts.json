@@ -1,5 +1,33 @@
 [
     {
+        "title": "M.Sc.",
+        "firstname": "Tobias",
+        "lastname": "Lahmann",
+        "category": "Programmierer",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "So Web-Kram"
+            },
+            {
+                "key": "Raum",
+                "value": "Zuhause"
+            },
+            {
+                "key": "Telefon",
+                "value": "hab ich"
+            },
+            {
+                "key": "Mail",
+                "value": "tobias.lahmann@uni-ulm.de"
+            },
+            {
+                "key": "Beliebiger Wert",
+                "value": "Hier kann stehen, was will"
+            }
+        ]
+    },
+    {
         "title": "Prof.",
         "firstname": "Roger",
         "lastname": "Walk",

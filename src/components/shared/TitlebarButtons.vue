@@ -1,7 +1,7 @@
 <template>
-  <input type="button" value="" v-on:click="updateFocus" />
-  <input type="button" value="" v-on:click="updateFocus" />
-  <input type="button" value="" v-on:click="updateFocus" />
+  <input type="button" class="titlebar-button" value="" v-on:click="updateFocus" />
+  <input type="button" class="titlebar-button" value="" v-on:click="updateFocus" />
+  <input type="button" class="titlebar-button" value="" v-on:click="updateFocus" />
 </template>
 
 <script lang="ts">

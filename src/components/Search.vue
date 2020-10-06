@@ -2,6 +2,13 @@
   <div id="search">
     <div class="titlebar">
       <TitlebarButtons @update-focus="updateFocus" />
+      <input
+        type="button"
+        class="dead-button"
+        :value="title"
+        style="margin: 0 20px;padding: 3px 28px;"
+      />
+      <input type="button" class="dead-button" value="+" />
     </div>
     <div id="search-content" v-on:click="updateFocus('search')">
       <div id="side">
@@ -31,6 +38,9 @@ export default defineComponent({
   components: {
     TitlebarButtons
   },
+  data: () => ({
+    title: "Suche"
+  }),
   emits: ["update-focus"],
   methods: {
     updateFocus(focusValue: string) {

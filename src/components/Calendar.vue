@@ -2,6 +2,20 @@
   <div id="calendar">
     <div class="titlebar">
       <TitlebarButtons @update-focus="updateFocus" />
+      <input
+        type="button"
+        class="dead-button"
+        :value="title"
+        style="margin: 0 20px;padding: 3px 28px;"
+      />
+      <input type="button" class="dead-button" value="+" />
+      <div style="margin: 0 auto;">
+        <input type="button" class="dead-button" value="Tag" />
+        <input type="button" class="dead-button" value="Woche" />
+        <input type="button" class="dead-button" value="Monat" />
+        <input type="button" class="dead-button" value="Jahr" />
+      </div>
+      <input type="text" class="dead-button" placeholder="Suche" />
     </div>
     <div id="calendar-content" v-on:click="updateFocus('calendar')">
       <div id="side">
@@ -83,6 +97,7 @@ export default defineComponent({
   },
   emits: ["update-focus"],
   data: () => ({
+    title: "Kalender",
     days: [0],
     month: "None",
     year: "2020",

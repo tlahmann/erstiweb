@@ -2,6 +2,13 @@
   <div id="notes">
     <div class="titlebar">
       <TitlebarButtons @update-focus="updateFocus" />
+      <input
+        type="button"
+        class="dead-button"
+        :value="title"
+        style="margin: 0 20px;padding: 3px 28px;"
+      />
+      <input type="button" class="dead-button" value="+" />
     </div>
     <div id="notes-content" v-on:click="updateFocus('notes')">
       <nav>
@@ -145,6 +152,7 @@ export default defineComponent({
     TitlebarButtons
   },
   data: () => ({
+    title: "Notizen",
     current: 0,
     notes: [] as { text: string }[]
   }),
