@@ -1,6 +1,8 @@
 <template>
   <div id="notes">
-    <Titlebar focused="focused" @update-focus="updateFocus" />
+    <div class="titlebar">
+      <TitlebarButtons @update-focus="updateFocus" />
+    </div>
     <div id="notes-content" v-on:click="updateFocus('notes')">
       <nav>
         <span
@@ -134,13 +136,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Titlebar from "@/components/shared/Titlebar.vue"; // @ is an alias to /src
+import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
 import axios from "axios";
 
 export default defineComponent({
   name: "Notes",
   components: {
-    Titlebar
+    TitlebarButtons
   },
   data: () => ({
     current: 0,

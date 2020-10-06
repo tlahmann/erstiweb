@@ -1,6 +1,8 @@
 <template>
   <div id="info">
-    <Titlebar focused="focused" @update-focus="updateFocus" />
+    <div class="titlebar">
+      <TitlebarButtons @update-focus="updateFocus" />
+    </div>
     <div id="info-content" v-on:click="updateFocus('info')">
       <div id="side">
         <p>FH Dortmund</p>
@@ -47,13 +49,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Titlebar from "@/components/shared/Titlebar.vue"; // @ is an alias to /src
+import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
 import axios from "axios";
 
 export default defineComponent({
   name: "Info",
   components: {
-    Titlebar
+    TitlebarButtons
   },
   data: () => ({
     current: 0,

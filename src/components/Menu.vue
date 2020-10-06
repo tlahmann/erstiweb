@@ -1,6 +1,8 @@
 <template>
   <div id="menu">
-    <Titlebar focused="focused" @update-focus="updateFocus" />
+    <div class="titlebar">
+      <TitlebarButtons @update-focus="updateFocus" />
+    </div>
     <div id="menu-content" v-on:click="updateFocus('menu')">
       <Folder
         title="Startseite"
@@ -57,12 +59,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Folder from "@/components/shared/Folder.vue"; // @ is an alias to /src
-import Titlebar from "@/components/shared/Titlebar.vue"; // @ is an alias to /src
+import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
 
 export default defineComponent({
   name: "Menu",
   components: {
-    Titlebar,
+    TitlebarButtons,
     Folder
   },
   emits: ["update-focus"],
@@ -86,8 +88,6 @@ export default defineComponent({
   border-radius: 7pt;
   width: 875px;
   height: 580px;
-  min-width: 875px;
-  min-height: 580px;
   #menu-content {
     position: relative;
     width: calc(100% - 16px);

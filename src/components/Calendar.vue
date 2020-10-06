@@ -1,6 +1,8 @@
 <template>
   <div id="calendar">
-    <Titlebar focused="focused" @update-focus="updateFocus" />
+    <div class="titlebar">
+      <TitlebarButtons @update-focus="updateFocus" />
+    </div>
     <div id="calendar-content" v-on:click="updateFocus('calendar')">
       <div id="side">
         <div
@@ -69,7 +71,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Titlebar from "@/components/shared/Titlebar.vue"; // @ is an alias to /src
+import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
 import axios from "axios";
 
 type Event = { title: string; category: string; date: string };
@@ -77,7 +79,7 @@ type Event = { title: string; category: string; date: string };
 export default defineComponent({
   name: "Calendar",
   components: {
-    Titlebar
+    TitlebarButtons
   },
   emits: ["update-focus"],
   data: () => ({
