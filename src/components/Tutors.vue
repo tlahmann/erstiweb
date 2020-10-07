@@ -174,8 +174,8 @@ export default defineComponent({
       } else {
         // x = this.tutors[index].bounds.x + "px";
         // y = this.tutors[index].bounds.y + "px";
-        const x = randInt(-30, 30) + "px";
-        const y = randInt(-30, 30) + "px";
+        const x = randInt(-50, 50) + "px";
+        const y = randInt(-100, 100) + "px";
         return {
           "z-index": Math.floor(Math.random() * this.tutors.length),
           transform: `translate(${x}, ${y})`
@@ -211,8 +211,7 @@ img.tutor-image {
   -moz-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
 
-  -webkit-transition: transform $positionDuration
-    ease-in-out;
+  -webkit-transition: transform $positionDuration ease-in-out;
   transition: transform $positionDuration ease-in-out;
   transition-delay: 0s;
 }

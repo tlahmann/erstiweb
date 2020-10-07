@@ -334,8 +334,8 @@ body,
   z-index: 1200;
   position: relative;
   display: flex;
-  padding: 7pt 56pt;
-  font-size: 18px;
+  padding: 1em 2em;
+  font-size: 1.125em;
   font-weight: 400;
 
   -webkit-box-shadow: 0px 4pt 28pt 0px rgba(0, 0, 0, 0.28);
@@ -461,7 +461,7 @@ $sizeDuration: 0.65s;
 }
 @keyframes focusable {
   0% {
-    width: 50vw;
+    width: 100vw;
     height: 1px;
     overflow: visible;
   }

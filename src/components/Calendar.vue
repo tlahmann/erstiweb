@@ -26,14 +26,50 @@
           v-for="(category, categoryIndex) in getCategories()"
           :key="categoryIndex"
         >
-          <input
+          <!-- <input
             type="checkbox"
-            :id="'fhdo-' + category"
-            :name="'fhdo-' + category"
-            :value="category"
+            class="category-checkbox"
+            :id="'fhdo-' + category.title"
+            :name="'fhdo-' + category.title"
+            :value="category.title"
             v-model="checkedCategories"
           />
-          <label :for="'fhdo-' + category"> {{ category }}</label>
+          <label
+            :for="'fhdo-' + category.title"
+            :style="{ color: category.color }"
+          >
+            {{ category.title }}</label
+          > -->
+          <label class="checkbox" :for="'fhdo-' + category.title">
+            <span class="checkbox__input">
+              <input
+                type="checkbox"
+                name="checkbox"
+                :id="'fhdo-' + category.title"
+                :value="category.title"
+                v-model="checkedCategories"
+              />
+              <span
+                class="checkbox__control"
+                :style="{ 'background-color': category.color }"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="none"
+                    stroke-width="2"
+                    stroke="white"
+                    d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span class="radio__label">{{ category.title }}</span>
+          </label>
         </div>
       </div>
       <div id="weeks">
@@ -75,7 +111,13 @@
                   v-for="(event, eventIndex) in getEventsOfDay(day)"
                   :key="eventIndex"
                 >
-                  {{ event.title }}
+                  <div
+                    class="category"
+                    :style="{
+                      'background-color': getCategoryColor(event.category)
+                    }"
+                  ></div>
+                  <div class="title">{{ event.title }}</div>
                 </div>
               </div>
             </div>
@@ -112,7 +154,7 @@ export default defineComponent({
       .get("./_content/calendar.json")
       .then((response) => {
         this.events = response.data;
-        this.checkedCategories = this.getCategories();
+        this.checkedCategories = this.getCategories().map((v) => v.title);
       })
       .catch((error) => console.error(error));
   },
@@ -154,10 +196,41 @@ export default defineComponent({
     updateMaximization() {
       this.$emit("update-maximization", "calendar");
     },
-    getCategories(): string[] {
+    getCategories(): { title: string; color: string }[] {
+      const colors = [
+        "#FF0000",
+        "#00EAFF",
+        "#AA00FF",
+        "#FF7F00",
+        "#BFFF00",
+        "#0095FF",
+        "#FF00AA",
+        "#FFD400",
+        "#6AFF00",
+        "#0040FF",
+        "#EDB9B9",
+        "#B9D7ED",
+        "#E7E9B9",
+        "#DCB9ED",
+        "#B9EDE0",
+        "#8F2323",
+        "#23628F",
+        "#8F6A23",
+        "#6B238F",
+        "#4F8F23",
+        "#000000",
+        "#737373",
+        "#CCCCCC"
+      ];
       return this.events
         ?.map((e) => e.category)
-        ?.filter((value, index, self) => self.indexOf(value) === index);
+        ?.filter((value, index, self) => self.indexOf(value) === index)
+        ?.map((v: string, i: number) => ({ title: v, color: colors[i] }));
+    },
+    getCategoryColor(category: string): string {
+      return (
+        this.getCategories().find((v) => v.title === category)?.color || "white"
+      );
     },
     setSelectedEvents(): Event[] {
       return this.events.filter((e) =>
@@ -303,7 +376,8 @@ export default defineComponent({
           flex-direction: row;
           flex: 1 1 calc(100% / 4);
           .day {
-            flex: 0 0 calc(82% / 7);
+            flex: 0 1 calc(100% / 7);
+            overflow: hidden;
             padding: 0.4em 0.9em;
             display: flex;
             flex-direction: column;
@@ -337,11 +411,27 @@ export default defineComponent({
               display: flex;
               flex-direction: column;
               .event {
-                border: 1px solid #ababab;
+                // border: 1px solid #ababab;
                 border-radius: 4px;
                 padding: 2px;
                 margin-bottom: 2px;
                 font-size: 0.825em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .category {
+                  width: 0.8em;
+                  height: 0.8em;
+                  border-radius: 0.4em;
+                  margin-right: 0.5em;
+                  flex: 1 0 0.8em;
+                }
+                .title {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  flex: 1 0 calc(100% - 0.8em);
+                }
               }
             }
           }
@@ -353,6 +443,63 @@ export default defineComponent({
       }
       .weekend {
         background-color: #f5f5f5;
+      }
+    }
+    // .category-checkbox {
+    //   display: none;
+    // }
+    // .category-checkbox + label::before {
+    //   width: 22px;
+    //   height: 18px;
+    //   background-image: url("unchecked.png");
+    //   display: block;
+    //   content: "";
+    //   float: left;
+    //   margin-right: 5px;
+    // }
+    // .category-checkbox:checked + label::before {
+    //   background-image: url("checked.png");
+    // }
+    .checkbox {
+      display: grid;
+      grid-template-columns: min-content auto;
+      grid-gap: 0.5em;
+      font-size: 1em;
+    }
+    .checkbox__control {
+      display: inline-grid;
+      width: 1em;
+      height: 1em;
+      border-radius: 0.25em;
+      border: 0.1em solid currentColor;
+      svg {
+        transition: transform 0.1s ease-in 25ms;
+        transform: scale(0);
+        transform-origin: bottom left;
+      }
+    }
+    .checkbox__input {
+      display: grid;
+      grid-template-areas: "checkbox";
+      > * {
+        grid-area: checkbox;
+      }
+      input {
+        opacity: 0;
+        width: 1em;
+        height: 1em;
+
+        &:focus + .checkbox__control {
+          box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
+        }
+
+        &:checked + .checkbox__control svg {
+          transform: scale(1);
+        }
+
+        &:disabled + .checkbox__control {
+          color: var(--disabled);
+        }
       }
     }
   }

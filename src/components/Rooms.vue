@@ -1,11 +1,11 @@
 <template>
   <div id="rooms">
-    <div id="room-images">
+    <div id="room-images" v-on:click="updateFocus('', $event)">
       <img
         v-for="(room, idx) in rooms"
         v-bind:key="idx"
-        v-bind:src="room.image"
-        v-on:click="updateFocus('rooms')"
+        v-bind:src="rooms[0].images[0]"
+        v-on:click="updateFocus('rooms', $event)"
         width="780"
         height="521"
         alt="Bilder je nach Breite des Viewports"
@@ -13,24 +13,9 @@
         class="room-image"
       />
     </div>
-    <div id="content" v-on:click="updateFocus('')">
-      <p>
-        Ob Fleisch, Fisch, vegetarisch, vegan oder glutenfrei: In der Mensa hat
-        jede*r Student*in die Möglichkeit zwischen verschiedenen warmen Speisen
-        auszuwählen. Alle Gerichte kannst Du individuell zusammen-stellen und
-        ein Nachtisch ist auch immer dabei. Das Angebot wechselt von Woche zu
-        Woche. Snacks, sowie belegte Brötchen, Süßkram, Kaffee und Tee kannst Du
-        entweder in der Mensa oder an den Automaten erwerben.
-        <br /><br />
-        Der Preis einer Mahlzeit beträgt für Studierende ca. 2,50€. Jede weitere
-        Beilage kostet 0,50€. Gäste haben ebenfalls die Möglichkeit in der Mensa
-        zu essen und zahlen meist für eine Mahlzeit zwischen 3,20€ und 4,30€.
-        Die Mensa kann auch als Räumlichkeit zum Arbeiten bis 22.00 Uhr genutzt
-        werden. Ein WLAN-Zugang und Steckdosen sind vorhanden.
-        <br /><br />
-        Im Foyer befindet sich ein Wasserspender. Hier kannst Du Dir kostenlos
-        Deine Flasche mit stillem oder kohlensäurehaltigem Wasser auffüllen.
-      </p>
+    <div id="content" v-on:click="updateFocus('', $event)">
+      <img :src="rooms[0]?.banner" class="room-banner" />
+      <div v-html="rooms[0]?.text"></div>
     </div>
   </div>
 </template>
@@ -54,38 +39,12 @@ export default defineComponent({
     axios
       .get("./_content/rooms.json")
       .then((response) => {
-        // return response.data?.tutors.map((elem: {}) => {
         this.rooms = response.data?.rooms.map((elem: {}) => {
-          // const w = Math.floor(Math.random() * 100) + 230;
-          // const h = Math.floor(Math.random() * 100) + 120;
           return {
             ...elem
-            // pos: this.generatePosition(),
-            // bounds: {
-            //   // ...this.generatePosition(),
-            //   width: w,
-            //   height: h,
-            //   hw: w >> 1, // half-width
-            //   hh: h >> 1 // half-height
-            // }
           };
         });
       })
-      // .then((tutors) => {
-      //   this.tutors = reposition(
-      //     {
-      //       x: 100,
-      //       y: 100,
-      //       w: window.innerWidth - 200,
-      //       h: 820 - 50,
-      //       hw: (window.innerWidth - 200) >> 1,
-      //       hh: (820 - 50) >> 1
-      //     },
-      //     tutors,
-      //     20,
-      //     30
-      //   );
-      // })
       .catch((error) => console.error(error));
   },
   mounted() {
@@ -109,8 +68,9 @@ export default defineComponent({
     this.observer.disconnect();
   },
   methods: {
-    updateFocus(focusValue: string) {
+    updateFocus(focusValue: string, event: any) {
       this.$emit("update-focus", focusValue);
+      event.stopPropagation();
     },
     offset(
       index: number
@@ -162,23 +122,31 @@ img.room-image {
   position: absolute;
   .focused & {
     position: relative;
-    margin: 2rem;
+    margin: 1.5em;
+    max-width: 8vw;
+
+    transition-property: transform;
+    transition-duration: $sizeDuration * 3;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
   }
 
   -webkit-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
 
-  -webkit-transition: transform $positionDuration
-    ease-in-out;
+  -webkit-transition: transform $positionDuration ease-in-out;
   transition: transform $positionDuration ease-in-out;
   transition-delay: 0s;
 }
-.room-banner {
+.tutor-banner {
   display: block;
-  width: 322px;
-  height: 140px;
-  transform: translate(-270px, -40px);
+  width: 20em;
+  height: 10em;
+  top: -10em;
+  left: -3em;
+  position: absolute;
+  z-index: 1500;
 }
 #content {
   display: none;
@@ -192,28 +160,31 @@ img.room-image {
   overflow-x: hidden;
   overflow-y: scroll;
   #room-images {
-    width: 80%;
-    height: 600px;
-    transform: translateY(10%);
-    margin: 0 auto 220px auto;
+    width: 90%;
+    height: 65vmin;
+    margin: 40px auto;
   }
   #content {
     max-width: 1088px;
-    margin: 0 auto 200px auto;
+    margin: 140px auto 200px auto;
+    padding: 20px;
     text-align: left;
     display: block;
-    strong {
-      font-family: muli-black, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      line-height: 48px;
-      font-size: 42px;
-      margin-bottom: 100px;
-      display: block;
-    }
-    p {
-      line-height: 48px;
-      font-size: 32px;
-      margin-bottom: 10rem;
+    position: relative;
+    div {
+      strong {
+        font-family: muli-black, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        line-height: 2.1em;
+        font-size: 2em;
+        margin-bottom: 100px;
+        display: block;
+      }
+      p {
+        line-height: 1.9em;
+        font-size: 1.8em;
+        margin-bottom: 10em;
+      }
     }
   }
 }

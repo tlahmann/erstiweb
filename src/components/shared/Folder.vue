@@ -52,8 +52,8 @@ export default defineComponent({
 .folder {
   width: 5em;
   height: 4.375em;
-  max-width: 10vw;
-  max-height: 8vh;
+  max-width: 10em;
+  max-height: 8em;
   position: absolute;
   transform: translate(-50%, -50%);
   text-align: center;

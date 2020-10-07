@@ -14,16 +14,6 @@
       <input type="button" class="dead-button" value="+" />
     </div>
     <div id="notes-content" v-on:click="updateFocus('notes')">
-      <nav>
-        <span
-          v-for="(note, noteIndex) in notes"
-          :key="noteIndex"
-          :class="{ active: noteIndex === current }"
-          v-on:click="current = noteIndex"
-        >
-          Notiz {{ noteIndex + 1 }}
-        </span>
-      </nav>
       <div id="ruler">
         <div class="horizontal"></div>
         <div class="vertical" style="left: 8px">
@@ -139,7 +129,21 @@
           <div class="number">24</div>
         </div>
       </div>
-      <div id="content" v-html="notes[current]?.text"></div>
+      <div id="content">
+        <small>psst: Rechtsklick -> Bild Herunterladen ...</small>
+        <img
+          src="../assets/Einleger-Leben.png"
+          alt="Einleger Leben"
+          :style="{ 'z-index': current === 0 ? 250 : 200 }"
+          v-on:click="current = 0"
+        />
+        <img
+          src="../assets/Einleger-Leben2.png"
+          alt="Einleger Leben"
+          :style="{ 'z-index': current === 1 ? 250 : 200 }"
+          v-on:click="current = 1"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -147,7 +151,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
-import axios from "axios";
 
 export default defineComponent({
   name: "Notes",
@@ -156,18 +159,9 @@ export default defineComponent({
   },
   data: () => ({
     title: "Notizen",
-    current: 0,
-    notes: [] as { text: string }[]
+    current: 0
   }),
   emits: ["update-focus", "update-maximization"],
-  created: function() {
-    axios
-      .get("./_content/notes.json")
-      .then((response) => {
-        this.notes = response.data;
-      })
-      .catch((error) => console.error(error));
-  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
@@ -185,8 +179,8 @@ export default defineComponent({
   background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
-  width: 40em;
-  height: 50em;
+  width: 80em;
+  height: 65em;
   #notes-content {
     width: 100%;
     height: calc(100% - 30pt);
@@ -240,20 +234,18 @@ export default defineComponent({
       padding: 8px;
       font-size: 1.125rem;
       line-height: 2.125rem;
-      overflow-x: hidden;
-      overflow-y: scroll;
-    }
-  }
-}
+      position: relative;
+      img {
+        width: calc(93% - 5em);
+        position: absolute;
+        transition: z-index 0.25s ease-in-out;
+        left: 5%;
+        top: 7%;
 
-nav {
-  padding: 6px 0;
-  span {
-    padding: 5px;
-    border-right: 1px solid #ababab;
-    border-radius: 0 0 6px 6px;
-    &.active {
-      background-color: white;
+        &:nth-of-type(2) {
+          transform: translate(4em, 1.5em);
+        }
+      }
     }
   }
 }
