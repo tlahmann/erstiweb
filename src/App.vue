@@ -308,10 +308,6 @@ body,
   overflow: hidden;
 }
 
-body {
-  background-color: #0027cc;
-}
-
 #app {
   font-family: muli, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -319,8 +315,8 @@ body {
   // text-align: center;
   color: #2c3e50;
   background-color: #9b9b9b;
-  // mix-blend-mode: screen;
-  // filter: sepia(1) hue-rotate(184deg);
+  mix-blend-mode: screen;
+  filter: sepia(1) hue-rotate(184deg);
 
   // filter: greyscale(100%) hue-rotate(180deg) brightness(100%) contrast(90%)
   //   saturate(200%);
@@ -623,7 +619,7 @@ $titlebarHeight: 40px;
   padding: 4pt 5pt 4pt 5pt;
   transform: translate(-1pt, -1pt);
   background-image: linear-gradient(180deg, #ecebec, #d4d3d4);
-  border-bottom: 1pt solid rgba(0, 0, 0, 6%);
+  border-bottom: 1px solid rgba(0, 0, 0, 6%);
   border-top-left-radius: 7pt;
   border-top-right-radius: 7pt;
   align-items: center;

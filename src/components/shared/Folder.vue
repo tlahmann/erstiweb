@@ -64,7 +64,7 @@ export default defineComponent({
   width: calc(100% - 0pt);
   height: calc(100% - 16px);
   z-index: 20;
-  border-top: 1pt solid #a9e8fc;
+  border-top: 1px solid #a9e8fc;
   border-radius: 7px;
   background-color: #75cdf9;
 }

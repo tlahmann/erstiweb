@@ -1,7 +1,7 @@
 <template>
   <div id="equipment">
     <Notepad
-      color="#D6809A"
+      color="#da678a"
       highlightColor="#ED1A5B"
       v-for="(note, idx) in notes"
       v-bind:key="idx"

@@ -50,6 +50,16 @@
         61 6e 64 20 63 6f 66 66 65 65 2e
     -->
 
+  <style>
+    .bg {
+      background: #0027cc;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -60,6 +70,10 @@
       <img src="robot.png" />
     </div>
   </noscript>
+  <!-- Need a background element -->
+  <!-- "During the animation, it seems like the body doesn't count as an element, [...]" -->
+  <!-- https://stackoverflow.com/a/43023158/3652076 -->
+  <div class="bg"></div>
   <div id="app"></div>
   <!-- built files will be auto injected -->
 </body>

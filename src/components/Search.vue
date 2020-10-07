@@ -59,7 +59,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #search {
-  background-color: #e8e8e8;
+  background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
   width: 1374px;
@@ -69,7 +69,7 @@ export default defineComponent({
     height: calc(100% - 25pt);
     display: flex;
     #side {
-      background-color: #e8e8e8;
+      background-color: #cecece;
       flex: 1 1 19.4%;
       height: calc(100% - 30pt);
       padding: 10pt 8pt;
@@ -106,7 +106,7 @@ export default defineComponent({
       #input-container {
         width: 80%;
         height: 56px;
-        border: 1px solid #cecece;
+        border: 1px solid #9b9b9b;
         border-radius: 28px;
         margin-bottom: 28px;
         display: flex;

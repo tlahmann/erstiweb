@@ -158,7 +158,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #contact {
-  background-color: #e8e8e8;
+  background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
   width: 1079px;
@@ -168,7 +168,7 @@ export default defineComponent({
     height: 100%;
     display: flex;
     #side {
-      background-color: #e8e8e8;
+      background-color: #cecece;
       flex: 1 1 18.9%;
       height: calc(100% - 30pt);
       padding: 10pt 8pt;
@@ -215,7 +215,7 @@ export default defineComponent({
       #contact-list,
       #contact-info {
         flex: 1 1 40.1%;
-        border-right: 1px solid #e8e8e8;
+        border-right: 1px solid #cecece;
         background-color: white;
         height: 100%;
         padding: 1rem 0;
@@ -224,7 +224,7 @@ export default defineComponent({
           padding: 0;
           list-style: none;
           li {
-            border-bottom: 1px solid #e8e8e8;
+            border-bottom: 1px solid #cecece;
             padding: 14px 18px 14px 22px;
             color: #7c7c7c;
             &.active {
@@ -265,7 +265,7 @@ export default defineComponent({
           display: flex;
           flex-direction: row;
           padding: 20px 5px;
-          border-top: 1px solid #e8e8e8;
+          border-top: 1px solid #cecece;
           border-bottom: none;
           .value {
             flex: 1 1 78%;
@@ -289,18 +289,18 @@ export default defineComponent({
         box-shadow: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.28);
         &::placeholder {
           /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: #e8e8e8;
+          color: #cecece;
           opacity: 1; /* Firefox */
         }
 
         &:-ms-input-placeholder {
           /* Internet Explorer 10-11 */
-          color: #e8e8e8;
+          color: #cecece;
         }
 
         &::-ms-input-placeholder {
           /* Microsoft Edge */
-          color: #e8e8e8;
+          color: #cecece;
         }
       }
     }

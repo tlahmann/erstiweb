@@ -244,7 +244,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #calendar {
-  background-color: #e8e8e8;
+  background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
   width: 1280px;
@@ -254,7 +254,7 @@ export default defineComponent({
     height: calc(100% - 25pt);
     display: flex;
     #side {
-      background-color: #e8e8e8;
+      background-color: #cecece;
       flex: 1 1 20%;
       height: calc(100% - 40pt);
       padding: 20pt 17pt;
@@ -305,8 +305,8 @@ export default defineComponent({
             padding: 0.4em 0.9em;
             display: flex;
             flex-direction: column;
-            border-top: 1pt solid #e6e5e6;
-            border-left: 1pt solid #e6e5e6;
+            border-top: 1px solid #e6e5e6;
+            border-left: 1px solid #e6e5e6;
             .day-number {
               // width: 20px;
               // height: 20px;
@@ -352,9 +352,6 @@ export default defineComponent({
       .weekend {
         background-color: #f5f5f5;
       }
-      // #days div {
-      //   border: 1pt solid #e6e5e6;
-      // }
     }
   }
 }

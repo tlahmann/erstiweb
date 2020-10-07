@@ -116,7 +116,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #info {
-  background-color: #e8e8e8;
+  background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
   width: 1280px;
@@ -126,7 +126,7 @@ export default defineComponent({
     height: calc(100% - 25pt);
     display: flex;
     #side {
-      background-color: #e8e8e8;
+      background-color: #cecece;
       flex: 1 1 18.9%;
       height: calc(100% - 30pt);
       padding: 10pt 8pt;
@@ -168,7 +168,7 @@ export default defineComponent({
           padding: 0;
           list-style: none;
           li {
-            border-bottom: 1px solid #e8e8e8;
+            border-bottom: 1px solid #cecece;
             padding: 14px 18px;
             cursor: pointer;
           }
