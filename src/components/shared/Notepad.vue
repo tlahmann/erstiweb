@@ -23,6 +23,14 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
+declare global {
+  interface Window {
+    fitText: any;
+  }
+}
+
+window.fitText = window.fitText || {};
+
 export default defineComponent({
   name: "Notepad",
   props: {
@@ -38,6 +46,32 @@ export default defineComponent({
     height: [Number, String],
     content: String,
     link: String
+  },
+  data: () => ({
+    observer: {} as MutationObserver
+  }),
+  // mounted() {
+  //   this.observer = new MutationObserver((mutations) => {
+  //     for (const m of mutations) {
+  //       // console.log((m.target as HTMLElement).clientWidth);
+  //       this.$nextTick().then(() => {
+  //         window.fitText();
+  //       });
+  //     }
+  //   });
+
+  //   this.observer.observe(this.$el, {
+  //     attributes: true,
+  //     attributeOldValue: true,
+  //     attributeFilter: ["style"]
+  //   });
+  // }
+  mounted: function() {
+    window.fitText(
+      (this.$el as HTMLElement).childNodes[0]?.childNodes[0],
+      this.width,
+      1.3
+    );
   }
 });
 </script>
