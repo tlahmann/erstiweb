@@ -185,8 +185,8 @@ export default defineComponent({
   background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
-  width: 614px;
-  height: 750px;
+  width: 40em;
+  height: 50em;
   #notes-content {
     width: 100%;
     height: calc(100% - 30pt);

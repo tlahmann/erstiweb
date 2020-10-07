@@ -26,10 +26,10 @@
         01010100011101010111010001101111011100100110010101101110
         <br /><br />
         Aufgepasst Erstis! Mit Beginn eures Studiums an der FH Dortmund seid ihr
-        eurem Ziel ein erfolgreicher Designer zu werden schon einen Schritt
-        näher - woher wir das wissen? Wir sind die Ersti-tutoren aus der Zukunft
-        und wurden ins Jahr 2020 entsandt, um euch während eures ersten
-        Semesters zur Seite zu stehen.
+        euem Ziel ein erfolgreicher Designer zu werden schon einen Schritt näher
+        - woher wir das wissen? Wir sind die Ersti-tutoren aus der Zukunft und
+        wurden ins Jahr 2020 entsandt, um euch während eures ersten Semesters
+        zur Seite zu stehen.
         <br /><br />
         Auf euch wartet eine spannende Reise voller neuer Aufgaben,
         unvergesslicher Teamarbeiten, innovativen Designs, legendären
@@ -192,13 +192,19 @@ $positionDuration: 0.55s;
 $sizeDuration: 0.25s;
 
 img.tutor-image {
-  max-width: 4vw;
-  min-width: 80px;
+  max-width: 4vmin;
+  min-width: 5vmax;
   height: auto;
   position: absolute;
   .focused & {
     position: relative;
-    margin: 2rem;
+    margin: 1.5em;
+    max-width: 8vw;
+
+    transition-property: transform;
+    transition-duration: $sizeDuration * 3;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
   }
 
   -webkit-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
@@ -206,52 +212,54 @@ img.tutor-image {
   box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
 
   -webkit-transition: transform $positionDuration
-    cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: transform $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    ease-in-out;
+  transition: transform $positionDuration ease-in-out;
   transition-delay: 0s;
 }
 .tutor-banner {
   display: block;
-  width: 322px;
-  height: 140px;
-  top: -160px;
-  left: -5vw;
+  width: 20em;
+  height: 10em;
+  top: -10em;
+  left: -3em;
   position: absolute;
+  z-index: 1500;
 }
 #content {
   display: none;
 }
 #tutor.focused {
   transition: top $positionDuration, left $positionDuration,
-    transform $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    transform $sizeDuration ease-in-out;
   transition-delay: 0s, 0s, 0s;
 }
 .focused {
   overflow-x: hidden;
   overflow-y: scroll;
   #tutor-images {
-    width: 80%;
-    height: 600px;
+    width: 90%;
+    height: 65vmin;
     margin: 40px auto;
   }
   #content {
     max-width: 1088px;
     margin: 140px auto 200px auto;
+    padding: 20px;
     text-align: left;
     display: block;
     position: relative;
     strong {
       font-family: muli-black, Helvetica, Arial, sans-serif;
       font-weight: 700;
-      line-height: 2.2rem;
-      font-size: 2rem;
+      line-height: 2.1em;
+      font-size: 2em;
       margin-bottom: 100px;
       display: block;
     }
     p {
-      line-height: 2rem;
-      font-size: 1.8rem;
-      margin-bottom: 10rem;
+      line-height: 1.9em;
+      font-size: 1.8em;
+      margin-bottom: 10em;
     }
   }
 }
@@ -263,6 +271,6 @@ img.tutor-image {
   width: 100%;
   top: 0;
   left: 0;
-  margin-bottom: 10rem;
+  margin-bottom: 10em;
 }
 </style>

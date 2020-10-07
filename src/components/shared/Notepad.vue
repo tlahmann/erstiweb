@@ -91,10 +91,10 @@ $sizeDuration: 0.65s;
 
   -webkit-transition: z-index 3s, transform $sizeDuration, width $sizeDuration,
     height $sizeDuration, top $positionDuration,
-    left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    left $positionDuration ease-in-out;
   transition: z-index 3s, transform $sizeDuration, width $sizeDuration,
     height $sizeDuration, top $positionDuration,
-    left $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    left $positionDuration ease-in-out;
   transition-delay: 0s, 0s, 0s, 0s, $positionDuration, $positionDuration;
 }
 .content {

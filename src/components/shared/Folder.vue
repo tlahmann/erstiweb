@@ -50,8 +50,8 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .folder {
-  width: 80px;
-  height: 62px;
+  width: 5em;
+  height: 4.375em;
   max-width: 10vw;
   max-height: 8vh;
   position: absolute;
@@ -88,8 +88,8 @@ export default defineComponent({
     position: absolute;
     width: 40%;
     height: calc(100% - 2pt);
-    border-radius: 5px 5px 0 5px;
-    border-top-right-radius: 10pt 15pt;
+    border-radius: 0.4125em 0.4125em 0 0.4125em;
+    border-top-right-radius: 0.625em 1em;
   }
   .right {
     position: absolute;
@@ -97,7 +97,7 @@ export default defineComponent({
     height: calc(100% - 8pt);
     left: 20%;
     top: 6pt;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 0.4125em 0.4125em 0;
   }
 }
 .title {
@@ -106,6 +106,6 @@ export default defineComponent({
   top: 90%;
   width: 100%;
   color: white;
-  font-size: 0.875rem;
+  font-size: 1.25em;
 }
 </style>

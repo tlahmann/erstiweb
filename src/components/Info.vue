@@ -119,8 +119,8 @@ export default defineComponent({
   background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
-  width: 1280px;
-  height: 815px;
+  width: 80em;
+  height: 50em;
   #info-content {
     width: 100%;
     height: calc(100% - 25pt);
@@ -132,8 +132,8 @@ export default defineComponent({
       padding: 10pt 8pt;
       display: flex;
       flex-direction: column;
-      font-size: 0.875rem;
-      line-height: 1.125rem;
+      font-size: 0.875em;
+      line-height: 1.125em;
       input[type="checkbox"] {
         margin: 6.5px 3px;
       }
@@ -145,7 +145,7 @@ export default defineComponent({
       ul {
         margin: 0;
         list-style-type: none;
-        padding-left: 1.5rem;
+        padding-left: 1.5em;
         li {
           margin-bottom: 6px;
           cursor: pointer;
@@ -173,15 +173,15 @@ export default defineComponent({
             cursor: pointer;
           }
           h4 {
-            font-size: 0.875rem;
+            font-size: 0.875em;
             margin: 0;
           }
           span {
-            font-size: 0.625rem;
+            font-size: 0.625em;
           }
           .subtitle {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             margin: 12px 0 0 0;
             .date,
             .teaser {
@@ -197,20 +197,25 @@ export default defineComponent({
               margin-left: auto;
             }
           }
+          @media (min-width: 768px) {
+            .subtitle {
+              flex-direction: row;
+            }
+          }
         }
       }
       #content {
         h3 {
-          font-size: 1.75rem;
-          line-height: 2.125rem;
-          margin: 0 0 1.375rem 0;
+          font-size: 1.75em;
+          line-height: 2.125em;
+          margin: 0 0 1.375em 0;
         }
         padding: 2em;
         background-color: white;
         flex: 1 1 61.9%;
-        height: calc(100% - 5rem);
-        font-size: 1.125rem;
-        line-height: 2.125rem;
+        height: calc(100% - 5em);
+        font-size: 1.125em;
+        line-height: 2.125em;
 
         overflow-x: hidden;
         overflow-y: scroll;

@@ -247,8 +247,10 @@ export default defineComponent({
   background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
-  width: 1280px;
-  height: 815px;
+  // width: 1280px;
+  // height: 815px;
+  width: 80em;
+  height: 50em;
   #calendar-content {
     width: 100%;
     height: calc(100% - 25pt);
@@ -287,21 +289,21 @@ export default defineComponent({
           flex: 1 1 calc(100% / 7);
           padding: 0.4em 0.9em;
           text-align: end;
-          font-size: 0.75rem;
+          font-size: 0.75em;
         }
       }
       #days {
-        flex: 1 1 auto;
+        flex: 1 1 100%;
         flex-direction: column;
         display: flex;
         color: #3d3d3d;
-        font-size: 0.875rem;
+        font-size: 0.875em;
         .row {
           display: flex;
           flex-direction: row;
           flex: 1 1 calc(100% / 4);
           .day {
-            flex: 1 1 calc(100% / 7);
+            flex: 0 0 calc(82% / 7);
             padding: 0.4em 0.9em;
             display: flex;
             flex-direction: column;
@@ -313,7 +315,7 @@ export default defineComponent({
               align-self: flex-end;
               text-align: end;
               position: relative;
-              font-size: 0.8125rem;
+              font-size: 0.8125em;
               // color: #3d3d3d;
               &.current-day {
                 color: white;
@@ -339,7 +341,7 @@ export default defineComponent({
                 border-radius: 4px;
                 padding: 2px;
                 margin-bottom: 2px;
-                font-size: 0.75em;
+                font-size: 0.825em;
               }
             }
           }

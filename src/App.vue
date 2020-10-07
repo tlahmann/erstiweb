@@ -379,11 +379,12 @@ $sizeDuration: 0.65s;
     transform: translate(-50%, -50%) scale(1);
     cursor: default;
 
-    -webkit-transition: top $positionDuration, left $positionDuration,
-      transform $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-    transition: top $positionDuration, left $positionDuration,
-      transform $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-    transition-delay: 0s, 0s, $positionDuration;
+    transition-property: width, height, top, left, transform;
+    transition-duration: $sizeDuration/2, $sizeDuration/2, $positionDuration,
+      $positionDuration, $sizeDuration;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out,
+      ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s, 0s, $positionDuration;
 
     ~ .overlay {
       visibility: visible;
@@ -394,10 +395,8 @@ $sizeDuration: 0.65s;
       bottom: 0;
       left: 0;
       z-index: 25;
-      -webkit-transition: visibility 0s,
-        opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-      transition: visibility 0s,
-        opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+      -webkit-transition: visibility 0s, opacity $positionDuration ease-in-out;
+      transition: visibility 0s, opacity $positionDuration ease-in-out;
     }
   }
 
@@ -409,14 +408,14 @@ $sizeDuration: 0.65s;
 .folder {
   transition-property: z-index, transform, opacity;
   transition-duration: $positionDuration, $sizeDuration, $positionDuration;
-  transition-timing-function: ease, ease, ease;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
   transition-delay: 0s, 0s, 0s;
   &.unfocused {
     transform: translate(-50%, -50%) scale(0.35);
     opacity: 0.35;
     transition-property: z-index, transform, opacity;
     transition-duration: $positionDuration, $sizeDuration, $positionDuration;
-    transition-timing-function: ease, ease, ease;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
     transition-delay: 0s, 0s, 0s;
   }
 }
@@ -440,8 +439,8 @@ $sizeDuration: 0.65s;
     transition-property: width, height, top, left;
     transition-duration: $sizeDuration/2, $sizeDuration/2, $positionDuration,
       $positionDuration;
-    transition-timing-function: ease, ease, cubic-bezier(0.65, 0.05, 0.36, 1),
-      cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out,
+      ease-in-out;
     transition-delay: 0s, 0s, 0s, 0s;
   }
 }
@@ -452,10 +451,17 @@ $sizeDuration: 0.65s;
   animation-name: focusable;
   animation-timing-function: linear;
   animation-duration: $sizeDuration/2;
+
+  transition-property: width, height, top, left, transform;
+  transition-duration: $sizeDuration/2, $sizeDuration/2, $sizeDuration/2,
+    $sizeDuration/2, $sizeDuration/2;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out,
+    ease-in-out;
+  transition-delay: 0s, 0s, 0s, 0s, 0s;
 }
 @keyframes focusable {
   0% {
-    width: 1px;
+    width: 50vw;
     height: 1px;
     overflow: visible;
   }
@@ -476,9 +482,9 @@ $sizeDuration: 0.65s;
   background-color: #fefefe;
   z-index: initial;
   -webkit-transition: z-index 0.5s, visibility $positionDuration,
-    opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    opacity $positionDuration ease-in-out;
   transition: z-index 0.5s, visibility $positionDuration,
-    opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    opacity $positionDuration ease-in-out;
 }
 #calendar,
 #contact,
@@ -494,8 +500,8 @@ $sizeDuration: 0.65s;
   transition-property: z-index, transform, opacity, width, height, top, left;
   transition-duration: $positionDuration, $sizeDuration, $positionDuration,
     $sizeDuration, $sizeDuration, $positionDuration, $positionDuration;
-  transition-timing-function: ease, ease, ease, ease, ease,
-    cubic-bezier(0.65, 0.05, 0.36, 1), cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out,
+    ease-in-out, ease-in-out, ease-in-out;
   transition-delay: 0s, 0s, 0s, 0s, 0s, $positionDuration, $positionDuration;
 
   transform: translate(-50%, -50%) scale(0.5);
@@ -547,23 +553,14 @@ $sizeDuration: 0.65s;
       bottom: 0;
       left: 0;
       z-index: 99;
-      -webkit-transition: visibility 0s,
-        opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
-      transition: visibility 0s,
-        opacity $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+      -webkit-transition: visibility 0s, opacity $positionDuration ease-in-out;
+      transition: visibility 0s, opacity $positionDuration ease-in-out;
     }
   }
 }
 #tutors,
 #rooms {
   text-align: center;
-  -webkit-transition: all $sizeDuration 0s;
-  transition: all $sizeDuration 0s;
-  z-index: initial;
-  &.focused {
-    -webkit-transition: all $sizeDuration 0s;
-    transition: all $sizeDuration 0s;
-  }
 }
 #calendar {
   top: 8vh;
@@ -611,27 +608,28 @@ $sizeDuration: 0.65s;
 }
 
 // Titlebar
-$titlebarHeight: 40px;
+$titlebarHeight: 2.5em;
 .titlebar {
   height: $titlebarHeight;
   width: calc(100% - 8pt);
   display: flex;
   padding: 4pt 5pt 4pt 5pt;
   transform: translate(-1pt, -1pt);
-  background-image: linear-gradient(180deg, #ecebec, #d4d3d4);
-  border-bottom: 1px solid rgba(0, 0, 0, 6%);
+  background-image: linear-gradient(180deg, #d2d0d2, #bbb9bb);
+  border-bottom: 1px solid rgba(0, 0, 0, 10%);
   border-top-left-radius: 7pt;
   border-top-right-radius: 7pt;
   align-items: center;
-  font-size: 13px;
+  font-size: 0.8125em;
   .dead-button {
-    padding: 3px 8px;
-    margin: 0 0px;
-    border-radius: 3px;
+    padding: 0.125em 0.5em;
+    margin: 0;
+    border-radius: 0.125em;
     border: 1px solid #ababab;
+    font-size: 0.9em;
   }
   .titlebar-button {
-    margin: 2.4pt;
+    margin: 2.4em;
     padding: 0;
     width: 10pt;
     height: 10pt;
@@ -646,6 +644,38 @@ $titlebarHeight: 40px;
     &:nth-of-type(3) {
       background-color: #2acb42;
     }
+  }
+}
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// =-=-=-= Mobile Breakpoints =-=-=-=-
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+body {
+  font-size: 9px;
+}
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { body{font-size: 9px;} }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  body {
+    font-size: 16px;
   }
 }
 </style>

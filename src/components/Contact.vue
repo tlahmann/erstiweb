@@ -161,8 +161,8 @@ export default defineComponent({
   background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
-  width: 1079px;
-  height: 827px;
+  width: 67.5em;
+  height: 52em;
   #contact-content {
     width: 100%;
     height: 100%;

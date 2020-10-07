@@ -131,8 +131,8 @@ export default defineComponent({
         return {
           "z-index": Math.floor(Math.random() * this.notes.length),
           transform: `translate(${x}, ${y})`,
-          width: "100px",
-          height: "100px"
+          width: "6.25em",
+          height: "6.25em"
         };
       } else {
         x = this.notes[index].bounds.x + "px";

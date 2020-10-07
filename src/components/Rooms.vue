@@ -46,8 +46,8 @@ export default defineComponent({
     observer: {} as MutationObserver,
     expanded: false,
     primeAngle: -137,
-    primeRadiusX: 127,
-    primeRadiusY: 53,
+    primeRadiusX: 37,
+    primeRadiusY: 23,
     rooms: []
   }),
   created: function() {
@@ -127,12 +127,12 @@ export default defineComponent({
           Math.cos(this.primeAngle * index * (Math.PI / 180)) *
             this.primeRadiusX *
             (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
-          "px";
+          "%";
         y =
           Math.sin(this.primeAngle * index * (Math.PI / 180)) *
             this.primeRadiusY *
             (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
-          "px";
+          "%";
         return {
           "z-index": Math.floor(Math.random() * this.rooms.length),
           transform: `translate(${x}, ${y})`
@@ -156,8 +156,8 @@ $positionDuration: 0.55s;
 $sizeDuration: 0.25s;
 
 img.room-image {
-  max-width: 16vw;
-  min-width: 110px;
+  max-width: 26vmin;
+  min-width: 15vmax;
   height: auto;
   position: absolute;
   .focused & {
@@ -170,8 +170,8 @@ img.room-image {
   box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
 
   -webkit-transition: transform $positionDuration
-    cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: transform $positionDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    ease-in-out;
+  transition: transform $positionDuration ease-in-out;
   transition-delay: 0s;
 }
 .room-banner {
@@ -185,7 +185,7 @@ img.room-image {
 }
 #room.focused {
   transition: top $positionDuration, left $positionDuration,
-    transform $sizeDuration cubic-bezier(0.65, 0.05, 0.36, 1);
+    transform $sizeDuration ease-in-out;
   transition-delay: 0s, 0s, 0s;
 }
 .focused {

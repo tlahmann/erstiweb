@@ -62,8 +62,8 @@ export default defineComponent({
   background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
   border-radius: 7pt;
-  width: 1374px;
-  height: 869px;
+  width: 86em;
+  height: 55em;
   #search-content {
     width: 100%;
     height: calc(100% - 25pt);
