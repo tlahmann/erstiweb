@@ -106,6 +106,6 @@ export default defineComponent({
   top: 90%;
   width: 100%;
   color: white;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 </style>
