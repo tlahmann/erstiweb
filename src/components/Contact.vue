@@ -215,7 +215,7 @@ export default defineComponent({
       #contact-list,
       #contact-info {
         flex: 1 1 40.1%;
-        border-right: 1px solid #cecece;
+        border-right: 1px solid #ababab;
         background-color: white;
         height: 100%;
         padding: 1rem 0;
@@ -224,7 +224,7 @@ export default defineComponent({
           padding: 0;
           list-style: none;
           li {
-            border-bottom: 1px solid #cecece;
+            border-bottom: 1px solid #ababab;
             padding: 14px 18px 14px 22px;
             color: #7c7c7c;
             &.active {
@@ -265,7 +265,7 @@ export default defineComponent({
           display: flex;
           flex-direction: row;
           padding: 20px 5px;
-          border-top: 1px solid #cecece;
+          border-top: 1px solid #ababab;
           border-bottom: none;
           .value {
             flex: 1 1 78%;

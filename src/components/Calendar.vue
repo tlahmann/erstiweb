@@ -305,8 +305,8 @@ export default defineComponent({
             padding: 0.4em 0.9em;
             display: flex;
             flex-direction: column;
-            border-top: 1px solid #e6e5e6;
-            border-left: 1px solid #e6e5e6;
+            border-top: 1px solid #ababab;
+            border-left: 1px solid #ababab;
             .day-number {
               // width: 20px;
               // height: 20px;
@@ -335,7 +335,7 @@ export default defineComponent({
               display: flex;
               flex-direction: column;
               .event {
-                border: 1px solid #e6e5e6;
+                border: 1px solid #ababab;
                 border-radius: 4px;
                 padding: 2px;
                 margin-bottom: 2px;

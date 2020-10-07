@@ -106,7 +106,7 @@ export default defineComponent({
       #input-container {
         width: 80%;
         height: 56px;
-        border: 1px solid #9b9b9b;
+        border: 1px solid #ababab;
         border-radius: 28px;
         margin-bottom: 28px;
         display: flex;

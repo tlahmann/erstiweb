@@ -201,13 +201,13 @@ export default defineComponent({
         width: 100%;
         top: 50%;
         left: 0;
-        border-bottom: 2px solid #b5b5b5;
+        border-bottom: 2px solid #ababab;
       }
       .vertical {
         position: absolute;
         height: 40%;
         top: 48%;
-        border-right: 2px solid #707070;
+        border-right: 2px solid #ababab;
         &.short {
           height: 20%;
         }
@@ -224,7 +224,7 @@ export default defineComponent({
           border-top: 6px solid transparent;
           border-bottom: 6px solid transparent;
 
-          border-left: 6px solid #787878;
+          border-left: 6px solid #ababab;
         }
         .number {
           position: absolute;
@@ -250,7 +250,7 @@ nav {
   padding: 6px 0;
   span {
     padding: 5px;
-    border-right: 1px solid #787878;
+    border-right: 1px solid #ababab;
     border-radius: 0 0 6px 6px;
     &.active {
       background-color: white;

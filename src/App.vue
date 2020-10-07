@@ -628,7 +628,7 @@ $titlebarHeight: 40px;
     padding: 3px 8px;
     margin: 0 0px;
     border-radius: 3px;
-    border: 1px solid #0000001a;
+    border: 1px solid #ababab;
   }
   .titlebar-button {
     margin: 2.4pt;

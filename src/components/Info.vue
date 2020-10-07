@@ -162,13 +162,13 @@ export default defineComponent({
         background-color: white;
         flex: 1 1 19.2%;
         height: 100%;
-        border-right: 1px solid #c8c7c8;
+        border-right: 1px solid #ababab;
         ul {
           margin: 0;
           padding: 0;
           list-style: none;
           li {
-            border-bottom: 1px solid #cecece;
+            border-bottom: 1px solid #ababab;
             padding: 14px 18px;
             cursor: pointer;
           }
