@@ -58,6 +58,7 @@
               <span class="first-name"> {{ contact.firstname }}&nbsp; </span>
               <span class="last-name">{{ contact.lastname }}</span>
             </li>
+            <hr />
           </ul>
         </div>
         <div id="contact-info">
@@ -115,12 +116,11 @@ export default defineComponent({
       .catch((error) => console.error(error));
   },
   mounted() {
-    // this.$options.timer = window.setTimeout(this.updateDateTime, SECOND);
-    setTimeout(() => {
+    this.$options.timer = window.setTimeout(() => {
       this.filter = this.$route.query["q"] as string;
       this.current = this.filteredContacts()?.[0];
-      // console.log('timed out', this.filter, this.current);
-    }, 1);
+      console.log("timed out", this.filter, this.current);
+    }, 100);
   },
   beforeUnmount() {
     window.clearTimeout(this.$options.timer);
@@ -129,7 +129,7 @@ export default defineComponent({
   beforeRouteUpdate(to, from, next) {
     this.filter = to.query["q"] as string;
     this.current = this.filteredContacts()?.[0];
-    // console.log('beforeRouteUpdate', this.filter, this.current);
+    console.log("beforeRouteUpdate", this.filter, this.current);
     next();
   },
   methods: {
@@ -140,22 +140,21 @@ export default defineComponent({
       this.$emit("update-maximization", "contact");
     },
     filteredContacts() {
-      return (
-        (!this.filter && this.contacts) ||
-        this.contacts.filter((c) => {
-          const fa = this.filter?.split(" ");
-          return fa?.some(
-            (f) =>
-              c.firstname?.toLowerCase().match(f.toLowerCase()) ||
-              c.lastname?.toLowerCase().match(f.toLowerCase()) ||
-              c.title?.toLowerCase().match(f.toLowerCase()) ||
-              c.category?.toLowerCase().match(f.toLowerCase()) ||
-              c.contactInfos?.some((ci) =>
-                ci.value.toLowerCase().match(f.toLowerCase())
-              )
-          );
-        })
-      );
+      return !this.filter
+        ? this.contacts
+        : this.contacts.filter((c) => {
+            const fa = this.filter?.split(" ");
+            return fa?.some(
+              (f) =>
+                c.firstname?.toLowerCase().match(f.toLowerCase()) ||
+                c.lastname?.toLowerCase().match(f.toLowerCase()) ||
+                c.title?.toLowerCase().match(f.toLowerCase()) ||
+                c.category?.toLowerCase().match(f.toLowerCase()) ||
+                c.contactInfos?.some((ci) =>
+                  ci.value.toLowerCase().match(f.toLowerCase())
+                )
+            );
+          });
     },
     getCategories() {
       return this.contacts
@@ -245,9 +244,15 @@ export default defineComponent({
           margin: 0;
           padding: 0;
           list-style: none;
+          hr {
+            margin-left: 22px;
+            color: #7c7c7c;
+            border-style: solid;
+            border-width: 0 0 1px 0;
+          }
           li {
-            border-bottom: 1px solid #ababab;
-            padding: 14px 18px 14px 22px;
+            // border-bottom: 1px solid #ababab;
+            padding: 10px 18px 10px 22px;
             color: #7c7c7c;
             &.active {
               background-color: #707070;
