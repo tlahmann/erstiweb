@@ -1,1382 +1,1342 @@
 [
     {
         "term": "Vol.25",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Fachbereich Design",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Fünfundzwanzigstens",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Designstudium",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Max-Ophüls-Platz",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/maps/?q=Max-Ophüls-Platz,+Dortmund"}
     },
     {
         "term": "Sonnenstraße",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/maps/?q=Sonnenstra%C3%9Fe,+Dortmund"}
     },
     {
         "term": "Emil-Figge-Straße",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/maps/?q=Emil-Figge-Stra%C3%9Fe,+Dortmund"}
     },
     {
         "term": "Tutoren",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Ersti",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Erstitutoren",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Kneipentour",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=calendar"
     },
     {
         "term": "Einführungswoche",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=calendar"
     },
     {
         "term": "How-to",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Livestream",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Corona",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Podcast",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Luisa",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Greta",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Fabian",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Anna",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Tim",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Isabell",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Dalya",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Olga",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Marie",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Dilara",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Mara",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Janika",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Lorenz",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Emma",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": "./?c=tutors"
     },
     {
         "term": "Einrichtungen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kaffee",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Mensa",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Bibliothek",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Buch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Bücher",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "vegetarisch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "vegan",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "glutenfrei",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Snacks",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Mahlzeit",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "WLAN",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Wasserspender",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "E-Books",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kopieren",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Drucken",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Scannen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Rückgabe",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Buchlabor",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Medienstelle",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Archiv",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Produktionsbüro",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Filmproduktion",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kamera",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "kiU",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "storyLab",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Virtual Reality",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Augumented Reality",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "3D",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Apps",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Rosies",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Werkstätten",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Computerpool",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "iMacs",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Radierung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Buchdruck",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Linolschnitt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Siebdruck",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Risographie",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Plottwerkstatt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "3D-Drucker",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Laserschneider",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Farbe",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Papier",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Modellbauwerkstatt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Holzwerkstatt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Metallwerkstatt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "SzenoPro",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Werkzeugverleih",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "EBV-Pool",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Adobe",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Cinema 4D",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "VectorWorks",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Filmwerkstatt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Filmstudio",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Tonstudio",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Film & Sound",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Fotowerkstatt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Bildbearbeitung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Farblabor",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Bearbeitung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Proofdrucker",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Angebote",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Auslandssemester",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Praktika",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Designwandern",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "International Office",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Ausland",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kulturcafé",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Internationale Woche",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Auslandbeauftragter",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Austausch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Internationale Studierende",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Erasmus",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Auslandsbafög",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Stipendien",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "ILIAS",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Selbstlernmodul",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Notenübersicht",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Tutorials",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "FH-Mail",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "ODS",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Postfach",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Semesterbeitrag",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienbescheinigung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studierendenwerk",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "FHCard",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kursanmeldung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Mentoring",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienstandsgespräch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "NRW-Ticket",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "BAföG",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienlogbuch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Zugangsdaten",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studierendenausweis",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Aufladestation",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "IT-Helpdesk",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Support",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Cisco",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "WebEx",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "LinkedIn Learning",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Lynda.com",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Career Service",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Schlüsselkompetenzen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Family Scouts",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Evaluation",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Feedback",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Direktes Gespräch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kritik",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Bachelorstudium",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Masterstudium",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Module",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "BA Fotografie",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "BA Kommunikationsdesign",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "BA Objekt- & Raumdesign",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "BA Film & Sound",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "MA Editorial Design",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "MA Film",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "MA Photographic Studies",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "MA Creative Audio Director",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "MA Szenografie & Kommunikation",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Beratung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienbüro",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Prüfungsangelegenheiten",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Exmatrikulation",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Mentoring",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienstandsgespräch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Sprechstunde",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienberatung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Barrierefrei",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Inklusion",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Psychologische Studienberatung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studentische Studienberatung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Finanzierung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Stipendien",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Stipendium",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienfinanzierung",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Gremien",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Fachbegriffe",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Nachschlagwerk",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "FAStA",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Fachschaftsrat",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "ASta",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Allgemeiner Studienausschuss",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Prüfungsausschuss",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Prüfungsleistung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Prüfungszeitraum",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Abschlussarbeiten",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Prüfungsordnung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Prüfungsauschussvorsitzender",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienleistungen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Senat",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "StuPa",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studierenden-Parlament",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studierendenschaft",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Fachbereichsrat",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Dekan",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Prodekan",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Leben",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Dortmund",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Stadt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Theater",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Ämter",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Hochschulsport",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Klettern",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Jogging",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Laufstrecken",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Sportmöglichkeiten",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Fahrrad",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Fahrradwerkstatt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "VeloKitchen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Nextbike",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Ausstellungen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Podest",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "33pt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Schauraum",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Ringvorlesungen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Externe Ausstellungen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kartothek",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "World Press Photo",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "parcours Münster",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kunstakademie",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Glossar",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "ECTS-System",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "EGG (Erweiterte Gestaltungsgrundlagen)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "HFM (Hauptfachmodul)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "IDP (Interdisziplinäres Gestaltungsprojekt)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "LP (Leistungspunkte)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Credit Points",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Mentoringgespräche",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Modul",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Modulhandbuch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "MP (Modulprüfung)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "MTP (Modulteilprüfung)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "NFM (Nebenfachmodul)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "SK (Schlüsselkompetenzen)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienverlaufsplan",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "TN (Teilnahmenachweis)",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Studienstandsgespräch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "W (Wissenschaft)",
-        "target": "https://www.google.de/?q=foobar"
-    },
-    {
-        "term": "",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=foobar"}
     },
     {
         "term": "Kontakte",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact"}
     },
     {
         "term": "Adewale Adebisi",
-        "target": "./?c=contact&q=Adewale Adebisi"
+        "target": {"component": "contact", "query": "Adewale Adebisi"}
     },
     {
         "term": "Debora Ando",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Debora Ando"}
     },
     {
         "term": "Marita Altermann-Köster",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Marita Altermann-Köster"}
     },
     {
         "term": "Bert Bartel",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Bert Bartel"}
     },
     {
         "term": "Hanna Becker",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Hanna Becker"}
     },
     {
         "term": "Tobias Bieseke",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Tobias Bieseke"}
     },
     {
         "term": "Prof. Dr. Ralf Bohn",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Ralf Bohn"}
     },
     {
         "term": "Anita Brockmann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Anita Brockmann"}
     },
     {
         "term": "Prof. Ulrike Brückner",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Ulrike Brückner"}
     },
     {
         "term": "Prof. Susanne Brügger",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Susanne Brügger"}
     },
     {
         "term": "Astrid Busch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Astrid Busch"}
     },
     {
         "term": "Prof. Dr. Fabian Dittrich",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Fabian Dittrich"}
     },
     {
         "term": "Prof. Caroline Dlugos",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Caroline Dlugos"}
     },
     {
         "term": "Angelika Dreischulte",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Angelika Dreischulte"}
     },
     {
         "term": "Bea Emsbach",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Bea Emsbach"}
     },
     {
         "term": "Heike Fink",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Heike Fink"}
     },
     {
         "term": "Prof. Nora Fuchs",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Nora Fuchs"}
     },
     {
         "term": "Holger Gathmann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Holger Gathmann"}
     },
     {
         "term": "Prof. Dirk Gebhardt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Dirk Gebhardt"}
     },
     {
         "term": "Claudia Gips",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Claudia Gips"}
     },
     {
         "term": "Prof. Johannes Graf",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Johannes Graf"}
     },
     {
         "term": "Katharina Gschwendtner",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Katharina Gschwendtner"}
     },
     {
         "term": "Zeichnerische Darstellung",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"link": "https://www.google.de/?q=Zeichnerische Darstellung"}
     },
     {
         "term": "Prof. Sandra Hacker",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Sandra Hacker"}
     },
     {
         "term": "Dr. Jana Haeckel",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Jana Haeckel"}
     },
     {
         "term": "Prof. Lars Harmsen",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Lars Harmsen"}
     },
     {
         "term": "Stephan Hauptmann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Stephan Hauptmann"}
     },
     {
         "term": "Jonas Herfurth",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Jonas Herfurth"}
     },
     {
         "term": "Prof. Margareta Hesse",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Margareta Hesse"}
     },
     {
         "term": "Marian Heuser",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Marian Heuser"}
     },
     {
         "term": "Klaus Hommerich",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Klaus Hommerich"}
     },
     {
         "term": "Dagmar Hösch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Dagmar Hösch"}
     },
     {
         "term": "Prof. Sabine an Huef",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Sabine an Huef"}
     },
     {
         "term": "Prof. Kai Jünemann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Kai Jünemann"}
     },
     {
         "term": "Ralf Junkers",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Ralf Junkers"}
     },
     {
         "term": "Arnim Kamps",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Arnim Kamps"}
     },
     {
         "term": "Karsten Kettermann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Karsten Kettermann"}
     },
     {
         "term": "Saskia Ketz",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Saskia Ketz"}
     },
     {
         "term": "Jan Kirchhoff",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Jan Kirchhoff"}
     },
     {
         "term": "Sebastian Klebe",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Sebastian Klebe"}
     },
     {
         "term": "Hendrik Klein",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Hendrik Klein"}
     },
     {
         "term": "Julian Klein",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Julian Klein"}
     },
     {
         "term": "Susanne Kleinlein",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Susanne Kleinlein"}
     },
     {
         "term": "Marcel Knuth",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Marcel Knuth"}
     },
     {
         "term": "Marian Kolodziejczyk",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Marian Kolodziejczyk"}
     },
     {
         "term": "Gerald Königer",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Gerald Königer"}
     },
     {
         "term": "Dorothe Lanc",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Dorothe Lanc"}
     },
     {
         "term": "Prof. Oliver Langbein",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Oliver Langbein"}
     },
     {
         "term": "Vanessa Leißring",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Vanessa Leißring"}
     },
     {
         "term": "Prof. Jörg U. Lensing",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Jörg U. Lensing"}
     },
     {
         "term": "Frederic Lezmi",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Frederic Lezmi"}
     },
     {
         "term": "Maria Litwa",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Maria Litwa"}
     },
     {
         "term": "Stefanie Luchtenberg",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Stefanie Luchtenberg"}
     },
     {
         "term": "Usch Luhn",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Usch Luhn"}
     },
     {
         "term": "Marcus Maida",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Marcus Maida"}
     },
     {
         "term": "Susanne Matrane",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Susanne Matrane"}
     },
     {
         "term": "Prof. Dr. Marcel René Marburger",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Marcel René Marburger"}
     },
     {
         "term": "Diana Merk",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Diana Merk"}
     },
     {
         "term": "Prof. Martin Middelhauve",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Martin Middelhauve"}
     },
     {
         "term": "Udo Milbret",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Udo Milbret"}
     },
     {
         "term": "Horst Mühlberger",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Horst Mühlberger"}
     },
     {
         "term": "Saskia Niehaus",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Saskia Niehaus"}
     },
     {
         "term": "Philipp Niggemeier",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Philipp Niggemeier"}
     },
     {
         "term": "Lennart Oberscheidt",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Lennart Oberscheidt"}
     },
     {
         "term": "Harald Opel",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Harald Opel"}
     },
     {
         "term": "Joachim Ortmanns",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Joachim Ortmanns"}
     },
     {
         "term": "Michael Osthaus",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Michael Osthaus"}
     },
     {
         "term": "Willi Otremba",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Willi Otremba"}
     },
     {
         "term": "Christian Lord Otto",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Christian Lord Otto"}
     },
     {
         "term": "Andreas Pawlitzki",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Andreas Pawlitzki"}
     },
     {
         "term": "Selina Pfrüner",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Selina Pfrüner"}
     },
     {
         "term": "Angelina Rackwitz",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Angelina Rackwitz"}
     },
     {
         "term": "Bianca Reimann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Bianca Reimann"}
     },
     {
         "term": "Anna Reschucha",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Anna Reschucha"}
     },
     {
         "term": "Jan Rocho",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Jan Rocho"}
     },
     {
         "term": "Michael Rogosch",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Michael Rogosch"}
     },
     {
         "term": "Sabrina Rothe",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Sabrina Rothe"}
     },
     {
         "term": "Judith Rüther",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Judith Rüther"}
     },
     {
         "term": "Dr. Peter Schmieder",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Peter Schmieder"}
     },
     {
         "term": "Frank Schoepgens",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Frank Schoepgens"}
     },
     {
         "term": "Nicole Schöning",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Nicole Schöning"}
     },
     {
         "term": "Geert Schüttler",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Geert Schüttler"}
     },
     {
         "term": "Anne-Kathrin Schulz",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Anne-Kathrin Schulz"}
     },
     {
         "term": "Prof. Dr. Pamela C. Scorzin",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Pamela C. Scorzin"}
     },
     {
         "term": "Lothar Segeler",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Lothar Segeler"}
     },
     {
         "term": "Anja Sommerfeld",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Anja Sommerfeld"}
     },
     {
         "term": "Maria-Elisabeth Sporkmann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Maria-Elisabeth Sporkmann"}
     },
     {
         "term": "Andy Spyra",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Andy Spyra"}
     },
     {
         "term": "Jörg Steinebach",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Jörg Steinebach"}
     },
     {
         "term": "René Struttmann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "René Struttmann"}
     },
     {
         "term": "Damoun Tamir",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Damoun Tamir"}
     },
     {
         "term": "Sven Theymann",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Sven Theymann"}
     },
     {
         "term": "Werner Thiel",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Werner Thiel"}
     },
     {
         "term": "Jaqueline Tonn",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Jaqueline Tonn"}
     },
     {
         "term": "Prof. Roger Walk",
-        "target": "./?c=contact&q=Roger Walk"
+        "target": {"c": "contact", "q": "Roger Walk"}
     },
     {
         "term": "Dr. Christoph Weismüller",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Christoph Weismüller"}
     },
     {
         "term": "Barbara Wendling",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Barbara Wendling"}
     },
     {
         "term": "Germán Wiener",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Germán Wiener"}
     },
     {
         "term": "Prof. Jörg Winde",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Jörg Winde"}
     },
     {
         "term": "Anne Wirtz",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Anne Wirtz"}
     },
     {
         "term": "Carina Witte",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Carina Witte"}
     },
     {
         "term": "Sebastian Wolniczak",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Sebastian Wolniczak"}
     },
     {
         "term": "Moritz Zielke",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Moritz Zielke"}
     },
     {
         "term": "Wolfgang Zurborn",
-        "target": "https://www.google.de/?q=foobar"
+        "target": {"component": "contact", "query": "Wolfgang Zurborn"}
     }
 ]

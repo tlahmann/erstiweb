@@ -119,6 +119,7 @@ export default defineComponent({
     setTimeout(() => {
       this.filter = this.$route.query["q"] as string;
       this.current = this.filteredContacts()?.[0];
+      // console.log('timed out', this.filter, this.current);
     }, 1);
   },
   beforeUnmount() {
@@ -128,6 +129,7 @@ export default defineComponent({
   beforeRouteUpdate(to, from, next) {
     this.filter = to.query["q"] as string;
     this.current = this.filteredContacts()?.[0];
+      // console.log('beforeRouteUpdate', this.filter, this.current);
     next();
   },
   methods: {
@@ -142,7 +144,6 @@ export default defineComponent({
         const fa = this.filter?.split(" ");
         return fa?.some(
           (f) =>
-            !f ||
             c.firstname?.toLowerCase().match(f.toLowerCase()) ||
             c.lastname?.toLowerCase().match(f.toLowerCase()) ||
             c.title?.toLowerCase().match(f.toLowerCase()) ||

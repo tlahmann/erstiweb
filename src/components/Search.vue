@@ -37,8 +37,11 @@
               <li
                 v-for="(term, termIndex) in filteredSearchTerms()"
                 :key="termIndex"
+                v-on:click="navigateRoute(term.target)"
               >
-                <a :href="term.target">{{ term.term }}</a>
+                <!-- <a :href="term.target"> -->
+                {{ term.term }}
+                <!-- </a> -->
               </li>
             </ul>
           </div>
@@ -53,6 +56,7 @@
 import { defineComponent } from "vue";
 import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
 import axios from "axios";
+import router from "@/router";
 
 export default defineComponent({
   name: "Search",
@@ -62,7 +66,10 @@ export default defineComponent({
   data: () => ({
     title: "Suche",
     filter: "",
-    terms: [] as { term: string; target: string }[]
+    terms: [] as {
+      term: string;
+      target: { component: string; query: string } | { link: string };
+    }[]
   }),
   emits: ["update-focus", "update-maximization"],
   created: function() {
@@ -84,6 +91,18 @@ export default defineComponent({
       return this.terms
         ?.filter((t) => t.term?.toLowerCase().match(this.filter?.toLowerCase()))
         ?.splice(0, 10);
+    },
+    navigateRoute(
+      route: { component: string; query: string } & { link: string }
+    ) {
+      // eslint-disable-next-line no-prototype-builtins
+      if (route.hasOwnProperty("component") && route.hasOwnProperty("query")) {
+        const r = { c: route.component, q: route.query };
+        router.push({ path: "", query: r });
+        // eslint-disable-next-line no-prototype-builtins
+      } else if (route.hasOwnProperty("link")) {
+        router.push({ path: route.link });
+      }
     }
   }
 });
