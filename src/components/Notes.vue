@@ -16,216 +16,25 @@
     <div id="notes-content" v-on:click="updateFocus('notes')">
       <div id="ruler">
         <div class="horizontal"></div>
-        <div class="vertical" style="left: 8px">
-          <div class="arrow"></div>
-          <div class="number">0</div>
-        </div>
-        <div class="vertical shortest" style="left: 31px"></div>
-        <div class="vertical short" style="left: 54px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 77px"></div>
-        <div class="vertical" style="left: 100px">
-          <div class="arrow"></div>
-          <div class="number">2</div>
-        </div>
-        <div class="vertical shortest" style="left: 123px"></div>
-        <div class="vertical short" style="left: 146px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 169px"></div>
-        <div class="vertical" style="left: 192px">
-          <div class="arrow"></div>
-          <div class="number">4</div>
-        </div>
-        <div class="vertical shortest" style="left: 215px"></div>
-        <div class="vertical short" style="left: 238px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 261px"></div>
-        <div class="vertical" style="left: 284px">
-          <div class="arrow"></div>
-          <div class="number">6</div>
-        </div>
-        <div class="vertical shortest" style="left: 307px"></div>
-        <div class="vertical short" style="left: 330px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 353px"></div>
-        <div class="vertical" style="left: 376px">
-          <div class="arrow"></div>
-          <div class="number">8</div>
-        </div>
-        <div class="vertical shortest" style="left: 399px"></div>
-        <div class="vertical short" style="left: 422px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 445px"></div>
-        <div class="vertical" style="left: 468px">
-          <div class="arrow"></div>
-          <div class="number">10</div>
-        </div>
-        <div class="vertical shortest" style="left: 491px"></div>
-        <div class="vertical short" style="left: 514px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 537px"></div>
-        <div class="vertical" style="left: 560px">
-          <div class="arrow"></div>
-          <div class="number">12</div>
-        </div>
-        <div class="vertical shortest" style="left: 583px"></div>
-        <div class="vertical short" style="left: 606px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 629px"></div>
-        <div class="vertical" style="left: 652px">
-          <div class="arrow"></div>
-          <div class="number">14</div>
-        </div>
-        <div class="vertical shortest" style="left: 675px"></div>
-        <div class="vertical short" style="left: 698px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 721px"></div>
-        <div class="vertical" style="left: 744px">
-          <div class="arrow"></div>
-          <div class="number">16</div>
-        </div>
-        <div class="vertical shortest" style="left: 767px"></div>
-        <div class="vertical short" style="left: 790px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 813px"></div>
-        <div class="vertical" style="left: 836px">
-          <div class="arrow"></div>
-          <div class="number">18</div>
-        </div>
-        <div class="vertical shortest" style="left: 859px"></div>
-        <div class="vertical short" style="left: 882px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 905px"></div>
-        <div class="vertical" style="left: 928px">
-          <div class="arrow"></div>
-          <div class="number">20</div>
-        </div>
-        <div class="vertical shortest" style="left: 951px"></div>
-        <div class="vertical short" style="left: 974px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 997px"></div>
-        <div class="vertical" style="left: 1020px">
-          <div class="arrow"></div>
-          <div class="number">22</div>
-        </div>
-        <div class="vertical shortest" style="left: 1043px"></div>
-        <div class="vertical short" style="left: 1066px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1089px"></div>
-        <div class="vertical" style="left: 1112px">
-          <div class="arrow"></div>
-          <div class="number">24</div>
-        </div>
-        <div class="vertical shortest" style="left: 1135px"></div>
-        <div class="vertical short" style="left: 1158px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1181px"></div>
-        <div class="vertical" style="left: 1204px">
-          <div class="arrow"></div>
-          <div class="number">26</div>
-        </div>
-        <div class="vertical shortest" style="left: 1227px"></div>
-        <div class="vertical short" style="left: 1250px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1273px"></div>
-        <div class="vertical" style="left: 1296px">
-          <div class="arrow"></div>
-          <div class="number">28</div>
-        </div>
-        <div class="vertical shortest" style="left: 1319px"></div>
-        <div class="vertical short" style="left: 1342px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1365px"></div>
-        <div class="vertical" style="left: 1388px">
-          <div class="arrow"></div>
-          <div class="number">30</div>
-        </div>
-        <div class="vertical shortest" style="left: 1411px"></div>
-        <div class="vertical short" style="left: 1434px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1457px"></div>
-        <div class="vertical" style="left: 1480px">
-          <div class="arrow"></div>
-          <div class="number">32</div>
-        </div>
-        <div class="vertical shortest" style="left: 1503px"></div>
-        <div class="vertical short" style="left: 1526px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1549px"></div>
-        <div class="vertical" style="left: 1572px">
-          <div class="arrow"></div>
-          <div class="number">34</div>
-        </div>
-        <div class="vertical shortest" style="left: 1595px"></div>
-        <div class="vertical short" style="left: 1618px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1641px"></div>
-        <div class="vertical" style="left: 1664px">
-          <div class="arrow"></div>
-          <div class="number">36</div>
-        </div>
-        <div class="vertical shortest" style="left: 1687px"></div>
-        <div class="vertical short" style="left: 1710px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1733px"></div>
-        <div class="vertical" style="left: 1756px">
-          <div class="arrow"></div>
-          <div class="number">38</div>
-        </div>
-        <div class="vertical shortest" style="left: 1779px"></div>
-        <div class="vertical short" style="left: 1802px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1825px"></div>
-        <div class="vertical" style="left: 1848px">
-          <div class="arrow"></div>
-          <div class="number">40</div>
-        </div>
-        <div class="vertical shortest" style="left: 1779px"></div>
-        <div class="vertical short" style="left: 1802px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1825px"></div>
-        <div class="vertical" style="left: 1848px">
-          <div class="arrow"></div>
-          <div class="number">42</div>
-        </div>
-        <div class="vertical shortest" style="left: 1871px"></div>
-        <div class="vertical short" style="left: 1894px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 1917px"></div>
-        <div class="vertical" style="left: 1940px">
-          <div class="arrow"></div>
-          <div class="number">44</div>
-        </div>
-        <div class="vertical shortest" style="left: 1963px"></div>
-        <div class="vertical short" style="left: 1986px">
-          <div class="arrow"></div>
-        </div>
-        <div class="vertical shortest" style="left: 2009px"></div>
-        <div class="vertical" style="left: 2032px">
-          <div class="arrow"></div>
-          <div class="number">46</div>
+        <div v-for="(v, idx) in Math.floor(getWidth() / 69)" :key="idx">
+          <div class="vertical" :style="{ left: `${idx * 4 * 23 + 8 + 0}px` }">
+            <div class="arrow"></div>
+            <div class="number">{{ idx * 2 }}</div>
+          </div>
+          <div
+            class="vertical shortest"
+            :style="{ left: `${idx * 4 * 23 + 8 + 23}px` }"
+          ></div>
+          <div
+            class="vertical short"
+            :style="{ left: `${idx * 4 * 23 + 8 + 46}px` }"
+          >
+            <div class="arrow"></div>
+          </div>
+          <div
+            class="vertical shortest"
+            :style="{ left: `${idx * 4 * 23 + 8 + 69}px` }"
+          ></div>
         </div>
       </div>
       <div id="content">
@@ -269,6 +78,9 @@ export default defineComponent({
     },
     updateMaximization() {
       this.$emit("update-maximization", "notes");
+    },
+    getWidth() {
+      return window.innerWidth;
     }
   }
 });
@@ -337,7 +149,7 @@ export default defineComponent({
       line-height: 2.125rem;
       position: relative;
       img {
-        width: calc(93% - 5em);
+        width: 95vmin;
         position: absolute;
         transition: z-index 0.25s ease-in-out;
         left: 5%;
