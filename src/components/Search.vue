@@ -37,7 +37,7 @@
               <li
                 v-for="(term, termIndex) in filteredSearchTerms()"
                 :key="termIndex"
-                v-on:click="navigateRoute(term.target)"
+                v-on:click="navigateRoute(term.target, $event)"
               >
                 <!-- <a :href="term.target"> -->
                 {{ term.term }}
@@ -93,16 +93,18 @@ export default defineComponent({
         ?.splice(0, 10);
     },
     navigateRoute(
-      route: { component: string; query: string } & { link: string }
+      route: { c: string; q: string } & { link: string },
+      event: any
     ) {
       // eslint-disable-next-line no-prototype-builtins
-      if (route.hasOwnProperty("component") && route.hasOwnProperty("query")) {
-        const r = { c: route.component, q: route.query };
-        router.push({ path: "", query: r });
+      if (route.hasOwnProperty("c") && route.hasOwnProperty("q")) {
+        // const r = { c: route.c, q: q };
+        router.push({ path: "", query: route });
         // eslint-disable-next-line no-prototype-builtins
       } else if (route.hasOwnProperty("link")) {
         router.push({ path: route.link });
       }
+      event.stopPropagation();
     }
   }
 });
