@@ -440,7 +440,7 @@ export default defineComponent({
         color: #3d3d3d88;
       }
       .weekend {
-        background-color: #f5f5f5;
+        background-color: var(--white-bg-color-darker);
       }
     }
     // .category-checkbox {

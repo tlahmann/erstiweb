@@ -22,9 +22,26 @@
         </ul>
       </div>
       <div id="searches">
-        <div id="input-container">
-          <i class="material-icons">search</i>
-          <input id="search-text" type="text" />
+        <div>
+          <div id="input-container">
+            <i class="material-icons">search</i>
+            <input
+              id="search-text"
+              type="text"
+              v-model="filter"
+              placeholder="Suche"
+            />
+          </div>
+          <div id="results-container">
+            <ul v-if="filter !== '' && filteredSearchTerms().length">
+              <li
+                v-for="(term, termIndex) in filteredSearchTerms()"
+                :key="termIndex"
+              >
+                <a :href="term.target">{{ term.term }}</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <input id="search-button" type="button" value="Suchen" />
       </div>
@@ -35,6 +52,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
+import axios from "axios";
 
 export default defineComponent({
   name: "Search",
@@ -42,15 +60,30 @@ export default defineComponent({
     TitlebarButtons
   },
   data: () => ({
-    title: "Suche"
+    title: "Suche",
+    filter: "",
+    terms: [] as { term: string; target: string }[]
   }),
   emits: ["update-focus", "update-maximization"],
+  created: function() {
+    axios
+      .get("./_content/search.json")
+      .then((response) => {
+        this.terms = response.data;
+      })
+      .catch((error) => console.error(error));
+  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
     },
     updateMaximization() {
       this.$emit("update-maximization", "search");
+    },
+    filteredSearchTerms() {
+      return this.terms
+        ?.filter((t) => t.term?.toLowerCase().match(this.filter?.toLowerCase()))
+        ?.splice(0, 10);
     }
   }
 });
@@ -103,34 +136,64 @@ export default defineComponent({
       align-items: center;
       justify-content: center;
 
-      #input-container {
+      > div {
         width: 80%;
-        height: 56px;
+        display: flex;
+        flex-direction: column;
         border: 1px solid #ababab;
         border-radius: 28px;
         margin-bottom: 28px;
-        display: flex;
         justify-content: flex-start;
-        align-items: center;
         overflow: hidden;
-        .material-icons {
-          margin: 0 10px;
-          color: #3d3d3d;
+        #input-container {
+          display: flex;
+          align-items: center;
+          height: 56px;
+          display: flex;
+          margin: 0 1.25em;
+          .material-icons {
+            margin: 0 10px 0 0;
+            color: #3d3d3d;
+          }
+          #search-text {
+            width: 85%;
+            border: none;
+            line-height: 50px;
+            font-size: 2em;
+            color: #3d3d3d;
+            background-color: var(--white-bg-color);
+            &:focus {
+              outline: none;
+            }
+          }
         }
-        #search-text {
-          width: 85%;
-          border: none;
-          line-height: 50px;
-          font-size: 2em;
-          color: #3d3d3d;
-          background-color: var(--white-bg-color);
+        #results-container {
+          display: flex;
+          flex-direction: column;
+          ul {
+            border-top: 1px solid #ababab;
+            margin: 0 1.25em;
+            list-style-type: none;
+            padding-left: 0;
+            padding-top: 1em;
+            li {
+              margin-bottom: 6px;
+              cursor: pointer;
+              line-height: 1.4em;
+              font-size: 1.25em;
+              a {
+                text-decoration: none;
+                color: #3d3d3d;
+              }
+            }
+          }
         }
       }
       #search-button {
         width: 130px;
         height: 35px;
         background-color: #f5f5f5;
-        border: none;
+        border: 1px solid #ababab;
         border-radius: 6px;
         font-size: 1.125em;
         color: #3d3d3d;

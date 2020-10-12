@@ -114,6 +114,22 @@ export default defineComponent({
       })
       .catch((error) => console.error(error));
   },
+  mounted() {
+    // this.$options.timer = window.setTimeout(this.updateDateTime, SECOND);
+    setTimeout(() => {
+      this.filter = this.$route.query["q"] as string;
+      this.current = this.filteredContacts()?.[0];
+    }, 1);
+  },
+  beforeUnmount() {
+    window.clearTimeout(this.$options.timer);
+  },
+  // FIXME: the routing is not called in app.vue, only in (routed) components
+  beforeRouteUpdate(to, from, next) {
+    this.filter = to.query["q"] as string;
+    this.current = this.filteredContacts()?.[0];
+    next();
+  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
@@ -123,15 +139,17 @@ export default defineComponent({
     },
     filteredContacts() {
       return this.contacts.filter((c) => {
-        return (
-          !this.filter ||
-          c.firstname?.toLowerCase().match(this.filter.toLowerCase()) ||
-          c.lastname?.toLowerCase().match(this.filter.toLowerCase()) ||
-          c.title?.toLowerCase().match(this.filter.toLowerCase()) ||
-          c.category?.toLowerCase().match(this.filter.toLowerCase()) ||
-          c.contactInfos?.some((ci) =>
-            ci.value.toLowerCase().match(this.filter.toLowerCase())
-          )
+        const fa = this.filter?.split(" ");
+        return fa?.some(
+          (f) =>
+            !f ||
+            c.firstname?.toLowerCase().match(f.toLowerCase()) ||
+            c.lastname?.toLowerCase().match(f.toLowerCase()) ||
+            c.title?.toLowerCase().match(f.toLowerCase()) ||
+            c.category?.toLowerCase().match(f.toLowerCase()) ||
+            c.contactInfos?.some((ci) =>
+              ci.value.toLowerCase().match(f.toLowerCase())
+            )
         );
       });
     },

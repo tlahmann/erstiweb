@@ -300,7 +300,8 @@ export default defineComponent({
 
 $titlebarColor: hsl(0, 0%, 75%);
 :root {
-  --white-bg-color: rgb(230, 230, 220);
+  --white-bg-color: rgb(240, 240, 243);
+  --white-bg-color-darker: rgb(235, 235, 239);
 }
 
 body,
@@ -484,7 +485,7 @@ $sizeDuration: 0.65s;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #fefefe;
+  background-color: var(--white-bg-color-darker);
   z-index: initial;
   -webkit-transition: z-index 0.5s, visibility $positionDuration,
     opacity $positionDuration ease-in-out;
