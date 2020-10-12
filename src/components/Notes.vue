@@ -128,9 +128,110 @@
           <div class="arrow"></div>
           <div class="number">24</div>
         </div>
+        <div class="vertical shortest" style="left: 1135px"></div>
+        <div class="vertical short" style="left: 1158px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1181px"></div>
+        <div class="vertical" style="left: 1204px">
+          <div class="arrow"></div>
+          <div class="number">26</div>
+        </div>
+        <div class="vertical shortest" style="left: 1227px"></div>
+        <div class="vertical short" style="left: 1250px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1273px"></div>
+        <div class="vertical" style="left: 1296px">
+          <div class="arrow"></div>
+          <div class="number">28</div>
+        </div>
+        <div class="vertical shortest" style="left: 1319px"></div>
+        <div class="vertical short" style="left: 1342px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1365px"></div>
+        <div class="vertical" style="left: 1388px">
+          <div class="arrow"></div>
+          <div class="number">30</div>
+        </div>
+        <div class="vertical shortest" style="left: 1411px"></div>
+        <div class="vertical short" style="left: 1434px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1457px"></div>
+        <div class="vertical" style="left: 1480px">
+          <div class="arrow"></div>
+          <div class="number">32</div>
+        </div>
+        <div class="vertical shortest" style="left: 1503px"></div>
+        <div class="vertical short" style="left: 1526px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1549px"></div>
+        <div class="vertical" style="left: 1572px">
+          <div class="arrow"></div>
+          <div class="number">34</div>
+        </div>
+        <div class="vertical shortest" style="left: 1595px"></div>
+        <div class="vertical short" style="left: 1618px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1641px"></div>
+        <div class="vertical" style="left: 1664px">
+          <div class="arrow"></div>
+          <div class="number">36</div>
+        </div>
+        <div class="vertical shortest" style="left: 1687px"></div>
+        <div class="vertical short" style="left: 1710px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1733px"></div>
+        <div class="vertical" style="left: 1756px">
+          <div class="arrow"></div>
+          <div class="number">38</div>
+        </div>
+        <div class="vertical shortest" style="left: 1779px"></div>
+        <div class="vertical short" style="left: 1802px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1825px"></div>
+        <div class="vertical" style="left: 1848px">
+          <div class="arrow"></div>
+          <div class="number">40</div>
+        </div>
+        <div class="vertical shortest" style="left: 1779px"></div>
+        <div class="vertical short" style="left: 1802px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1825px"></div>
+        <div class="vertical" style="left: 1848px">
+          <div class="arrow"></div>
+          <div class="number">42</div>
+        </div>
+        <div class="vertical shortest" style="left: 1871px"></div>
+        <div class="vertical short" style="left: 1894px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 1917px"></div>
+        <div class="vertical" style="left: 1940px">
+          <div class="arrow"></div>
+          <div class="number">44</div>
+        </div>
+        <div class="vertical shortest" style="left: 1963px"></div>
+        <div class="vertical short" style="left: 1986px">
+          <div class="arrow"></div>
+        </div>
+        <div class="vertical shortest" style="left: 2009px"></div>
+        <div class="vertical" style="left: 2032px">
+          <div class="arrow"></div>
+          <div class="number">46</div>
+        </div>
       </div>
       <div id="content">
-        <small>psst: Rechtsklick -> Bild Herunterladen ...</small>
+        <small style="font-size: small;"
+          >psst: Rechtsklick -> Bild herunterladen ...</small
+        >
         <img
           src="../assets/Einleger-Leben.png"
           alt="Einleger Leben"
@@ -187,7 +288,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     #ruler {
-      background-color: #f0f0f0;
+      background-color: var(--white-bg-color);
       height: 54px;
       position: relative;
       .horizontal {
@@ -229,7 +330,7 @@ export default defineComponent({
       }
     }
     #content {
-      background-color: white;
+      background-color: var(--white-bg-color);
       height: calc(100% - 54px);
       padding: 8px;
       font-size: 1.125rem;

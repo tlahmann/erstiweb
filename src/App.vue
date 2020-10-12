@@ -298,6 +298,11 @@ export default defineComponent({
   src: local("muli-black"), url(./assets/Muli-Black.ttf) format("truetype");
 }
 
+$titlebarColor: hsl(0, 0%, 75%);
+:root {
+  --white-bg-color: rgb(230, 230, 220);
+}
+
 body,
 #app {
   margin: 0;
@@ -313,10 +318,10 @@ body,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
-  color: #2c3e50;
-  background-color: #9b9b9b;
-  mix-blend-mode: screen;
-  filter: sepia(1) hue-rotate(184deg);
+  color: #10171e;
+  background-color: #3b3b3b;
+  // mix-blend-mode: screen;
+  // filter: sepia(1) hue-rotate(184deg);
 
   // filter: greyscale(100%) hue-rotate(180deg) brightness(100%) contrast(90%)
   //   saturate(200%);
@@ -330,7 +335,7 @@ body,
 }
 
 #main-nav {
-  background-color: #f2f2f2;
+  background-color: $titlebarColor;
   z-index: 1200;
   position: relative;
   display: flex;
@@ -395,8 +400,8 @@ $sizeDuration: 0.65s;
       bottom: 0;
       left: 0;
       z-index: 25;
-      -webkit-transition: visibility 0s, opacity $positionDuration ease-in-out;
-      transition: visibility 0s, opacity $positionDuration ease-in-out;
+      -webkit-transition: visibility 0s, opacity $positionDuration/2 ease-in-out;
+      transition: visibility 0s, opacity $positionDuration/2 ease-in-out;
     }
   }
 
@@ -615,7 +620,11 @@ $titlebarHeight: 2.5em;
   display: flex;
   padding: 4pt 5pt 4pt 5pt;
   transform: translate(-1pt, -1pt);
-  background-image: linear-gradient(180deg, #d2d0d2, #bbb9bb);
+  background-image: linear-gradient(
+    180deg,
+    $titlebarColor,
+    darken($titlebarColor, 9%)
+  );
   border-bottom: 1px solid rgba(0, 0, 0, 10%);
   border-top-left-radius: 7pt;
   border-top-right-radius: 7pt;
@@ -661,14 +670,14 @@ body {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   body {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   body {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 

@@ -95,7 +95,7 @@ export default defineComponent({
     // display: flex;
     // flex-direction: column;
     // #content {
-    background-color: white;
+    background-color: var(--white-bg-color);
     // height: 100%;
     padding: 8px;
     // }

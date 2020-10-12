@@ -75,8 +75,8 @@ export default defineComponent({
       padding: 10pt 8pt;
       display: flex;
       flex-direction: column;
-      font-size: 0.875rem;
-      line-height: 1.125rem;
+      font-size: 0.875em;
+      line-height: 1.125em;
       input[type="checkbox"] {
         margin: 6.5px 3px;
       }
@@ -88,7 +88,7 @@ export default defineComponent({
       ul {
         margin: 0;
         list-style-type: none;
-        padding-left: 1.5rem;
+        padding-left: 1.5em;
         li {
           margin-bottom: 6px;
         }
@@ -99,7 +99,7 @@ export default defineComponent({
       height: 100%;
       display: flex;
       flex-direction: column;
-      background-color: white;
+      background-color: var(--white-bg-color);
       align-items: center;
       justify-content: center;
 
@@ -121,8 +121,9 @@ export default defineComponent({
           width: 85%;
           border: none;
           line-height: 50px;
-          font-size: 2rem;
+          font-size: 2em;
           color: #3d3d3d;
+          background-color: var(--white-bg-color);
         }
       }
       #search-button {
@@ -131,8 +132,9 @@ export default defineComponent({
         background-color: #f5f5f5;
         border: none;
         border-radius: 6px;
-        font-size: 1.125rem;
+        font-size: 1.125em;
         color: #3d3d3d;
+        background-color: var(--white-bg-color);
       }
     }
   }

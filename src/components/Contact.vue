@@ -216,7 +216,7 @@ export default defineComponent({
       #contact-info {
         flex: 1 1 40.1%;
         border-right: 1px solid #ababab;
-        background-color: white;
+        background-color: var(--white-bg-color);
         height: 100%;
         padding: 1rem 0;
         ul {

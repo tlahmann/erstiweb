@@ -202,10 +202,8 @@ export default defineComponent({
         "#00EAFF",
         "#AA00FF",
         "#FF7F00",
-        "#BFFF00",
         "#0095FF",
         "#FF00AA",
-        "#FFD400",
         "#6AFF00",
         "#0040FF",
         "#EDB9B9",
@@ -338,7 +336,7 @@ export default defineComponent({
       }
     }
     #weeks {
-      background-color: white;
+      background-color: var(--white-bg-color);
       flex: 1 1 80%;
       height: 100%;
       display: flex;

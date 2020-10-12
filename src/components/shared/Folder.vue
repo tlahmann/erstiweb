@@ -60,20 +60,19 @@ export default defineComponent({
 }
 .front {
   position: absolute;
-  top: 12px;
+  top: 0.5em;
   width: calc(100% - 0pt);
-  height: calc(100% - 16px);
+  height: calc(100% - 1.1em);
   z-index: 20;
   border-top: 1px solid #a9e8fc;
-  border-radius: 7px;
-  background-color: #75cdf9;
+  border-radius: 0.25em;
+  background-color: hsl(200, 92%, 62%);
 }
 .back {
   position: absolute;
   width: 100%;
-  height: calc(100% - 2pt);
+  height: calc(100% - 0.3em);
   z-index: 10;
-  border-radius: 7px;
 
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
@@ -82,22 +81,22 @@ export default defineComponent({
   .left,
   .right {
     // border-radius: 5px;
-    background-color: #96ddfe;
+    background-color: hsl(200, 92%, 69%);
   }
   .left {
     position: absolute;
     width: 40%;
-    height: calc(100% - 2pt);
-    border-radius: 0.4125em 0.4125em 0 0.4125em;
-    border-top-right-radius: 0.625em 1em;
+    height: calc(100% - 0.15em);
+    border-radius: 0.25em 0.25em 0 0.25em;
+    border-top-right-radius: 0.5em 0.85em;
   }
   .right {
     position: absolute;
     width: 80%;
-    height: calc(100% - 8pt);
+    height: calc(100% - 0.5em);
     left: 20%;
-    top: 6pt;
-    border-radius: 0 0.4125em 0.4125em 0;
+    top: 0.35em;
+    border-radius: 0 0.25em 0.25em 0;
   }
 }
 .title {
@@ -106,6 +105,7 @@ export default defineComponent({
   top: 90%;
   width: 100%;
   color: white;
-  font-size: 1em;
+  font-size: 0.8em;
+  margin-top: 0.5em;
 }
 </style>

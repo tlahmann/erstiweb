@@ -199,21 +199,22 @@ img.tutor-image {
   .focused & {
     position: relative;
     margin: 1.5em;
-    max-width: 8vw;
+    max-width: 10vmin;
 
-    transition-property: transform;
-    transition-duration: $sizeDuration * 3;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
+    transition-property: transform, width, height;
+    transition-duration: $sizeDuration * 3, $sizeDuration, $sizeDuration;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s;
   }
 
   -webkit-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 10pt 20pt 0px rgba(0, 0, 0, 0.16);
 
-  -webkit-transition: transform $positionDuration ease-in-out;
-  transition: transform $positionDuration ease-in-out;
-  transition-delay: 0s;
+  transition-property: transform, width, height;
+  transition-duration: $sizeDuration * 3, $sizeDuration, $sizeDuration;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0s, 0s, 0s;
 }
 .tutor-banner {
   display: block;

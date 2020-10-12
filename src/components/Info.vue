@@ -159,7 +159,7 @@ export default defineComponent({
       flex-direction: row;
       #titles {
         // padding: 1em;
-        background-color: white;
+        background-color: var(--white-bg-color);
         flex: 1 1 19.2%;
         height: 100%;
         border-right: 1px solid #ababab;
@@ -211,7 +211,7 @@ export default defineComponent({
           margin: 0 0 1.375em 0;
         }
         padding: 2em;
-        background-color: white;
+        background-color: var(--white-bg-color);
         flex: 1 1 61.9%;
         height: calc(100% - 5em);
         font-size: 1.125em;
