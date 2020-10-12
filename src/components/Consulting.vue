@@ -1,11 +1,11 @@
 <template>
-  <div id="exibitions">
+  <div id="consulting">
     <Notepad
-      color="#198C19"
-      highlightColor="#116211"
+      color="#FFA500"
+      highlightColor="#B27300"
       v-for="(note, idx) in notes"
       v-bind:key="idx"
-      v-on:click="updateFocus('exibitions')"
+      v-on:click="updateFocus('consulting')"
       v-bind:style="offset(idx)"
       :width="note.bounds.width"
       :height="note.bounds.height"
@@ -22,7 +22,7 @@ import axios from "axios";
 import { reposition } from "@/utils/reposition.function";
 
 export default defineComponent({
-  name: "Exibitions",
+  name: "Consulting",
   components: {
     Notepad
   },
@@ -33,7 +33,7 @@ export default defineComponent({
     observer: {} as MutationObserver,
     expanded: false,
     primeAngle: 137,
-    primeRadiusX: 67,
+    primeRadiusX: 31,
     primeRadiusY: 31,
     notes: [] as {
       bounds: { x: string; y: string; left: string; top: string };
@@ -41,14 +41,14 @@ export default defineComponent({
   }),
   created: function() {
     axios
-      .get("./_content/exibitions.json")
-      .then((response: any) => {
-        return response.data?.map((elem: {}, idx: number) => {
+      .get("./_content/consulting.json")
+      .then((response) => {
+        return response.data?.map((elem: {}) => {
           const w = Math.floor(Math.random() * 150) + 220;
           const h = Math.floor(Math.random() * 150) + 170;
           return {
             ...elem,
-            pos: this.generateInitialPosition(idx),
+            // pos: this.generatePosition(),
             bounds: {
               ...this.generatePosition(),
               width: w,
@@ -100,23 +100,10 @@ export default defineComponent({
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
     },
-    generatePosition(): { x: number; y: number } {
-      const x = Math.floor(Math.random() * 60) + 20;
-      const y = Math.floor(Math.random() * 60) + 20;
+    generatePosition(): { x: string; y: string } {
+      const x = Math.floor(Math.random() * 60) + 20 + "vw";
+      const y = Math.floor(Math.random() * 60) + 20 + "vh";
       return { x, y };
-    },
-    generateInitialPosition(index: number): { transform: string } {
-      const x =
-        Math.cos(this.primeAngle * index * (Math.PI / 180)) *
-          this.primeRadiusX *
-          (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
-        "%";
-      const y =
-        Math.sin(this.primeAngle * index * (Math.PI / 180)) *
-          this.primeRadiusY *
-          (Math.floor((this.primeAngle * (index + 1)) / 360) + 1) +
-        "%";
-      return { transform: `translate(${x}, ${y})` };
     },
     offset(
       index: number

@@ -62,27 +62,27 @@
     />
 
     <!-- Post-It style components -->
-    <Equipment
+    <bodies
       v-bind:class="{
-        focused: focused === 'equipment',
-        unfocused: !!focused && focused !== 'equipment',
-        expanded: !!focused && focused !== 'equipment'
+        focused: focused === 'bodies',
+        unfocused: !!focused && focused !== 'bodies',
+        expanded: !!focused && focused !== 'bodies'
       }"
       @update-focus="updateFocus"
     />
-    <Exibitions
+    <Proposals
       v-bind:class="{
-        focused: focused === 'exibitions',
-        unfocused: !!focused && focused !== 'exibitions',
-        expanded: !!focused && focused !== 'exibitions'
+        focused: focused === 'proposals',
+        unfocused: !!focused && focused !== 'proposals',
+        expanded: !!focused && focused !== 'proposals'
       }"
       @update-focus="updateFocus"
     />
-    <Inspirations
+    <Consulting
       v-bind:class="{
-        focused: focused === 'inspirations',
-        unfocused: !!focused && focused !== 'inspirations',
-        expanded: !!focused && focused !== 'inspirations'
+        focused: focused === 'consulting',
+        unfocused: !!focused && focused !== 'consulting',
+        expanded: !!focused && focused !== 'consulting'
       }"
       @update-focus="updateFocus"
     />
@@ -200,10 +200,10 @@
 import { defineComponent } from "vue";
 import Calendar from "@/components/Calendar.vue"; // @ is an alias to /src
 import Contact from "@/components/Contact.vue"; // @ is an alias to /src
-import Equipment from "@/components/Equipment.vue"; // @ is an alias to /src
-import Exibitions from "@/components/Exibitions.vue"; // @ is an alias to /src
+import Bodies from "@/components/Bodies.vue"; // @ is an alias to /src
+import Proposals from "@/components/Proposals.vue"; // @ is an alias to /src
 import Info from "@/components/Info.vue"; // @ is an alias to /src
-import Inspirations from "@/components/Inspirations.vue"; // @ is an alias to /src
+import Consulting from "@/components/Consulting.vue"; // @ is an alias to /src
 import Menu from "@/components/Menu.vue"; // @ is an alias to /src
 import Notes from "@/components/Notes.vue"; // @ is an alias to /src
 import Rooms from "@/components/Rooms.vue"; // @ is an alias to /src
@@ -219,10 +219,10 @@ export default defineComponent({
   components: {
     Calendar,
     Contact,
-    Equipment,
-    Exibitions,
+    Bodies,
+    Proposals,
     Info,
-    Inspirations,
+    Consulting,
     Menu,
     Notes,
     Rooms,
@@ -367,11 +367,11 @@ $sizeDuration: 0.65s;
 
 #calendar,
 #contact,
-#equipment,
-#exibitions,
+#bodies,
+#proposals,
 #menu,
 #info,
-#inspirations,
+#consulting,
 #notes,
 #rooms,
 #search,
@@ -517,9 +517,9 @@ $sizeDuration: 0.65s;
   overflow: hidden;
   cursor: pointer;
 }
-#equipment,
-#exibitions,
-#inspirations {
+#bodies,
+#proposals,
+#consulting {
   -webkit-transition: all $sizeDuration 0s;
   transition: all $sizeDuration 0s;
   z-index: initial;
@@ -579,7 +579,7 @@ $sizeDuration: 0.65s;
   top: 86vh;
   left: 100vw;
 }
-#equipment {
+#bodies {
   top: 11vh;
   left: 58vw;
 }
@@ -587,11 +587,11 @@ $sizeDuration: 0.65s;
   top: 25vh;
   left: 93vw;
 }
-#exibitions {
+#proposals {
   top: 95vh;
   left: 7vw;
 }
-#inspirations {
+#consulting {
   top: 33vh;
   left: 6vw;
 }

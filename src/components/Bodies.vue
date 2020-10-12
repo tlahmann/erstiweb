@@ -1,11 +1,11 @@
 <template>
-  <div id="equipment">
+  <div id="bodies">
     <Notepad
       color="#da678a"
       highlightColor="#ED1A5B"
       v-for="(note, idx) in notes"
       v-bind:key="idx"
-      v-on:click="updateFocus('equipment')"
+      v-on:click="updateFocus('bodies')"
       v-bind:style="offset(idx)"
       :width="note.bounds.width"
       :height="note.bounds.height"
@@ -22,7 +22,7 @@ import axios from "axios";
 import { reposition } from "@/utils/reposition.function";
 
 export default defineComponent({
-  name: "Equipment",
+  name: "Bodies",
   components: {
     Notepad
   },
@@ -42,7 +42,7 @@ export default defineComponent({
   }),
   created: function() {
     axios
-      .get("./_content/equipment.json")
+      .get("./_content/bodies.json")
       .then((response) => {
         return response.data?.map((elem: {}) => {
           const w = Math.floor(Math.random() * 150) + 220;

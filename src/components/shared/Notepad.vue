@@ -15,7 +15,7 @@
       }"
     >
       <h4 lang="de">{{ content }}</h4>
-      <a :href="link">Hier weiterlesen&nbsp;&rarr;</a>
+      <a :href="link" target="_blank">Hier weiterlesen&nbsp;&rarr;</a>
     </div>
   </div>
 </template>

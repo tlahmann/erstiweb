@@ -2,10 +2,10 @@
   <div id="rooms">
     <div id="room-images" v-on:click="updateFocus('', $event)">
       <img
-        v-for="(room, idx) in rooms"
+        v-for="(room, idx) in getTeasers()"
         v-bind:key="idx"
-        v-bind:src="rooms[0].images[0]"
-        v-on:click="updateFocus('rooms', $event)"
+        v-bind:src="room"
+        v-on:click="updateFocus('rooms', $event, idx)"
         width="780"
         height="521"
         alt="Bilder je nach Breite des Viewports"
@@ -14,8 +14,8 @@
       />
     </div>
     <div id="content" v-on:click="updateFocus('', $event)">
-      <img :src="rooms[0]?.banner" class="room-banner" />
-      <div v-html="rooms[0]?.text"></div>
+      <img :src="rooms[current]?.banner" class="room-banner" />
+      <div v-html="rooms[current]?.text"></div>
     </div>
   </div>
 </template>
@@ -30,10 +30,11 @@ export default defineComponent({
   data: () => ({
     observer: {} as MutationObserver,
     expanded: false,
+    current: 0,
     primeAngle: -137,
     primeRadiusX: 37,
     primeRadiusY: 23,
-    rooms: []
+    rooms: [] as { images: string[] }[]
   }),
   created: function() {
     axios
@@ -68,8 +69,12 @@ export default defineComponent({
     this.observer.disconnect();
   },
   methods: {
-    updateFocus(focusValue: string, event: any) {
-      this.$emit("update-focus", focusValue);
+    updateFocus(focusValue: string, event: any, index?: number) {
+      if ((this.expanded && focusValue !== "rooms") || !this.expanded) {
+        this.$emit("update-focus", focusValue);
+      } else {
+        this.current = index || 0;
+      }
       event.stopPropagation();
     },
     offset(
@@ -105,6 +110,9 @@ export default defineComponent({
           transform: `translate(${x}, ${y})`
         };
       }
+    },
+    getTeasers(): string[] {
+      return this.rooms.map((room) => room.images?.[0]);
     }
   }
 });
@@ -123,7 +131,13 @@ img.room-image {
   .focused & {
     position: relative;
     margin: 1.5em;
-    max-width: 8vw;
+    // max-width: 8vw;
+    display: flex;
+    flex: 0 0 4vh;
+    width: 4vh;
+    height: 4vh;
+    max-width: initial;
+    min-width: initial;
 
     transition-property: transform;
     transition-duration: $sizeDuration * 3;
@@ -163,6 +177,8 @@ img.room-image {
     width: 90%;
     height: 65vmin;
     margin: 40px auto;
+    display: flex;
+    flex-direction: row;
   }
   #content {
     max-width: 1088px;
