@@ -129,7 +129,7 @@ export default defineComponent({
   beforeRouteUpdate(to, from, next) {
     this.filter = to.query["q"] as string;
     this.current = this.filteredContacts()?.[0];
-      // console.log('beforeRouteUpdate', this.filter, this.current);
+    // console.log('beforeRouteUpdate', this.filter, this.current);
     next();
   },
   methods: {
@@ -140,19 +140,22 @@ export default defineComponent({
       this.$emit("update-maximization", "contact");
     },
     filteredContacts() {
-      return this.contacts.filter((c) => {
-        const fa = this.filter?.split(" ");
-        return fa?.some(
-          (f) =>
-            c.firstname?.toLowerCase().match(f.toLowerCase()) ||
-            c.lastname?.toLowerCase().match(f.toLowerCase()) ||
-            c.title?.toLowerCase().match(f.toLowerCase()) ||
-            c.category?.toLowerCase().match(f.toLowerCase()) ||
-            c.contactInfos?.some((ci) =>
-              ci.value.toLowerCase().match(f.toLowerCase())
-            )
-        );
-      });
+      return (
+        (!this.filter && this.contacts) ||
+        this.contacts.filter((c) => {
+          const fa = this.filter?.split(" ");
+          return fa?.some(
+            (f) =>
+              c.firstname?.toLowerCase().match(f.toLowerCase()) ||
+              c.lastname?.toLowerCase().match(f.toLowerCase()) ||
+              c.title?.toLowerCase().match(f.toLowerCase()) ||
+              c.category?.toLowerCase().match(f.toLowerCase()) ||
+              c.contactInfos?.some((ci) =>
+                ci.value.toLowerCase().match(f.toLowerCase())
+              )
+          );
+        })
+      );
     },
     getCategories() {
       return this.contacts
