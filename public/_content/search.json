@@ -1137,7 +1137,7 @@
     },
     {
         "term": "Usch Luhn",
-        "target": {"component": "contact", "query": "Usch Luhn"}
+        "target": {"component": "rooms", "query": "Fotowerkstatt"}
     },
     {
         "term": "Marcus Maida",

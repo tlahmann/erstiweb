@@ -1,18 +1,44 @@
-{
-    "tutors": [
-        {"image": "./assets/Tutoren/Anna_sw.jpg"},
-        {"image": "./assets/Tutoren/dilara_sw.jpg"},
-        {"image": "./assets/Tutoren/Emma_sw.jpg"},
-        {"image": "./assets/Tutoren/Fabian_sw.jpg"},
-        {"image": "./assets/Tutoren/greta_sw.jpg"},
-        {"image": "./assets/Tutoren/Isabell_sw.jpg"},
-        {"image": "./assets/Tutoren/janika_sw.jpg"},
-        {"image": "./assets/Tutoren/lorenz_sw.jpg"},
-        {"image": "./assets/Tutoren/Luisa.jpg"},
-        {"image": "./assets/Tutoren/Marie_sw.jpg"},
-        {"image": "./assets/Tutoren/Olga_sw.jpg"},
-        {"image": "./assets/Tutoren/Tim1_sw.jpg"},
-        {"image": "./assets/Tutoren/tim2_sw.jpg"},
-        {"image": "./assets/Tutoren/Tim3_sw.jpg"}
-    ]
-}
+[
+    {
+        "image": "./assets/Tutoren/Anna_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/dilara_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/Emma_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/Fabian_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/greta_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/Isabell_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/janika_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/lorenz_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/Luisa.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/Marie_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/Olga_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/Tim1_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/tim2_sw.jpg"
+    },
+    {
+        "image": "./assets/Tutoren/Tim3_sw.jpg"
+    }
+]

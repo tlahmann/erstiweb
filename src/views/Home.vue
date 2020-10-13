@@ -324,8 +324,8 @@ body,
   // text-align: center;
   color: #10171e;
   background-color: #3b3b3b;
-  // mix-blend-mode: screen;
-  // filter: sepia(1) hue-rotate(184deg);
+  mix-blend-mode: screen;
+  filter: sepia(1) hue-rotate(184deg);
 
   // filter: greyscale(100%) hue-rotate(180deg) brightness(100%) contrast(90%)
   //   saturate(200%);

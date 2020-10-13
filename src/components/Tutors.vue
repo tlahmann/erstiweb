@@ -83,7 +83,7 @@ export default defineComponent({
       .get("./_content/tutors.json")
       .then((response) => {
         // return response.data?.tutors.map((elem: {}) => {
-        this.tutors = response.data?.tutors.map((elem: {}) => {
+        this.tutors = response.data?.map((elem: {}) => {
           const w = Math.floor(Math.random() * 100) + 230;
           const h = Math.floor(Math.random() * 100) + 120;
           return {

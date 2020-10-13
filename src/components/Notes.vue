@@ -42,16 +42,16 @@
           >psst: Rechtsklick -> Bild herunterladen ...</small
         >
         <img
-          src="../assets/Einleger-Leben.png"
-          alt="Einleger Leben"
-          :style="{ 'z-index': current === 0 ? 250 : 200 }"
-          v-on:click="current = 0"
-        />
-        <img
-          src="../assets/Einleger-Leben2.png"
-          alt="Einleger Leben"
-          :style="{ 'z-index': current === 1 ? 250 : 200 }"
-          v-on:click="current = 1"
+          v-for="(note, noteIndex) in notes"
+          :key="noteIndex"
+          :src="note"
+          :alt="'Notiz_' + noteIndex"
+          :style="{
+            'z-index': current === noteIndex ? 250 : 200,
+            transform: `translate(${noteIndex *
+              (16 / notes.length)}%, ${noteIndex * (12 / notes.length)}%)`
+          }"
+          v-on:click="current = noteIndex"
         />
       </div>
     </div>
@@ -61,6 +61,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is an alias to /src
+import axios from "axios";
 
 export default defineComponent({
   name: "Notes",
@@ -69,9 +70,19 @@ export default defineComponent({
   },
   data: () => ({
     title: "Notizen",
-    current: 0
+    current: 0,
+    notes: [] as string[]
   }),
   emits: ["update-focus", "update-maximization"],
+  created: function() {
+    axios
+      .get("./_content/notes.json")
+      .then((response) => {
+        this.notes = response.data;
+        this.current = this.notes?.length - 1;
+      })
+      .catch((error) => console.error(error));
+  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
@@ -150,14 +161,11 @@ export default defineComponent({
       position: relative;
       img {
         width: 95vmin;
+        max-width: 82%;
         position: absolute;
         transition: z-index 0.25s ease-in-out;
         left: 5%;
         top: 7%;
-
-        &:nth-of-type(2) {
-          transform: translate(4em, 1.5em);
-        }
       }
     }
   }

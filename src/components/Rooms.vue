@@ -51,7 +51,7 @@ export default defineComponent({
     axios
       .get("./_content/rooms.json")
       .then((response) => {
-        this.rooms = response.data?.rooms.map((elem: {}) => {
+        this.rooms = response.data?.map((elem: {}) => {
           return {
             ...elem
           };
