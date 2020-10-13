@@ -245,7 +245,7 @@ export default defineComponent({
           padding: 0;
           list-style: none;
           hr {
-            margin-left: 22px;
+            margin-left: 0 0 0 22px;
             color: #7c7c7c;
             border-style: solid;
             border-width: 0 0 1px 0;

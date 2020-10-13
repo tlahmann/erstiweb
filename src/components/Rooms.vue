@@ -1,17 +1,28 @@
 <template>
   <div id="rooms">
     <div id="room-images" v-on:click="updateFocus('', $event)">
-      <img
-        v-for="(room, idx) in getTeasers()"
-        v-bind:key="idx"
-        v-bind:src="room"
-        v-on:click="updateFocus('rooms', $event, idx)"
-        width="780"
-        height="521"
-        alt="Bilder je nach Breite des Viewports"
-        v-bind:style="offset(idx)"
-        class="room-image"
-      />
+      <div id="room-teasers">
+        <img
+          v-for="(room, idx) in getTeasers()"
+          v-bind:key="idx"
+          v-bind:src="room"
+          v-on:click="updateFocus('rooms', $event, idx)"
+          width="780"
+          height="521"
+          alt="Bilder je nach Breite des Viewports"
+          v-bind:style="offset(idx)"
+          class="room-image"
+        />
+      </div>
+      <div id="room-image-large">
+        <img
+          v-bind:src="rooms[current]?.images?.[0]"
+          width="780"
+          height="521"
+          alt="Bilder je nach Breite des Viewports"
+          class="room-image"
+        />
+      </div>
     </div>
     <div id="content" v-on:click="updateFocus('', $event)">
       <img :src="rooms[current]?.banner" class="room-banner" />
@@ -174,11 +185,22 @@ img.room-image {
   overflow-x: hidden;
   overflow-y: scroll;
   #room-images {
+    display: flex;
+    flex-direction: column;
     width: 90%;
     height: 65vmin;
     margin: 40px auto;
-    display: flex;
-    flex-direction: row;
+    #room-teasers {
+      display: flex;
+      flex-direction: row;
+    }
+    #room-image-large {
+      img.room-image {
+        width: 100vmin;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
   }
   #content {
     max-width: 1088px;
@@ -188,17 +210,19 @@ img.room-image {
     display: block;
     position: relative;
     div {
+      line-height: 1.9em;
+      font-size: 1.8em;
       strong {
         font-family: muli-black, Helvetica, Arial, sans-serif;
         font-weight: 700;
-        line-height: 2.1em;
-        font-size: 2em;
+        // line-height: 2.1em;
+        // font-size: 2em;
         margin-bottom: 100px;
         display: block;
       }
       p {
-        line-height: 1.9em;
-        font-size: 1.8em;
+        // line-height: 1.9em;
+        // font-size: 1.8em;
         margin-bottom: 10em;
       }
     }
