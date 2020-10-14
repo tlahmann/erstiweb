@@ -115,23 +115,6 @@ export default defineComponent({
       })
       .catch((error) => console.error(error));
   },
-  mounted() {
-    this.$options.timer = window.setTimeout(() => {
-      this.filter = this.$route.query["q"] as string;
-      this.current = this.filteredContacts()?.[0];
-      console.log("timed out", this.filter, this.current);
-    }, 100);
-  },
-  beforeUnmount() {
-    window.clearTimeout(this.$options.timer);
-  },
-  // FIXME: the routing is not called in app.vue, only in (routed) components
-  beforeRouteUpdate(to, from, next) {
-    this.filter = to.query["q"] as string;
-    this.current = this.filteredContacts()?.[0];
-    console.log("beforeRouteUpdate", this.filter, this.current);
-    next();
-  },
   methods: {
     updateFocus(focusValue: string) {
       this.$emit("update-focus", focusValue);
@@ -246,16 +229,16 @@ export default defineComponent({
           list-style: none;
           hr {
             margin: 0 0 0 22px;
-            color: #7c7c7c;
+            color: #ababab;
             border-style: solid;
             border-width: 0 0 1px 0;
           }
           li {
             // border-bottom: 1px solid #ababab;
             padding: 10px 18px 10px 22px;
-            color: #7c7c7c;
+            // color: #7c7c7c;
             &.active {
-              background-color: #707070;
+              background-color: hsl(0, 0%, 35%);
               color: white;
             }
             .first-name,
@@ -275,9 +258,10 @@ export default defineComponent({
         flex: 1 1 69.9%;
         padding: 3rem 1.375em;
         height: calc(100% - 6rem);
+        overflow-y: scroll;
         #first-name,
         #last-name {
-          color: #7c7c7c;
+          // color: #7c7c7c;
           font-size: 2.125rem;
           margin-bottom: 1rem;
           display: inline-block;

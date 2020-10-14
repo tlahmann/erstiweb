@@ -12,6 +12,9 @@
         v-bind:style="offset(idx)"
         class="tutor-image"
       />
+      <!-- <div v-for="(tutor, idx) in tutors" v-bind:key="idx">
+        {{ tutor }}
+      </div> -->
     </div>
     <div id="content" v-on:click="updateFocus('', $event)">
       <img :src="tutorBanner" class="tutor-banner" />
@@ -58,7 +61,6 @@
 import { defineComponent } from "vue";
 import Calendar from "@/components/Calendar.vue"; // @ is an alias to /src
 import axios from "axios";
-import { reposition } from "@/utils/reposition.function";
 import randInt from "@/utils/randInt.function";
 
 export default defineComponent({
@@ -87,8 +89,7 @@ export default defineComponent({
           const w = Math.floor(Math.random() * 100) + 230;
           const h = Math.floor(Math.random() * 100) + 120;
           return {
-            ...elem,
-            // pos: this.generatePosition(),
+            image: elem,
             bounds: {
               ...this.generatePosition(),
               width: w,
@@ -99,21 +100,6 @@ export default defineComponent({
           };
         });
       })
-      // .then((tutors) => {
-      //   this.tutors = reposition(
-      //     {
-      //       x: 100,
-      //       y: 100,
-      //       w: window.innerWidth - 200,
-      //       h: 820 - 50,
-      //       hw: (window.innerWidth - 200) >> 1,
-      //       hh: (820 - 50) >> 1
-      //     },
-      //     tutors,
-      //     20,
-      //     30
-      //   );
-      // })
       .catch((error) => console.error(error));
   },
   mounted() {
@@ -172,8 +158,6 @@ export default defineComponent({
           transform: `translate(${x}, ${y})`
         };
       } else {
-        // x = this.tutors[index].bounds.x + "px";
-        // y = this.tutors[index].bounds.y + "px";
         const x = randInt(-50, 50) + "px";
         const y = randInt(-100, 100) + "px";
         return {
@@ -240,6 +224,7 @@ img.tutor-image {
     width: 90%;
     height: 65vmin;
     margin: 40px auto;
+    margin-top: 80px;
   }
   #content {
     max-width: 1088px;

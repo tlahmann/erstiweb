@@ -99,6 +99,7 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$background-color-darker: rgb(235, 235, 239);
 #notes {
   background-color: #cecece;
   border: solid 1pt rgba(0, 0, 0, 10%);
@@ -111,7 +112,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     #ruler {
-      background-color: var(--white-bg-color);
+      background-color: darken($background-color-darker, 10%);
       height: 54px;
       position: relative;
       .horizontal {
@@ -119,13 +120,13 @@ export default defineComponent({
         width: 100%;
         top: 50%;
         left: 0;
-        border-bottom: 2px solid #ababab;
+        border-bottom: 1px solid #10171e;
       }
       .vertical {
         position: absolute;
         height: 40%;
         top: 48%;
-        border-right: 2px solid #ababab;
+        border-right: 1px solid #10171e;
         &.short {
           height: 20%;
         }
@@ -139,10 +140,10 @@ export default defineComponent({
           left: 0.5px;
           width: 0;
           height: 0;
-          border-top: 6px solid transparent;
-          border-bottom: 6px solid transparent;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
 
-          border-left: 6px solid #ababab;
+          border-left: 5px solid #10171e;
         }
         .number {
           position: absolute;

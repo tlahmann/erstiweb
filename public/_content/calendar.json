@@ -2,53 +2,50 @@
     {
         "title": "Tag der Deutschen Einheit",
         "category": "Feiertage",
+        "place": "Aula / R100",
         "date": "2020-10-03",
-        "time": "17:00"
+        "time": "17:00 Uhr"
     },
     {
         "title": "Tag der Deutschen Einheit (Kneipentour)",
         "category": "Feiertage",
+        "place": "Aula / R100",
         "date": "2020-10-10",
-        "time": "17:00 - 20:00"
+        "time": "17:00 - 20:00 Uhr"
     },
     {
         "title": "Zwei Veranstaltungen",
         "category": "FH Veranstaltung",
-        "date": "2020-10-15"
+        "place": "Aula / R100",
+        "date": "2020-10-15",
+        "time": "17:00 Uhr"
     },
     {
         "title": "Am gleichen Tag",
         "category": "Ohne",
-        "date": "2020-10-15"
+        "place": "Aula / R100",
+        "date": "2020-10-15",
+        "time": "18:00 Uhr"
     },
     {
         "title": "Einführung",
         "category": "FH Veranstaltung",
-        "date": "2020-10-26"
+        "place": "Aula / R100",
+        "date": "2020-10-26",
+        "time": "17:00 Uhr"
     },
     {
         "title": "Ein Termin im Vergangenen Monat",
         "category": "Beliebige Kategorie",
-        "date": "2020-09-30"
+        "place": "Aula / R100",
+        "date": "2020-09-30",
+        "time": "17:00 Uhr"
     },
     {
         "title": "Ein Termin im nächsten Monat",
         "category": "FH Veranstaltung",
-        "date": "2020-11-02"
-    },
-    {
-        "title": "Einführung",
-        "category": "FH eranstaltung",
-        "date": "2020-10-24"
-    },
-    {
-        "title": "Ein Termin im Vergangenen Monat",
-        "category": "Beliebige ",
-        "date": "2020-09-29"
-    },
-    {
-        "title": "Ein Termin im nächsten Monat",
-        "category": "FH Verastaltung",
-        "date": "2020-11-04"
+        "place": "Aula / R100",
+        "date": "2020-11-02",
+        "time": "17:00 Uhr"
     }
 ]

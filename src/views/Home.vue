@@ -254,9 +254,6 @@ export default defineComponent({
   },
   // FIXME: the routing is not called in app.vue, only in (routed) components
   beforeRouteUpdate(to, from, next) {
-    // console.log("beforeRouteUpdate");
-    // console.log("from", from);
-    // console.log("to", to);
     this.focused = to.query["c"] as string;
     next();
   },
@@ -302,6 +299,8 @@ export default defineComponent({
 }
 
 $titlebarColor: hsl(0, 0%, 75%);
+$background-color: rgb(240, 240, 243);
+$background-color-darker: rgb(235, 235, 239);
 :root {
   --white-bg-color: rgb(240, 240, 243);
   --white-bg-color-darker: rgb(235, 235, 239);
@@ -339,17 +338,22 @@ body,
 }
 
 #main-nav {
-  background-color: $titlebarColor;
+  // background-color: $titlebarColor;
+  background-image: linear-gradient(
+    180deg,
+    $titlebarColor,
+    darken($titlebarColor, 9%)
+  );
   z-index: 1200;
   position: relative;
   display: flex;
-  padding: 1em 2em;
+  padding: 0.7em 2em;
   font-size: 1.125em;
   font-weight: 400;
 
-  -webkit-box-shadow: 0px 4pt 28pt 0px rgba(0, 0, 0, 0.28);
-  -moz-box-shadow: 0px 4pt 28pt 0px rgba(0, 0, 0, 0.28);
-  box-shadow: 0px 4pt 28pt 0px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.28);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.28);
 
   #imprint,
   #menu-button {
@@ -456,7 +460,7 @@ $sizeDuration: 0.65s;
 #tutors.focused,
 #rooms.focused {
   width: 100vw;
-  height: calc(100vh - 40px);
+  height: 100vh;
   animation-name: focusable;
   animation-timing-function: linear;
   animation-duration: $sizeDuration/2;
@@ -488,7 +492,7 @@ $sizeDuration: 0.65s;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--white-bg-color-darker);
+  background-color: transparent;
   z-index: initial;
   -webkit-transition: z-index 0.5s, visibility $positionDuration,
     opacity $positionDuration ease-in-out;

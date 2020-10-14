@@ -190,6 +190,7 @@ img.room-image {
     width: 90%;
     height: 65vmin;
     margin: 40px auto;
+    margin-top: 80px;
     #room-teasers {
       display: flex;
       flex-direction: row;

@@ -207,7 +207,7 @@ export default defineComponent({
       #content {
         h3 {
           font-size: 1.75em;
-          line-height: 2.125em;
+          line-height: 2em;
           margin: 0 0 1.375em 0;
         }
         padding: 2em;
@@ -215,7 +215,8 @@ export default defineComponent({
         flex: 1 1 61.9%;
         height: calc(100% - 5em);
         font-size: 1.125em;
-        line-height: 2.125em;
+        line-height: 2em;
+        font-weight: 600;
 
         overflow-x: hidden;
         overflow-y: scroll;

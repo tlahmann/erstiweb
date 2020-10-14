@@ -2,7 +2,8 @@
     {
         "banner": "./assets/mensa.svg",
         "images": [
-            "./assets/Räume/Mensa/DSC_0311-positive.jpg"
+            "./assets/Räume/Mensa/DSC_0311-positive.jpg",
+            "./assets/Räume/Mensa/nikonf65tmax20050.jpg"
         ],
         "text": "<p>Ob Fleisch, Fisch, vegetarisch, vegan oder glutenfrei: In der Mensa hat jede*r Student*in die Möglichkeit zwischen verschiedenen warmen Speisen auszuwählen. Alle Gerichte kannst Du individuell zusammenstellen und ein Nachtisch ist auch immer dabei. Das Angebot wechselt von Woche zu Woche. Snacks, sowie belegte Brötchen, Süßkram, Kaffee und Tee kannst Du entweder in der Mensa oder an den Automaten erwerben.</p><p>Der Preis einer Mahlzeit beträgt für Studierende ca. 2, 50€. Jede weitere Beilage kostet 0, 50€. Gäste haben ebenfalls die Möglichkeit in der Mensa zu essen und zahlen meist für eine Mahlzeit zwischen 3, 20€ und 4, 30€. Die Mensa kann auch als Räumlichkeit zum Arbeiten bis 22.00 Uhr genutzt werden. Ein WLAN- Zugang und Steckdosen sind vorhanden.</p><p>Im Foyer befindet sich ein Wasserspender. Hier kannst Du Dir kostenlos Deine Flasche mit stillem oder kohlensäurehaltigem Wasser auffüllen.</p>"
     },
@@ -23,6 +24,7 @@
     {
         "banner": "./assets/druckerwerkstätten.svg",
         "images": [
+            "./assets/Räume/Druckwerkstatt/img0025_bearbeitet.jpg",
             "./assets/Räume/Druckwerkstatt/img0025_bearbeitet.jpg"
         ],
         "text": "Die Siebdruckwerkstatt bietet Dir an einem Siebdrucktisch und einer Textildruckpresse die Möglichkeit zur Realisierung mehrfarbiger Siebdrucke, von der Herstellung eigener Vor-lagen bis zum fertigen Mehrfarbendruck in kleinen Auflagen. Für die Erstellung der Siebe steht eine digitale Film-Druck-Vorstufe zur Verfügung. "

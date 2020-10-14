@@ -96,10 +96,14 @@ $sizeDuration: 0.65s;
     height $sizeDuration, top $positionDuration,
     left $positionDuration ease-in-out;
   transition-delay: 0s, 0s, 0s, 0s, $positionDuration, $positionDuration;
+
+  -webkit-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.16);
 }
 .content {
   width: calc(100% - 2em);
-  height: calc(100% - 3pt - 2em);
+  height: calc(100% - 2em);
   padding: 1em;
   transition: color $sizeDuration 0s;
   display: flex;
@@ -119,9 +123,5 @@ $sizeDuration: 0.65s;
     // align-self: flex-end;
     margin-top: auto;
   }
-
-  -webkit-box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 25pt 30pt 0px rgba(0, 0, 0, 0.16);
 }
 </style>

@@ -92,17 +92,14 @@ export default defineComponent({
         ?.filter((t) => t.term?.toLowerCase().match(this.filter?.toLowerCase()))
         ?.splice(0, 10);
     },
-    navigateRoute(
-      route: { c: string; q: string } & { link: string },
-      event: any
-    ) {
+    navigateRoute(route: { component: string } & { link: string }, event: any) {
       // eslint-disable-next-line no-prototype-builtins
-      if (route.hasOwnProperty("c") && route.hasOwnProperty("q")) {
+      if (route.hasOwnProperty("component")) {
         // const r = { c: route.c, q: q };
-        router.push({ path: "", query: route });
+        router.push({ path: "", query: { c: route.component } });
         // eslint-disable-next-line no-prototype-builtins
       } else if (route.hasOwnProperty("link")) {
-        router.push({ path: route.link });
+        window.open(route.link, "_blank");
       }
       event.stopPropagation();
     }
