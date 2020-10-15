@@ -327,7 +327,7 @@ export default defineComponent({
       height: calc(100% - 40pt);
       padding: 20pt 17pt;
       input[type="checkbox"] {
-        margin: 4.5px 0;
+        margin-bottom: 0.4em;
       }
     }
     #weeks {
@@ -342,7 +342,7 @@ export default defineComponent({
         font-size: 2em;
         padding: 16px 21px;
         #month {
-          font-family: muli-black, Helvetica, Arial, sans-serif;
+          font-family: muli-bold, Helvetica, Arial, sans-serif;
           font-weight: 700;
           margin-right: 12px;
         }
@@ -602,7 +602,7 @@ export default defineComponent({
         }
 
         &:checked + .checkbox__control svg {
-          transform: scale(0.9);
+          transform: scale(0.9) translate(0, -0.8px);
         }
 
         &:disabled + .checkbox__control {

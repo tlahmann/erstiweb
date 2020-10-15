@@ -294,6 +294,10 @@ export default defineComponent({
   src: local("muli"), url(../assets/Muli-Regular.ttf) format("truetype");
 }
 @font-face {
+  font-family: "muli-bold";
+  src: local("muli-bold"), url(../assets/Muli-Bold.ttf) format("truetype");
+}
+@font-face {
   font-family: "muli-black";
   src: local("muli-black"), url(../assets/Muli-Black.ttf) format("truetype");
 }
@@ -324,7 +328,7 @@ body,
   color: #10171e;
   background-color: #3b3b3b;
   mix-blend-mode: screen;
-  filter: sepia(1) hue-rotate(184deg);
+  filter: grayscale(1);
 
   // filter: greyscale(100%) hue-rotate(180deg) brightness(100%) contrast(90%)
   //   saturate(200%);
@@ -347,7 +351,7 @@ body,
   z-index: 1200;
   position: relative;
   display: flex;
-  padding: 0.7em 2em;
+  padding: 0.5em 2em;
   font-size: 1.125em;
   font-weight: 400;
 
@@ -415,7 +419,11 @@ $sizeDuration: 0.65s;
 
   &.unfocused {
     transform: translate(-50%, -50%) scale(0.35);
-    opacity: 0.35;
+    transition-property: transform;
+    transition-duration: $sizeDuration;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    // opacity: 0.35;
   }
 }
 .folder {
@@ -471,6 +479,10 @@ $sizeDuration: 0.65s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out,
     ease-in-out;
   transition-delay: 0s, 0s, 0s, 0s, 0s;
+
+  ~ .overlay {
+    background-color: white;
+  }
 }
 @keyframes focusable {
   0% {
@@ -494,10 +506,11 @@ $sizeDuration: 0.65s;
   left: 0;
   background-color: transparent;
   z-index: initial;
-  -webkit-transition: z-index 0.5s, visibility $positionDuration,
-    opacity $positionDuration ease-in-out;
-  transition: z-index 0.5s, visibility $positionDuration,
-    opacity $positionDuration ease-in-out;
+  transition-property: z-index, background-color, visibility, opacity;
+  transition-duration: 0.5s, $positionDuration, $positionDuration,
+    $positionDuration;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0s, 0s, 0s, 0s;
 }
 #calendar,
 #contact,
@@ -574,6 +587,11 @@ $sizeDuration: 0.65s;
 #tutors,
 #rooms {
   text-align: center;
+
+  transition-property: transform;
+  transition-duration: $sizeDuration;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
 #calendar {
   top: 8vh;
@@ -626,7 +644,7 @@ $titlebarHeight: 2.5em;
   height: $titlebarHeight;
   width: calc(100% - 8pt);
   display: flex;
-  padding: 4pt 5pt 4pt 5pt;
+  padding: 0.3em 0.7em;
   transform: translate(-1pt, -1pt);
   background-image: linear-gradient(
     180deg,

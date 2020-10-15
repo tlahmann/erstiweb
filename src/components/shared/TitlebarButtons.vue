@@ -51,7 +51,8 @@ export default defineComponent({
     padding: 0;
     width: 12px;
     height: 12px;
-    border: solid 1pt rgba(0, 0, 0, 15%);
+    border: none;
+    // border: solid 1pt rgba(0, 0, 0, 15%);
     border-radius: 5pt;
     &:nth-of-type(1) {
       background-color: #ff6157;

@@ -216,7 +216,7 @@ img.room-image {
       strong {
         font-family: muli-black, Helvetica, Arial, sans-serif;
         font-weight: 700;
-        // line-height: 2.1em;
+        // line-height: 1.875em;
         // font-size: 2em;
         margin-bottom: 100px;
         display: block;

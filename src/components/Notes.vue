@@ -158,15 +158,17 @@ $background-color-darker: rgb(235, 235, 239);
       height: calc(100% - 54px);
       padding: 8px;
       font-size: 1.125rem;
-      line-height: 2.125rem;
+      line-height: 1.875em;
       position: relative;
       img {
-        width: 95vmin;
-        max-width: 82%;
+        width: 80vmin;
+        max-width: 75%;
         position: absolute;
         transition: z-index 0.25s ease-in-out;
         left: 5%;
         top: 7%;
+        filter: saturate(20);
+        box-shadow: 5px 10px 20px 0px rgba(0, 0, 0, 0.15);
       }
     }
   }
