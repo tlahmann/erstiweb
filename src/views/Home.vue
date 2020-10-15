@@ -318,6 +318,10 @@ body,
   top: 0;
   position: absolute;
   overflow: hidden;
+  -webkit-perspective: 1;
+  perspective: 1;
+  -webkit-backface-visibility: none;
+  backface-visibility: none;
 }
 
 #app {
