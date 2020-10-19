@@ -16,7 +16,7 @@
         {{ tutor }}
       </div> -->
     </div>
-    <div id="content" v-on:click="updateFocus('', $event)">
+    <div id="content">
       <img :src="tutorBanner" class="tutor-banner" />
       <strong>
         Die Tutor*innen sind Studierende, die euch beim Einstieg ins Studium

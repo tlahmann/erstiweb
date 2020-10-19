@@ -209,19 +209,19 @@
     },
     {
         "term": "Filmproduktion",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Kamera",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "kiU",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "storyLab",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Virtual Reality",
@@ -241,19 +241,19 @@
     },
     {
         "term": "Rosies",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Werkstätten",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Computerpool",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "iMacs",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Radierung",
@@ -261,111 +261,111 @@
     },
     {
         "term": "Buchdruck",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Linolschnitt",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Siebdruck",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Risographie",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Plottwerkstatt",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "3D-Drucker",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Laserschneider",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Farbe",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Papier",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Modellbauwerkstatt",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Holzwerkstatt",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Metallwerkstatt",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "SzenoPro",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Werkzeugverleih",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "EBV-Pool",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Adobe",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Cinema 4D",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "VectorWorks",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Filmwerkstatt",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Filmstudio",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Tonstudio",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Film & Sound",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Fotowerkstatt",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Bildbearbeitung",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Farblabor",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Bearbeitung",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Proofdrucker",
-        "target": {}
+        "target": {"component": "rooms"}
     },
     {
         "term": "Angebote",
@@ -569,39 +569,39 @@
     },
     {
         "term": "BA Fotografie",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "BA Kommunikationsdesign",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "BA Objekt- & Raumdesign",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "BA Film & Sound",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "MA Editorial Design",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "MA Film",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "MA Photographic Studies",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "MA Creative Audio Director",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "MA Szenografie & Kommunikation",
-        "target": {}
+        "target": {"component": "info"}
     },
     {
         "term": "Beratung",

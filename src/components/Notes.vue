@@ -167,7 +167,7 @@ $background-color-darker: rgb(235, 235, 239);
         transition: z-index 0.25s ease-in-out;
         left: 5%;
         top: 7%;
-        filter: saturate(20);
+        filter: saturate(5);
         box-shadow: 5px 10px 20px 0px rgba(0, 0, 0, 0.15);
       }
     }

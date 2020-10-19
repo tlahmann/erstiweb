@@ -10,7 +10,13 @@
     >
       Menü
     </div>
-    <div id="imprint">Impressum</div>
+    <div id="imprint">
+      <a
+        href="https://www.fh-dortmund.de/de/_diverses/impressum.php"
+        target="_blank"
+        >Impressum</a
+      >
+    </div>
     <div id="time">{{ day }}, {{ hours }}:{{ minutes }}</div>
   </nav>
   <div>
@@ -367,6 +373,10 @@ body,
   #menu-button {
     margin: 0 45pt 0 0;
     cursor: pointer;
+    a {
+      text-decoration: none;
+      color: #10171e;
+    }
   }
 
   #route {
@@ -436,8 +446,8 @@ $sizeDuration: 0.65s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
   transition-delay: 0s, 0s, 0s;
   &.unfocused {
-    transform: translate(-50%, -50%) scale(0.35);
-    opacity: 0.35;
+    transform: translate(-50%, -50%) scale(0.75);
+    // opacity: 0.35;
     transition-property: z-index, transform, opacity;
     transition-duration: $positionDuration, $sizeDuration, $positionDuration;
     transition-timing-function: ease-in-out, ease-in-out, ease-in-out;

@@ -39,9 +39,7 @@
                 :key="termIndex"
                 v-on:click="navigateRoute(term.target, $event)"
               >
-                <!-- <a :href="term.target"> -->
                 {{ term.term }}
-                <!-- </a> -->
               </li>
             </ul>
           </div>
@@ -58,6 +56,10 @@ import TitlebarButtons from "@/components/shared/TitlebarButtons.vue"; // @ is a
 import axios from "axios";
 import router from "@/router";
 
+type Term = {
+  term: string;
+  target: { component: string; query: string } | { link: string };
+};
 export default defineComponent({
   name: "Search",
   components: {
@@ -66,18 +68,23 @@ export default defineComponent({
   data: () => ({
     title: "Suche",
     filter: "",
-    terms: [] as {
-      term: string;
-      target: { component: string; query: string } | { link: string };
-    }[]
+    terms: [] as Term[]
   }),
   emits: ["update-focus", "update-maximization"],
   created: function() {
     axios
       .get("./_content/search.json")
-      .then((response) => {
-        this.terms = response.data;
-      })
+      .then((response) => response.data)
+      .then(
+        (terms) =>
+          (this.terms = terms.filter(
+            (t: Term) =>
+              // eslint-disable-next-line no-prototype-builtins
+              t.target.hasOwnProperty("component") ||
+              // eslint-disable-next-line no-prototype-builtins
+              t.target.hasOwnProperty("link")
+          ))
+      )
       .catch((error) => console.error(error));
   },
   methods: {

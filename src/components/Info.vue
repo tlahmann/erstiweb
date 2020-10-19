@@ -48,8 +48,12 @@
             >
               <h4>{{ info.title }}</h4>
               <div class="subtitle">
-                <span class="date">{{ info.date }}</span>
-                <span class="teaser">{{ info.content }}</span>
+                <span class="date" v-if="info.date">{{ info.date }}</span>
+                <span
+                  class="teaser"
+                  v-html="getTeaser(info.content)"
+                  v-if="info.content"
+                ></span>
               </div>
             </li>
           </ul>
@@ -108,6 +112,10 @@ export default defineComponent({
     },
     getInfos() {
       return this.infos?.filter((i) => i.category === this.filter);
+    },
+    getTeaser(text: string) {
+      const regex = /(<([^>]+)>)/gi;
+      return text.replace(regex, "").substring(0, 50);
     }
   }
 });
@@ -163,6 +171,7 @@ export default defineComponent({
         flex: 1 1 19.2%;
         height: 100%;
         border-right: 1px solid #ababab;
+        overflow-y: scroll;
         ul {
           margin: 0;
           padding: 0;
@@ -195,6 +204,20 @@ export default defineComponent({
             }
             .teaser {
               margin-left: auto;
+              p,
+              div,
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6 {
+                margin: 0;
+                padding: 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+              }
             }
           }
           @media (min-width: 768px) {
