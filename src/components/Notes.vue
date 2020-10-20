@@ -49,7 +49,7 @@
           :style="{
             'z-index': current === noteIndex ? 250 : 200,
             transform: `translate(${noteIndex *
-              (16 / notes.length)}%, ${noteIndex * (12 / notes.length)}%)`
+              (22 / notes.length)}%, ${noteIndex * (16 / notes.length)}%)`
           }"
           v-on:click="current = noteIndex"
         />
