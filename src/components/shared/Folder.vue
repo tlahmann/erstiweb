@@ -62,7 +62,7 @@ export default defineComponent({
   position: absolute;
   top: 0.5em;
   width: calc(100% - 0pt);
-  height: calc(100% - 1.1em);
+  height: calc(100% - 0.9em);
   z-index: 20;
   border-top: 1px solid #a9e8fc;
   border-radius: 0.25em;
