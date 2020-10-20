@@ -219,7 +219,7 @@ img.tutor-image {
 }
 .focused {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   #tutor-images {
     width: 90%;
     height: 65vmin;

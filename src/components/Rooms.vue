@@ -221,7 +221,7 @@ img.room-image {
 }
 .focused {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   #room-images {
     display: flex;
     flex-direction: column;
