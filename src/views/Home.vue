@@ -361,7 +361,7 @@ body,
   z-index: 1200;
   position: relative;
   display: flex;
-  padding: 0.5em 2em;
+  padding: 0.5em 0;
   font-size: 1.125em;
   font-weight: 400;
 
@@ -381,6 +381,13 @@ body,
 
   #route {
     cursor: pointer;
+  }
+
+  :first-child {
+    margin-left: 2em;
+  }
+  :last-child {
+    margin-right: 2em;
   }
 }
 
