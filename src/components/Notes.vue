@@ -113,7 +113,7 @@ $background-color-darker: rgb(235, 235, 239);
     flex-direction: column;
     #ruler {
       background-color: darken($background-color-darker, 10%);
-      height: 54px;
+      height: 27px;
       position: relative;
       .horizontal {
         position: absolute;

@@ -13,6 +13,30 @@
         v-on:click="updateFocus('', true)"
       />
       <Folder
+        title="Gremien"
+        top="13"
+        left="48"
+        textColor="black"
+        fontWeight="400"
+        v-on:click="updateFocus('bodies', true)"
+      />
+      <Folder
+        title="Beratung"
+        top="47"
+        left="13"
+        textColor="black"
+        fontWeight="400"
+        v-on:click="updateFocus('consulting', true)"
+      />
+      <Folder
+        title="Angebote"
+        top="87"
+        left="16"
+        textColor="black"
+        fontWeight="400"
+        v-on:click="updateFocus('proposals', true)"
+      />
+      <Folder
         title="Kalender"
         top="74"
         left="44"
@@ -37,8 +61,16 @@
         v-on:click="updateFocus('tutors', true)"
       />
       <Folder
+        title="Informationen"
+        top="21"
+        left="87"
+        textColor="black"
+        fontWeight="400"
+        v-on:click="updateFocus('info', true)"
+      />
+      <Folder
         title="Räume"
-        top="19"
+        top="78"
         left="72"
         textColor="black"
         fontWeight="400"

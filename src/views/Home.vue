@@ -127,7 +127,7 @@
       />
 
       <Folder
-        title="Ordner"
+        title="Neuer Ordner"
         top="18"
         left="38"
         v-bind:class="{

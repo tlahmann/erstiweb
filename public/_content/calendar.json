@@ -4,14 +4,17 @@
         "category": "Feiertage",
         "place": "Aula / R100",
         "date": "2020-10-03",
-        "time": "17:00 Uhr"
+        "time": "17:00 Uhr",
+        "link": "https://www.google.de/?q=Tag+der+deutschen+Einheit",
+        "linkText": "Dieser Text ist optional"
     },
     {
         "title": "Tag der Deutschen Einheit (Kneipentour)",
         "category": "Feiertage",
         "place": "Aula / R100",
         "date": "2020-10-10",
-        "time": "17:00 - 20:00 Uhr"
+        "time": "17:00 - 20:00 Uhr",
+        "link": "https://www.google.de/?q=Kneipentour"
     },
     {
         "title": "Zwei Veranstaltungen",

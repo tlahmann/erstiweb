@@ -202,9 +202,9 @@ img.tutor-image {
 }
 .tutor-banner {
   display: block;
-  width: 20em;
-  height: 10em;
-  top: -10em;
+  width: 16em;
+  height: 8em;
+  top: -8em;
   left: -3em;
   position: absolute;
   z-index: 1500;
@@ -233,18 +233,22 @@ img.tutor-image {
     text-align: left;
     display: block;
     position: relative;
+    font-size: 1.125em;
+    line-height: 1.875em;
+    font-weight: 600;
     strong {
-      font-family: muli-black, Helvetica, Arial, sans-serif;
+      font-family: muli-bold, Helvetica, Arial, sans-serif;
       font-weight: 700;
-      line-height: 1.875em;
-      font-size: 2em;
-      margin-bottom: 100px;
+      margin-bottom: 60px;
       display: block;
     }
     p {
-      line-height: 1.9em;
-      font-size: 1.8em;
       margin-bottom: 10em;
+    }
+    h3 {
+      font-size: 1.75em;
+      line-height: 1.875em;
+      margin: 0 0 1.375em 0;
     }
   }
 }

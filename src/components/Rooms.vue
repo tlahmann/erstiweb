@@ -171,8 +171,8 @@ $positionDuration: 0.55s;
 $sizeDuration: 0.25s;
 
 img.room-image {
-  max-width: 18vmin;
-  min-width: 15vmax;
+  max-width: 13vmin;
+  min-width: 10vmax;
   height: auto;
   position: absolute;
   .focused & {
@@ -201,9 +201,9 @@ img.room-image {
 }
 .tutor-banner {
   display: block;
-  width: 20em;
-  height: 10em;
-  top: -10em;
+  width: 16em;
+  height: 8em;
+  top: -8em;
   left: -3em;
   position: absolute;
   z-index: 1500;
@@ -251,17 +251,23 @@ img.room-image {
     text-align: left;
     display: block;
     position: relative;
+    font-size: 1.125em;
+    line-height: 1.875em;
+    font-weight: 600;
     div {
-      line-height: 1.9em;
-      font-size: 1.8em;
       strong {
-        font-family: muli-black, Helvetica, Arial, sans-serif;
+        font-family: muli-bold, Helvetica, Arial, sans-serif;
         font-weight: 700;
         margin-bottom: 100px;
         display: block;
       }
       p {
         margin-bottom: 10em;
+      }
+      h3 {
+        font-size: 1.75em;
+        line-height: 1.875em;
+        margin: 0 0 1.375em 0;
       }
     }
   }

@@ -123,6 +123,11 @@
                       <p>{{ current.date }}</p>
                       <p>{{ current.time }}</p>
                     </div>
+                    <div class="link" v-if="current.link">
+                      <a :href="current.link" target="_blank">
+                        {{ current.linkText || current.link }}
+                      </a>
+                    </div>
                     <div class="arrow"></div>
                   </div>
                 </div>
@@ -146,6 +151,8 @@ type Event = {
   place: string;
   date: string;
   time: string;
+  link?: string;
+  linkText?: string;
 };
 
 export default defineComponent({
@@ -510,7 +517,8 @@ export default defineComponent({
                   }
 
                   .title,
-                  .info {
+                  .info,
+                  .link {
                     font-size: 1em;
                     padding: 1.2em 0.75em;
                     margin: 0;
@@ -528,7 +536,8 @@ export default defineComponent({
                       margin-bottom: 0;
                     }
                   }
-                  .info {
+                  .info,
+                  .link {
                     display: flex;
                     font-size: 1em;
                     :nth-child(2) {
@@ -538,6 +547,8 @@ export default defineComponent({
                       margin: 0;
                     }
                   }
+                  .info{padding: 1.2em 0.75em 0.5em 0.75em;}
+                  .link{padding: 0.5em 0.75em 1.2em 0.75em;}
                 }
               }
             }
