@@ -1,57 +1,116 @@
 [
     {
-        "title": "M.Sc.",
-        "firstname": "Tobias",
-        "lastname": "Lahmann",
-        "category": "Programmierer",
+        "firstname": "Adewale",
+        "lastname": "Adebisi",
+        "category": "FH Dortmund",
         "contactInfos": [
             {
                 "key": "Arbeitsgebiet",
-                "value": "So Web-Kram"
-            },
-            {
-                "key": "Raum",
-                "value": "Zuhause"
-            },
-            {
-                "key": "Telefon",
-                "value": "hab ich"
+                "value": "Film"
             },
             {
                 "key": "Mail",
-                "value": "tobias.lahmann@uni-ulm.de"
-            },
-            {
-                "key": "Beliebiger Wert",
-                "value": "Hier kann stehen, was will"
+                "value": "adewale.adebisi@"
             }
         ]
     },
     {
-        "title": "Prof.",
-        "firstname": "Roger",
-        "lastname": "Walk",
-        "category": "Fachbereich Design",
+        "firstname": "Marita",
+        "lastname": "Altermann-Köster",
+        "category": "FH Dortmund",
         "contactInfos": [
             {
                 "key": "Arbeitsgebiet",
-                "value": "????"
-            },
-            {
-                "key": "Org.-Einheit",
-                "value": "Fachbereich Design"
+                "value": "Mentoring- und Studienstandsgespräche"
             },
             {
                 "key": "Raum",
-                "value": "Mal hier mal Dort"
+                "value": "R E35"
             },
             {
                 "key": "Telefon",
-                "value": "EasterEgg, huhu"
+                "value": "-9465"
             },
             {
                 "key": "Mail",
-                "value": "roger.walk@fh-dortmund.de"
+                "value": "marita.altermann-koester@"
+            }
+        ]
+    },
+    {
+        "firstname": "Hanna",
+        "lastname": "Becker",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Mail",
+                "value": "hanna.becker@"
+            }
+        ]
+    },
+    {
+        "firstname": "Bert",
+        "lastname": "Bartel",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Film"
+            },
+            {
+                "key": "Raum",
+                "value": "R 230"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9487"
+            },
+            {
+                "key": "Mail",
+                "value": "bert.bartel@"
+            }
+        ]
+    },
+    {
+        "title": "Prof. Dr.",
+        "firstname": "Ralf",
+        "lastname": "Bohn",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Prüfungsausschussvorsitzender, Medienwissenschaften"
+            },
+            {
+                "key": "Raum",
+                "value": "R 121"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9448"
+            },
+            {
+                "key": "Mail",
+                "value": "ralf.bohn@"
+            }
+        ]
+    },
+    {
+        "firstname": "Anita",
+        "lastname": "Brockmann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Text und Konzeption"
+            },
+            {
+                "key": "Mail",
+                "value": "anita.brockmann@"
             }
         ]
     },
@@ -59,66 +118,1765 @@
         "title": "Prof.",
         "firstname": "Ulrike",
         "lastname": "Brückner",
+        "category": "FH Dortmund",
         "contactInfos": [
             {
                 "key": "Arbeitsgebiet",
-                "value": "K + E Grundlagen"
-            },
-            {
-                "key": "Org.-Einheit",
-                "value": "Fachbereich Design"
-            },
-            {
-                "key": "Raum",
-                "value": "MOP 2 131"
+                "value": "Grafik"
             },
             {
                 "key": "Telefon",
-                "value": "+49 (0231) 9112 - 9439"
+                "value": "-9439"
             },
             {
                 "key": "Mail",
-                "value": "ulrike.brueckner@fh-dortmund.de"
+                "value": "ulrike.brueckner@"
             }
         ]
     },
     {
-        "firstname": "Marita",
-        "lastname": "Altermann-Köster",
+        "title": "Prof.",
+        "firstname": "Susanne",
+        "lastname": "Brügger",
+        "category": "FH Dortmund",
         "contactInfos": [
             {
                 "key": "Arbeitsgebiet",
-                "value": "k.A."
-            },
-            {
-                "key": "Org.-Einheit",
-                "value": "Fachbereich Design"
+                "value": "Fotografie und Neue Medien"
             },
             {
                 "key": "Raum",
-                "value": "Irgendwo FH Dortmund"
+                "value": "R 125"
             },
             {
                 "key": "Telefon",
-                "value": "+49 (0231) 0000 - 0000"
+                "value": "-9484"
             },
             {
                 "key": "Mail",
-                "value": "marita.altermann-koester@fh-dortmund.de"
+                "value": "susanne.bruegger@"
             }
         ]
     },
     {
+        "firstname": "Astrid",
+        "lastname": "Busch",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Film"
+            },
+            {
+                "key": "Raum",
+                "value": "R 230"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9487"
+            },
+            {
+                "key": "Mail",
+                "value": "astrid.busch@"
+            }
+        ]
+    },
+    {
+        "firstname": "Bernd",
+        "lastname": "Dicke",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Druckgrafische Werkstätten"
+            },
+            {
+                "key": "Raum",
+                "value": "R 220"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9407"
+            }
+        ]
+    },
+    {
+        "firstname": "Carolin",
+        "lastname": "Diedrichs",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fachbereichssekretariat"
+            },
+            {
+                "key": "Raum",
+                "value": "R E43"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9426"
+            },
+            {
+                "key": "Mail",
+                "value": "carolin.diedrichs@"
+            }
+        ]
+    },
+    {
+        "title": "Prof. Dr.",
+        "firstname": "Fabian",
+        "lastname": "Dittrich",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenzen"
+            },
+            {
+                "key": "Mail",
+                "value": "fabian.dittrich@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Caroline",
+        "lastname": "Dlugos",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Raum",
+                "value": "R E22"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9442"
+            },
+            {
+                "key": "Mail",
+                "value": "dlugos@"
+            }
+        ]
+    },
+    {
+        "firstname": "Angelika",
+        "lastname": "Dreischulte",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Film"
+            },
+            {
+                "key": "Mail",
+                "value": "angelika.dreischulte@"
+            }
+        ]
+    },
+    {
+        "firstname": "Daniel",
+        "lastname": "Edelmeier",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Risographie"
+            },
+            {
+                "key": "Mail",
+                "value": "daniel.edelmeier@"
+            }
+        ]
+    },
+    {
+        "firstname": "Bea",
+        "lastname": "Emsbach",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Zeichnerische Darstellung"
+            },
+            {
+                "key": "Raum",
+                "value": "R 303"
+            },
+            {
+                "key": "Mail",
+                "value": "beatrice.emsbach@"
+            }
+        ]
+    },
+    {
+        "firstname": "Heike",
+        "lastname": "Fink",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Film"
+            },
+            {
+                "key": "Mail",
+                "value": "heike.fink@"
+            }
+        ]
+    },
+    {
+        "firstname": "Katia",
+        "lastname": "Fouquet",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Grafik"
+            },
+            {
+                "key": "Mail",
+                "value": "katia.fouquet@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Nora",
+        "lastname": "Fuchs",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Gleichstellungsbeauftragte, Plastisches Gestalten und Angewandte Formgestaltung"
+            },
+            {
+                "key": "Raum",
+                "value": "R 105"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9406"
+            },
+            {
+                "key": "Mail",
+                "value": "nora.fuchs@"
+            }
+        ]
+    },
+    {
+        "firstname": "Holger",
+        "lastname": "Gathmann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenzen"
+            },
+            {
+                "key": "Mail",
+                "value": "holger.gathmann@"
+            }
+        ]
+    },
+    {
+        "firstname": "Claudia",
+        "lastname": "Gips",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenzen"
+            },
+            {
+                "key": "Mail",
+                "value": "claudia.gips@"
+            }
+        ]
+    },
+    {
+        "firstname": "Yvonne",
+        "lastname": "Beckmann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fachbereichssekretariat"
+            },
+            {
+                "key": "Raum",
+                "value": "R E45"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9426"
+            },
+            {
+                "key": "Mail",
+                "value": "yvonne.beckmann@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Dirk",
+        "lastname": "Gebhardt",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Prodekan, Fotojournalismus"
+            },
+            {
+                "key": "Raum",
+                "value": "R 308"
+            },
+            {
+                "key": "Raum",
+                "value": "-9405"
+            },
+            {
+                "key": "Mail",
+                "value": "dirk.gebhardt@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Johannes",
+        "lastname": "Graf",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "BAföG-Beauftragter, Konzeption und Entwurf, Illustration"
+            },
+            {
+                "key": "Raum",
+                "value": "R 120a"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9427"
+            },
+            {
+                "key": "Mail",
+                "value": "graf@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Sandra",
+        "lastname": "Hacker",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Film"
+            },
+            {
+                "key": "Raum",
+                "value": "R 238"
+            },
+            {
+                "key": "Mail",
+                "value": "sandra.hacker@"
+            }
+        ]
+    },
+    {
+        "title": "Dr.",
+        "firstname": "Jana",
+        "lastname": "Haeckel",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Wissenschaften"
+            },
+            {
+                "key": "Mail",
+                "value": "jana.haeckel@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
         "firstname": "Lars",
         "lastname": "Harmsen",
+        "category": "FH Dortmund",
         "contactInfos": [
             {
                 "key": "Arbeitsgebiet",
-                "value": "k.A."
+                "value": "Grafik"
+            },
+            {
+                "key": "Raum",
+                "value": "R 132"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9485"
             },
             {
                 "key": "Mail",
-                "value": "lars.harmsen@fh-dortmund.de"
+                "value": "lars.harmsen@"
+            }
+        ]
+    },
+    {
+        "firstname": "Stephan",
+        "lastname": "Hauptmann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Wiss. Mitarbeiter kiU"
+            },
+            {
+                "key": "Mail",
+                "value": "stephan.hauptmann@"
+            }
+        ]
+    },
+    {
+        "firstname": "Jonas",
+        "lastname": "Herfurth",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Grafik"
+            },
+            {
+                "key": "Mail",
+                "value": "jonas.herfurth@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Margareta",
+        "lastname": "Hesse",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "LAB Künstlerische Strategien, Gestaltungslehre, Illustration"
+            },
+            {
+                "key": "Raum",
+                "value": "R 312"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9460"
+            },
+            {
+                "key": "Mail",
+                "value": "margareta.hesse@"
+            }
+        ]
+    },
+    {
+        "firstname": "Marian",
+        "lastname": "Heuser",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Text und Konzeption"
+            },
+            {
+                "key": "Mail",
+                "value": "marian.heuser@"
+            }
+        ]
+    },
+    {
+        "firstname": "Klaus",
+        "lastname": "Hommerich",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Filmwerkstatt"
+            },
+            {
+                "key": "Raum",
+                "value": "R 110"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9458 / -9422"
+            },
+            {
+                "key": "Mail",
+                "value": "klaus.hommerich@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Sabine",
+        "lastname": "an Huef",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Grafik"
+            },
+            {
+                "key": "Raum",
+                "value": "R 123"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9437"
+            },
+            {
+                "key": "Mail",
+                "value": "an.huef@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Kai",
+        "lastname": "Jünemann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Werbefotografie"
+            },
+            {
+                "key": "Raum",
+                "value": "R 115"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9405"
+            },
+            {
+                "key": "Mail",
+                "value": "kai.juenemann@"
+            }
+        ]
+    },
+    {
+        "firstname": "Ralf",
+        "lastname": "Junkers",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Dekanatsassistent"
+            },
+            {
+                "key": "Raum",
+                "value": "R E37"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9475"
+            },
+            {
+                "key": "Mail",
+                "value": "junkers@"
+            }
+        ]
+    },
+    {
+        "firstname": "Arnim",
+        "lastname": "Kamps",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "CAD, DTP und 3D-Technik"
+            },
+            {
+                "key": "Raum",
+                "value": "R U37d"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9454"
+            },
+            {
+                "key": "Mail",
+                "value": "arnim.kamps@"
+            }
+        ]
+    },
+    {
+        "firstname": "Karsten",
+        "lastname": "Kettermann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fototechnik"
+            },
+            {
+                "key": "Mail",
+                "value": "karsten.kettermann@"
+            }
+        ]
+    },
+    {
+        "firstname": "Saskia",
+        "lastname": "Ketz",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Wissenschaften"
+            },
+            {
+                "key": "Mail",
+                "value": "saskia.ketz@"
+            }
+        ]
+    },
+    {
+        "firstname": "Jan",
+        "lastname": "Kirchhoff",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Modellbauwerkstätten"
+            },
+            {
+                "key": "Raum",
+                "value": "R U01/02"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9443"
+            },
+            {
+                "key": "Mail",
+                "value": "jan.kirchhoff@"
+            }
+        ]
+    },
+    {
+        "firstname": "Sebastian",
+        "lastname": "Klebe",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Siebdruck"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9402"
+            },
+            {
+                "key": "Mail",
+                "value": "sebastian.klebe@"
+            }
+        ]
+    },
+    {
+        "firstname": "Susanne",
+        "lastname": "Kleinlein",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Objekt- und Raumdesign, Szenografie"
+            },
+            {
+                "key": "Mail",
+                "value": "susanne.kleinlein@"
+            }
+        ]
+    },
+    {
+        "firstname": "Marcel",
+        "lastname": "Knuth",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Sound"
+            },
+            {
+                "key": "Raum",
+                "value": "R 249"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9433"
+            },
+            {
+                "key": "Mail",
+                "value": "marcel.knuth@"
+            }
+        ]
+    },
+    {
+        "firstname": "Marian",
+        "lastname": "Kolodziejczyk",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Objekt- und Raumdesign"
+            },
+            {
+                "key": "Mail",
+                "value": "marian.kolodziejczyk@"
+            }
+        ]
+    },
+    {
+        "firstname": "Dorothe",
+        "lastname": "Lanc",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenzen"
+            },
+            {
+                "key": "Mail",
+                "value": "dorothe.lanc@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Oliver",
+        "lastname": "Langbein",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Szenografie"
+            },
+            {
+                "key": "Raum",
+                "value": "R E14"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9409"
+            },
+            {
+                "key": "Mail",
+                "value": "oliver.langbein@"
+            }
+        ]
+    },
+    {
+        "firstname": "Vanessa",
+        "lastname": "Leißring",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fotografie"
+            },
+            {
+                "key": "Mail",
+                "value": "vanessa.leissring@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Jörg U.",
+        "lastname": "Lensing",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Sound"
+            },
+            {
+                "key": "Raum",
+                "value": "R 235"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9469"
+            },
+            {
+                "key": "Mail",
+                "value": "joerg.lensing@"
+            }
+        ]
+    },
+    {
+        "firstname": "Frederic",
+        "lastname": "Lezmi",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fotografie"
+            },
+            {
+                "key": "Mail",
+                "value": "frederic.lezmi@"
+            }
+        ]
+    },
+    {
+        "firstname": "Maria",
+        "lastname": "Litwa",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fotografie"
+            },
+            {
+                "key": "Mail",
+                "value": "maria.litwa@"
+            }
+        ]
+    },
+    {
+        "firstname": "Stefanie",
+        "lastname": "Luchtenberg",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Kommunikationsdesign"
+            },
+            {
+                "key": "Mail",
+                "value": "stefanie.luchtenberg@"
+            }
+        ]
+    },
+    {
+        "firstname": "Usch",
+        "lastname": "Luhn",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Film"
+            },
+            {
+                "key": "Mail",
+                "value": "ursula.luhn@"
+            }
+        ]
+    },
+    {
+        "firstname": "Florian",
+        "lastname": "Machner",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Vertretungsprofessor ORD"
+            },
+            {
+                "key": "Mail",
+                "value": "florian.machner@"
+            }
+        ]
+    },
+    {
+        "firstname": "Marcus",
+        "lastname": "Maida",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Wissenschaften"
+            },
+            {
+                "key": "Mail",
+                "value": "markus.maida@"
+            }
+        ]
+    },
+    {
+        "firstname": "Susanne",
+        "lastname": "Matrane",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Studienbüro"
+            },
+            {
+                "key": "Zuständigkeit",
+                "value": "Bachelorstudiengänge"
+            },
+            {
+                "key": "Raum",
+                "value": "SON R A006"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9724"
+            },
+            {
+                "key": "Mail",
+                "value": "matrane@"
+            }
+        ]
+    },
+    {
+        "title": "Prof. Dr.",
+        "firstname": "Marcel René",
+        "lastname": "Marburger",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Designwissenschaften"
+            },
+            {
+                "key": "Mail",
+                "value": "marcelrene.marburger@"
+            }
+        ]
+    },
+    {
+        "firstname": "Diana",
+        "lastname": "Merk",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Mail",
+                "value": "diana.merk@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Martin",
+        "lastname": "Middelhauve",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Objekt- und Raumdesign, Messe und Ausstellung"
+            },
+            {
+                "key": "Raum",
+                "value": "R E41"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9424"
+            },
+            {
+                "key": "Mail",
+                "value": "martin.middelhauve@"
+            }
+        ]
+    },
+    {
+        "firstname": "Udo",
+        "lastname": "Milbret",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Mail",
+                "value": "udo.milbret@"
+            }
+        ]
+    },
+    {
+        "firstname": "Horst",
+        "lastname": "Mühlberger",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Objekt- und Raumdesign"
+            },
+            {
+                "key": "Mail",
+                "value": "horst.muehlberger@"
+            }
+        ]
+    },
+    {
+        "firstname": "Saskia",
+        "lastname": "Niehaus",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Zeichnerische Darstellung"
+            },
+            {
+                "key": "Mail",
+                "value": "saskia.niehaus@"
+            }
+        ]
+    },
+    {
+        "firstname": "Philipp",
+        "lastname": "Niggemeier",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Digitale Bildbearbeitung"
+            },
+            {
+                "key": "Mail",
+                "value": "philipp.niggemeier@"
+            }
+        ]
+    },
+    {
+        "firstname": "Lennart",
+        "lastname": "Oberscheidt",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Technischer Leiter VR & VFX kiU"
+            },
+            {
+                "key": "Mail",
+                "value": "lennart.oberscheidt@"
+            }
+        ]
+    },
+    {
+        "firstname": "Harald",
+        "lastname": "Opel",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Künstlerischer Leiter kiU, Film- und Produktionstechnik"
+            },
+            {
+                "key": "Telefon",
+                "value": "0231 70021109"
+            },
+            {
+                "key": "Mail",
+                "value": "opel@"
+            }
+        ]
+    },
+    {
+        "firstname": "Joachim",
+        "lastname": "Ortmanns",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenzen"
+            },
+            {
+                "key": "Mail",
+                "value": "joachim.ortmanns@"
+            }
+        ]
+    },
+    {
+        "firstname": "Michael",
+        "lastname": "Osthaus",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Hausmeister"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9420"
+            },
+            {
+                "key": "Mail",
+                "value": "michael.osthaus@"
+            }
+        ]
+    },
+    {
+        "firstname": "Willi",
+        "lastname": "Otremba",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Vertretungsprofessor QdL, LAB Design&Gesellschaft Gestaltungsgrundlagen"
+            },
+            {
+                "key": "Raum",
+                "value": "R 312"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9429"
+            },
+            {
+                "key": "Mail",
+                "value": "willi.otremba@"
+            }
+        ]
+    },
+    {
+        "firstname": "Christian Lord",
+        "lastname": "Otto",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenzen"
+            },
+            {
+                "key": "Mail",
+                "value": "christian.otto@"
+            }
+        ]
+    },
+    {
+        "firstname": "Andreas",
+        "lastname": "Pawlitzki",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Mail",
+                "value": "andreas.pawlitzki@"
+            }
+        ]
+    },
+    {
+        "firstname": "Selina",
+        "lastname": "Pfrüner",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Mail",
+                "value": "selina.pfruener@"
+            }
+        ]
+    },
+    {
+        "firstname": "Angelina",
+        "lastname": "Rackwitz",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fachbereichssekretariat"
+            },
+            {
+                "key": "Raum",
+                "value": "R E43"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9426"
+            },
+            {
+                "key": "Mail",
+                "value": "angelina.rackwitz@"
+            }
+        ]
+    },
+    {
+        "firstname": "Bianca",
+        "lastname": "Reimann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Druckgrafische Werkstätten"
+            },
+            {
+                "key": "Raum",
+                "value": "R 220"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9407"
+            },
+            {
+                "key": "Mail",
+                "value": "bianca.reimann@"
+            }
+        ]
+    },
+    {
+        "firstname": "Anna",
+        "lastname": "Reschucha",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Mail",
+                "value": "anna.reschucha@"
+            }
+        ]
+    },
+    {
+        "firstname": "Jan",
+        "lastname": "Rocho",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Webmaster FB 2"
+            },
+            {
+                "key": "Telefon",
+                "value": "-6285"
+            },
+            {
+                "key": "Mail",
+                "value": "jan.rocho@"
+            }
+        ]
+    },
+    {
+        "firstname": "Michael",
+        "lastname": "Rogosch",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fototechnik"
+            },
+            {
+                "key": "Mail",
+                "value": "michael.rogosch@"
+            }
+        ]
+    },
+    {
+        "firstname": "Sabrina",
+        "lastname": "Rothe",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fotografie"
+            },
+            {
+                "key": "Mail",
+                "value": "sabrina.rothe@"
+            }
+        ]
+    },
+    {
+        "firstname": "Judith",
+        "lastname": "Rüther",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Typografie und Layout, Konzept"
+            },
+            {
+                "key": "Mail",
+                "value": "judith.ruether@"
+            }
+        ]
+    },
+    {
+        "firstname": "Juri",
+        "lastname": "Sacharewitsch",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Wiss. Mitarbeiter buchlabor"
+            },
+            {
+                "key": "Mail",
+                "value": "sacharewitsch@buchlabor.net"
+            }
+        ]
+    },
+    {
+        "title": "Dr.",
+        "firstname": "Peter",
+        "lastname": "Schmieder",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Kunstwissenschaften"
+            },
+            {
+                "key": "Mail",
+                "value": "peter.schmieder@"
+            }
+        ]
+    },
+    {
+        "firstname": "Frank",
+        "lastname": "Schoepgens",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Mail",
+                "value": "frank.schoepgens@"
+            }
+        ]
+    },
+    {
+        "firstname": "Nicole",
+        "lastname": "Schöning",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Studienbüro"
+            },
+            {
+                "key": "Zuständigkeit",
+                "value": "Fotografie (Bachelor und Master)"
+            },
+            {
+                "key": "Raum",
+                "value": "SON A 026"
+            },
+            {
+                "key": "Mail",
+                "value": "nicole.schoening@"
+            }
+        ]
+    },
+    {
+        "firstname": "Geert",
+        "lastname": "Schüttler",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Darstellungstechniken, Modellbau"
+            },
+            {
+                "key": "Raum",
+                "value": "R E07"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9479"
+            },
+            {
+                "key": "Mail",
+                "value": "geert.schuettler@"
+            }
+        ]
+    },
+    {
+        "firstname": "Anne-Kathrin",
+        "lastname": "Schulz",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Vertretungsprofessorin ORD"
+            },
+            {
+                "key": "Mail",
+                "value": "anne-kathrin.schulz@"
+            }
+        ]
+    },
+    {
+        "title": "Prof. Dr.",
+        "firstname": "Pamela C.",
+        "lastname": "Scorzin",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Kunstwissenschaften"
+            },
+            {
+                "key": "Raum",
+                "value": "R 124"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9436"
+            },
+            {
+                "key": "Mail",
+                "value": "pamela.scorzin@"
+            }
+        ]
+    },
+    {
+        "firstname": "Lothar",
+        "lastname": "Segeler",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Sound"
+            },
+            {
+                "key": "Mail",
+                "value": "lothar.segeler@"
+            }
+        ]
+    },
+    {
+        "firstname": "Anja",
+        "lastname": "Sommerfeld",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenzen"
+            },
+            {
+                "key": "Mail",
+                "value": "anja.sommerfeld@"
+            }
+        ]
+    },
+    {
+        "firstname": "Maria-Elisabeth",
+        "lastname": "Sporkmann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Digitale grafische Techniken"
+            },
+            {
+                "key": "Raum",
+                "value": "R U37d"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9483"
+            },
+            {
+                "key": "Mail",
+                "value": "sporkmann@"
+            }
+        ]
+    },
+    {
+        "firstname": "Andy",
+        "lastname": "Spyra",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Foto"
+            },
+            {
+                "key": "Mail",
+                "value": "andy.spyra@"
+            }
+        ]
+    },
+    {
+        "firstname": "Jörg",
+        "lastname": "Steinebach",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Filmwerkstatt"
+            },
+            {
+                "key": "Raum",
+                "value": "R 114"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9458 / -9423"
+            },
+            {
+                "key": "Mail",
+                "value": "steinebach@"
+            }
+        ]
+    },
+    {
+        "firstname": "René",
+        "lastname": "Struttmann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Objekt- und Raumdesign"
+            },
+            {
+                "key": "Mail",
+                "value": "rene.struttmann@"
+            }
+        ]
+    },
+    {
+        "firstname": "Damoun",
+        "lastname": "Tamir",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Grafik"
+            },
+            {
+                "key": "Mail",
+                "value": "damoun.tamir@"
+            }
+        ]
+    },
+    {
+        "firstname": "Sven",
+        "lastname": "Theymann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Computerwerkstatt"
+            },
+            {
+                "key": "Raum",
+                "value": "R U37a"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9455"
+            },
+            {
+                "key": "Mail",
+                "value": "theymann@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Roger",
+        "lastname": "Walk",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Interaktionsgestaltung und Motion Design"
+            },
+            {
+                "key": "Raum",
+                "value": "R 122"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9403"
+            },
+            {
+                "key": "Mail",
+                "value": "roger.walk@"
+            }
+        ]
+    },
+    {
+        "firstname": "Axel",
+        "lastname": "Wehrtmann",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fototechnik"
+            },
+            {
+                "key": "Mail",
+                "value": "wehrtmann@"
+            }
+        ]
+    },
+    {
+        "title": "Dr.",
+        "firstname": "Christoph",
+        "lastname": "Weismüller",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Medienwissenschaften"
+            },
+            {
+                "key": "Mail",
+                "value": "christoph.weismueller@"
+            }
+        ]
+    },
+    {
+        "firstname": "Barbara",
+        "lastname": "Wendling",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenz"
+            },
+            {
+                "key": "Mail",
+                "value": "barbara.wendling@"
+            }
+        ]
+    },
+    {
+        "firstname": "Germán",
+        "lastname": "Wiener",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Film"
+            },
+            {
+                "key": "Mail",
+                "value": "wiener@"
+            }
+        ]
+    },
+    {
+        "title": "Prof.",
+        "firstname": "Jörg",
+        "lastname": "Winde",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Auslandsbeauftragter, LAB Editorial, Fotografie"
+            },
+            {
+                "key": "Raum",
+                "value": "R 127"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9486"
+            },
+            {
+                "key": "Mail",
+                "value": "winde@"
+            }
+        ]
+    },
+    {
+        "firstname": "Anne",
+        "lastname": "Wirtz",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Schlüsselkompetenzen"
+            },
+            {
+                "key": "Mail",
+                "value": "anne.wirtz@"
+            }
+        ]
+    },
+    {
+        "firstname": "Carina",
+        "lastname": "Witte",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Studentische Hilfskraft, Produktionsbüro Film"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9434"
+            },
+            {
+                "key": "Mail",
+                "value": "carina.witte@"
+            }
+        ]
+    },
+    {
+        "firstname": "Sebastian",
+        "lastname": "Wolniczak",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fotowerkstatt"
+            },
+            {
+                "key": "Raum",
+                "value": "R E51"
+            },
+            {
+                "key": "Telefon",
+                "value": "-9435 / -9456"
+            },
+            {
+                "key": "Mail",
+                "value": "sebastian.wolniczak@"
+            }
+        ]
+    },
+    {
+        "firstname": "Moritz",
+        "lastname": "Zielke",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Wissenschaften, Objekt- und Raumdesign"
+            },
+            {
+                "key": "Mail",
+                "value": "moritz.zielke@"
+            }
+        ]
+    },
+    {
+        "firstname": "Wolfgang",
+        "lastname": "Zurborn",
+        "category": "FH Dortmund",
+        "contactInfos": [
+            {
+                "key": "Arbeitsgebiet",
+                "value": "Fotografie"
+            },
+            {
+                "key": "Mail",
+                "value": "wolfgang.zurborn@"
             }
         ]
     }

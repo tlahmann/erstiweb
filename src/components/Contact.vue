@@ -22,6 +22,16 @@
               Alle Kontakte
             </li>
             <li
+              v-on:click="
+                () => {
+                  filter = 'Prof.';
+                  current = filteredContacts()?.[0];
+                }
+              "
+            >
+              Professoren
+            </li>
+            <li
               v-for="(category, categoryIndex) in getCategories()"
               :key="categoryIndex"
               v-on:click="
@@ -32,6 +42,36 @@
               "
             >
               {{ category }}
+            </li>
+            <li
+              v-on:click="
+                () => {
+                  filter = 'Foto';
+                  current = filteredContacts()?.[0];
+                }
+              "
+            >
+              Foto
+            </li>
+            <li
+              v-on:click="
+                () => {
+                  filter = 'Film';
+                  current = filteredContacts()?.[0];
+                }
+              "
+            >
+              Film
+            </li>
+            <li
+              v-on:click="
+                () => {
+                  filter = 'Sound';
+                  current = filteredContacts()?.[0];
+                }
+              "
+            >
+              Sound
             </li>
           </ul>
         </div>
@@ -221,8 +261,9 @@ export default defineComponent({
         flex: 1 1 40.1%;
         border-right: 1px solid #ababab;
         background-color: var(--white-bg-color);
-        height: 100%;
+        height: calc(100% - 2rem);
         padding: 1rem 0;
+        overflow-y: auto;
         ul {
           margin: 0;
           padding: 0;
@@ -258,7 +299,7 @@ export default defineComponent({
         flex: 1 1 69.9%;
         padding: 3rem 1.375em;
         height: calc(100% - 6rem);
-        overflow-y: scroll;
+        overflow-y: auto;
         #first-name,
         #last-name {
           // color: #7c7c7c;
