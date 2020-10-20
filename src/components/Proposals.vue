@@ -44,8 +44,8 @@ export default defineComponent({
       .get("./_content/proposals.json")
       .then((response: any) => {
         return response.data?.map((elem: {}, idx: number) => {
-          const w = Math.floor(Math.random() * 150) + 220;
-          const h = Math.floor(Math.random() * 150) + 170;
+          const w = Math.floor(Math.random() * 150) + 190;
+          const h = Math.floor(Math.random() * 150) + 150;
           return {
             ...elem,
             pos: this.generateInitialPosition(idx),
