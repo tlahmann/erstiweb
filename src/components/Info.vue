@@ -171,7 +171,7 @@ export default defineComponent({
         flex: 1 1 19.2%;
         height: 100%;
         border-right: 1px solid #ababab;
-        overflow-y: scroll;
+        overflow-y: auto;
         ul {
           margin: 0;
           padding: 0;
@@ -242,7 +242,7 @@ export default defineComponent({
         font-weight: 600;
 
         overflow-x: hidden;
-        overflow-y: scroll;
+        overflow-y: auto;
       }
     }
   }
