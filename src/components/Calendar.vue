@@ -474,7 +474,7 @@ export default defineComponent({
                     left: calc(100% + 0.9em + 2px + 10px);
                     > .arrow {
                       @include arrow;
-                      left: -0.9em;
+                      left: -0.75em;
                       border-right: 10px solid #636363;
                       &::before {
                         border-right: 10.1px solid #fefefe;
@@ -486,7 +486,7 @@ export default defineComponent({
                     right: calc(100% + 0.9em + 2px + 10px);
                     > .arrow {
                       @include arrow;
-                      right: -0.9em;
+                      right: -0.75em;
                       border-left: 10px solid #636363;
                       &::before {
                         border-left: 10.1px solid #fefefe;
